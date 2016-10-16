@@ -15,8 +15,8 @@ Methodological contributions: (1) Pulls in big (geo-referenced) data from differ
 
 ## Simulation input data
 Simulation results are largelty driven by monthly resovled data about vector presence of Aedes Aegypti and Aedes Albopictus produced by Moritz Kraemer and Oliver Brady.
-<center>Centered text</center>
 
+<p style="text-align: center;"><b> Aedes Aegypti </b></p>
 <center> ###  Aedes Aegypti </center>
 ![](figs/Animation_Aegypti_v2.gif)
 
