@@ -15,11 +15,12 @@ Methodological contributions: (1) Pulls in big (geo-referenced) data from differ
 
 ## Simulation input data
 Simulation results are largelty driven by monthly resovled data about vector presence of Aedes Aegypti and Aedes Albopictus produced by Moritz Kraemer and Oliver Brady.
+<center>Centered text</center>
 
-### Aedes Aegypti
+<center> ###  Aedes Aegypti </center>
 ![](figs/Animation_Aegypti_v2.gif)
 
-### Aedes Albopictus
+<center> ### Aedes Albopictus </center>
 ![](figs/Animation_Albopictus_v2.gif)
 
 To address subnational heterogneity whenever possible as raw data high-resolution raster data rather than census data (on country level) was used. In the data preprocessing the raster data was transformed to vector data on the aggregation level needed for a fast global model. Similiar provinces within nations were clustered to single shapes.
