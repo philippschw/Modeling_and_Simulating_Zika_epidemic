@@ -1,11 +1,15 @@
 # Modeling and simulating the Zika outbreak under deep uncertainty
+
+| Tables   |Graduation Committee|  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  Prof. dr. Bartel A. Van de Walle | $1600 |
+| col 2 is |  Prof. dr. Erik Pruyt |   $12 |
+| col 3 is |  Prof. dr. Michel Oey |    $1 |
+
 Author Philipp Schwarz, MSc in Engineering and Policy Analysis
 TU Delft, The Netherlands
 
 Graduation Committee
-Prof. dr. Bartel A. Van de Walle
-Prof. dr. Erik Pruyt
-Prof. dr. Michel Oey
 
 ***Short Summary*** 
 * Large-scale simulation model that pulls in big (geo-referenced) data from different sources including maps, census data and model-based predictions on global air travel and (mosquito) species distribution. 
