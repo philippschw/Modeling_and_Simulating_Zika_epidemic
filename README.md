@@ -2,12 +2,11 @@
 
 ### Author Philipp Schwarz, MSc in Engineering and Policy Analysis
 #### Delft University of Technology, The Netherlands
-
-|----------|:-------------:|------:|
-| Chair of graduation committee: |  Prof. dr. Bartel A. Van de Walle | TU Delft |
-| First Supervisor |  Prof. dr. Erik Pruyt |   TU Delft |
-| Second Supervisor |  Prof. dr. Michel Oey |    TU Delft |
-
+|    |            |
+|----------|:-------------:|
+| Chair of graduation committee: |  Prof. dr. Bartel A. Van de Walle |
+| First Supervisor |  Prof. dr. Erik Pruyt |
+| Second Supervisor |  Prof. dr. Michel Oey |
 
 
 Graduation Committee
