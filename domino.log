@@ -10059,3 +10059,1324 @@
 2016-10-16 02:31:18,722 CEST DEBUG FileStructureRepo - Push to origin complete: local/master = Some(AnyObjectId[0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57]), origin/master = Some(AnyObjectId[0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57]).
 2016-10-16 02:31:18,724 CEST DEBUG FileStructureRepoSynchronizer - Push to origin result: Succeeded.
 2016-10-16 02:31:18,725 CEST DEBUG FileSyncClient - Push result: Succeeded.
+2016-10-16 02:40:09,961 CEST  INFO Domino - ================================================================================
+2016-10-16 02:40:09,971 CEST  INFO Domino - Starting client. BuildInfo=name: common, version: 1.42.0.0, scalaVersion: 2.11.8, sbtVersion: 0.13.11, buildNumber: 341, gitCommit: a87fa94b8e2f506752fe5694303a4699626c689c, buildTime: 2016-09-30
+2016-10-16 02:40:09,972 CEST DEBUG Domino - CWD = D:\Git_Repositories\Modeling_and_Simulating_Zika_epidemic
+2016-10-16 02:40:09,972 CEST  INFO Domino - executing command: sync
+2016-10-16 02:40:10,063 CEST  INFO Domino - Verifying that the cloud update URL isn't being used.
+2016-10-16 02:40:10,121 CEST  INFO Domino - Cloud update URL not in use.
+2016-10-16 02:40:10,480 CEST  INFO ProjectControllerProxy - getting git host from https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic
+2016-10-16 02:40:10,486 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:10,498 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:10,503 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:10,504 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2016-10-16 02:40:10,513 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:10,514 CEST DEBUG MainClientExec - Opening connection {s}->https://app.dominodatalab.com:443
+2016-10-16 02:40:10,571 CEST DEBUG DefaultHttpClientConnectionOperator - Connecting to app.dominodatalab.com/54.70.76.25:443
+2016-10-16 02:40:10,572 CEST DEBUG SSLConnectionSocketFactory - Connecting socket to app.dominodatalab.com/54.70.76.25:443 with timeout 60000
+2016-10-16 02:40:10,856 CEST DEBUG SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2016-10-16 02:40:10,856 CEST DEBUG SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2016-10-16 02:40:10,856 CEST DEBUG SSLConnectionSocketFactory - Starting handshake
+2016-10-16 02:40:11,275 CEST DEBUG SSLConnectionSocketFactory - Secure session established
+2016-10-16 02:40:11,276 CEST DEBUG SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+2016-10-16 02:40:11,276 CEST DEBUG SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2016-10-16 02:40:11,276 CEST DEBUG SSLConnectionSocketFactory -  peer principal: OU=PositiveSSL Multi-Domain, OU=Domain Control Validated
+2016-10-16 02:40:11,277 CEST DEBUG SSLConnectionSocketFactory -  peer alternative names: [*.dominodatalab.com, *.dominoup.com, dominodatalab.com, dominoup.com]
+2016-10-16 02:40:11,277 CEST DEBUG SSLConnectionSocketFactory -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2016-10-16 02:40:11,283 CEST DEBUG DefaultHttpClientConnectionOperator - Connection established 192.168.1.66:56534<->54.70.76.25:443
+2016-10-16 02:40:11,283 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 60000
+2016-10-16 02:40:11,284 CEST DEBUG MainClientExec - Executing request GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:11,284 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:11,285 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:11,287 CEST DEBUG headers - http-outgoing-0 >> GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:11,287 CEST DEBUG headers - http-outgoing-0 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:11,287 CEST DEBUG headers - http-outgoing-0 >> Host: app.dominodatalab.com
+2016-10-16 02:40:11,287 CEST DEBUG headers - http-outgoing-0 >> Connection: Keep-Alive
+2016-10-16 02:40:11,287 CEST DEBUG headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:11,288 CEST DEBUG headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:11,472 CEST DEBUG headers - http-outgoing-0 << HTTP/1.1 200 OK
+2016-10-16 02:40:11,472 CEST DEBUG headers - http-outgoing-0 << Server: nginx/1.7.12
+2016-10-16 02:40:11,473 CEST DEBUG headers - http-outgoing-0 << Date: Sun, 16 Oct 2016 00:40:32 GMT
+2016-10-16 02:40:11,473 CEST DEBUG headers - http-outgoing-0 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:11,473 CEST DEBUG headers - http-outgoing-0 << Transfer-Encoding: chunked
+2016-10-16 02:40:11,473 CEST DEBUG headers - http-outgoing-0 << Connection: keep-alive
+2016-10-16 02:40:11,473 CEST DEBUG headers - http-outgoing-0 << Play-Processing-Time: 5
+2016-10-16 02:40:11,485 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:11,512 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:11,513 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:11,513 CEST DEBUG ProjectControllerProxy - response from server: https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git
+2016-10-16 02:40:11,514 CEST  INFO CLIFileSyncClient - checking whether remote (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git) needs to be upgraded to match new desired url (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git)
+2016-10-16 02:40:11,518 CEST  INFO CLIFileSyncClient - Running in cloud mode, so using AnonymousS3BlobStore
+2016-10-16 02:40:11,581 CEST TRACE FileSyncClient - Starting upload...
+2016-10-16 02:40:11,694 CEST TRACE FileStructureRepo - Staging structure. Current branch = master, head commit ID = Some(AnyObjectId[0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57]).
+2016-10-16 02:40:11,856 CEST DEBUG FileStructureRepo - Staging structure complete. Head advanced to commit ID = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]).
+2016-10-16 02:40:11,859 CEST TRACE FileStructureRepoSynchronizer - Upload starting...
+2016-10-16 02:40:11,870 CEST TRACE FileStructureRepoSynchronizer - Asserting repo is safe to operate.  repo state = SAFE, isClean = true, isSafe = true, currentBranch = master.
+2016-10-16 02:40:11,896 CEST DEBUG FileStructureRepoSynchronizer - Local paths:
+	figs\img_gif_Albopictus\6.png -> FileSignature(1476295886000,199702,Sha1(514508da4b7fe5fbd1ae3dc0d4d91230033d68c3))
+	figs\Countries_worldmap_hig_res.png -> FileSignature(1476313056000,1585961,Sha1(696a887a627e942c8b00df49c1f65547f0e81148))
+	figs\Animation_Both_v2.gif -> FileSignature(1476296019000,813689,Sha1(facda755b866d640e1c8baa045f165f34cec4a5c))
+	figs\img_gif_Both\6.png -> FileSignature(1476295969000,200418,Sha1(7531e12ea40b3c2b85bd52bac85857892cb76960))
+	figs\Animation_Aegypti_v2.gif -> FileSignature(1476296009000,777640,Sha1(f6bd9a70044bb9cf979e1e4aae568298965cffb6))
+	dominostats.json -> FileSignature(1455506055000,0,Sha1(da39a3ee5e6b4b0d3255bfef95601890afd80709))
+	figs\img_gif_Albopictus\3.png -> FileSignature(1476295873000,198836,Sha1(e9141b7f4b87a5e5e111a1f2ad04caf1cbdc7013))
+	figs\img_gif_Albopictus\12.png -> FileSignature(1476295927000,200459,Sha1(072fd886c3315d23c7d3a09f43bb8ababf7aa561))
+	figs\img_gif_Aegypti\5.png -> FileSignature(1476295806000,199647,Sha1(5d864420df7eb2fafd7d3ac4783f960de5b50de8))
+	figs\Countries_worldmap_low_res.png -> FileSignature(1476313047000,225114,Sha1(a2546cf6c9c91b476d9ad5f73e29e12582d6c66e))
+	figs\Animation_Albopictus_v2.gif -> FileSignature(1476296014000,793837,Sha1(652b91bcf2dcba2b40c4d3e10e6058010ea0f6ec))
+	Run 2 regions.ipynb -> FileSignature(1476577139000,25391,Sha1(f1cbe836013cd420ca300609b3b9e3d8f45348b4))
+	figs\img_gif_Aegypti\10.png -> FileSignature(1476295840000,200511,Sha1(1645b8b5dd544698e869ecede8eb2b1d42604acc))
+	02_Cluster similiar regions & add Worldbank data.ipynb -> FileSignature(1476438133000,35317,Sha1(7628fb79ba7c4afb10d96ff0b9e01ae58a2a4552))
+	figs\img_gif_Both\3.png -> FileSignature(1476295947000,199378,Sha1(e6f45d8946bc124efb115f0008cf63ab08c060cb))
+	input_data_simulation\geojson\gdf_model_elements.geojson -> FileSignature(1476437040000,25333832,Sha1(a66a12ee349ea41fb32a85c6d146aa55aa15ebfe))
+	figs\img_gif_Both\5.png -> FileSignature(1476295961000,200182,Sha1(4d257c090170eea2d13cab8ee6764249d4fe2ab8))
+	figs\img_gif_Albopictus\11.png -> FileSignature(1476295920000,200870,Sha1(a297906dab2e3a76d8b4c3ecaf223e184d4abca9))
+	figs\img_gif_Aegypti\7.png -> FileSignature(1476295819000,200011,Sha1(a6ea7f0746773c2a9610fea6dde839d2dc48b37c))
+	.dominoignore -> FileSignature(1475278162000,538,Sha1(ac5546165f3b05a1732fef59bc841c3fc2d5c33f))
+	figs\img_gif_Both\8.png -> FileSignature(1476295981000,202284,Sha1(3ce7388718ef779cd427fd224715b9816458f5bc))
+	.dominoresults -> FileSignature(1455506055000,313,Sha1(21dd498c2501c732b021ce2f28133e8c6d108f75))
+	figs\Continents_worldmap_hig_res.png -> FileSignature(1476313072000,1577532,Sha1(2550cc0800c883254965abc7d71f593f2fa8ca68))
+	figs\img_gif_Albopictus\2.png -> FileSignature(1476295867000,199084,Sha1(a8a735884726fa61dd8e06c6acdaf9ada6751932))
+	figs\Env_suitability_July_hig_res.png -> FileSignature(1476313007000,1438419,Sha1(f93ce27c8dbf3962fe0c499a96a2f99c40b1d27d))
+	figs\share_poor_aggregated_low_Res_hig_res.png -> FileSignature(1476313023000,1442031,Sha1(fedd174dba162b51dc4fea6c5c59b4658366276a))
+	figs\img_gif_Aegypti\11.png -> FileSignature(1476295849000,199927,Sha1(5528934f786c61c02d3d14def5821e4498a72c11))
+	input_data_simulation\csv_files\monthly_FlightData.csv -> FileSignature(1476437335000,16318219,Sha1(caff1c3c99ba2abba812456c73d78bba054116d4))
+	figs\img_gif_Both\9.png -> FileSignature(1476295986000,202807,Sha1(3ac335d5499f58d50628fa7e9488ad0bb692ea26))
+	figs\img_gif_Aegypti\4.png -> FileSignature(1476295800000,198841,Sha1(3c40c4977ffa6864efcd154ee60f7a5e6cb5da2a))
+	figs\img_gif_Albopictus\1.png -> FileSignature(1476295861000,199166,Sha1(32701f686923cbade55089de3b830bb36f9f2e9d))
+	figs\img_gif_Both\10.png -> FileSignature(1476295993000,202288,Sha1(4e13d0d501e28118e05066a30169166db252a6ac))
+	06_Preprocessing Part III_monthly flights.ipynb -> FileSignature(1476437359000,2521925,Sha1(3f719331c5f43556a41f4719c20aec572744bc83))
+	figs\Env_suitability_July_low_res.png -> FileSignature(1476312999000,205397,Sha1(b9c038a8f2a7d0ddadc24dad3bab5e62d214d3cc))
+	figs\img_gif_Albopictus\9.png -> FileSignature(1476295908000,202176,Sha1(3935d222600e81ccb4b849528942629df0ff62c4))
+	figs\img_gif_Aegypti\12.png -> FileSignature(1476295853000,199218,Sha1(fbad0762b4d01e45ed78381f964bedb96e9beaaa))
+	figs\img_gif_Albopictus\7.png -> FileSignature(1476295892000,200659,Sha1(4add832c9eaba7c014bc82e3b8d09f27ff020b51))
+	figs\img_gif_Both\1.png -> FileSignature(1476295936000,199546,Sha1(e7f0b678e98356b2d3f80bb9dbbfd40f74342fcb))
+	figs\img_gif_Aegypti\9.png -> FileSignature(1476295833000,200793,Sha1(4e7a165ef40bcb2a4ef3df5cc511a1586d4b296f))
+	00_Installed_Python_Modules_and_Environment_Setup.ipynb -> FileSignature(1476437532000,18819,Sha1(57c3b0387c34d53253770c9085e1c7d47d2c665e))
+	input_data_simulation\csv_files\Env_suitability_monthly.csv -> FileSignature(1476367380000,331001,Sha1(0a09106617bfbb997f1e96940503f1dd20c20abd))
+	figs\Continents_worldmap_low_res.png -> FileSignature(1476313065000,223686,Sha1(532b5f6c3e9d3984a992333bc59654c31f1b5ebf))
+	figs\img_gif_Aegypti\8.png -> FileSignature(1476295827000,200742,Sha1(2f13ac5a978f91dbfdbdda4c7814ded21ae40c85))
+	figs\img_gif_Both\4.png -> FileSignature(1476295955000,199536,Sha1(b370c08074ae6885e9c0b0390ea29f2228af8546))
+	figs\img_gif_Aegypti\2.png -> FileSignature(1476295786000,198725,Sha1(101d0977a21f573a3f7b3dc8238b01d52c25fa6e))
+	input_data_simulation\csv_files\adjacency_matrix.csv -> FileSignature(1476432839000,1547339,Sha1(950ed9b06de901c01c498077d1a1967a260aa9b0))
+	figs\img_gif_Both\11.png -> FileSignature(1476296001000,201414,Sha1(eece7cbb784eebe75aefe885252f606b77d9e6a6))
+	figs\img_gif_Albopictus\8.png -> FileSignature(1476295902000,201500,Sha1(300088ce77b8ba5d585089b8c047d9e8f826e055))
+	figs\population_aggregated_low_Res_hig_res.png -> FileSignature(1476313039000,1449444,Sha1(b65a2e694ab1f22490f5396b34969386487db7e9))
+	figs\img_gif_Aegypti\3.png -> FileSignature(1476295794000,198629,Sha1(b2758b9d5aeb89821724c09840c1f4ca5744878b))
+	figs\img_gif_Aegypti\1.png -> FileSignature(1476295780000,198364,Sha1(879c3413cb9eee7cefa8ebcadfbbd9164832bd1f))
+	figs\population_aggregated_low_Res_low_res.png -> FileSignature(1476313032000,209351,Sha1(9a53d1aa131b0319d25d1f48e52994165add2754))
+	input_data_simulation\read_input -> FileSignature(1476438085000,706,Sha1(24b9b124b18b3366e53e3c774d1fa9a782a40152))
+	input_data_simulation\read_input~ -> FileSignature(1476433030000,89,Sha1(64a27410303b177a1768e467ac782c3321aafb37))
+	05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb -> FileSignature(1476437253000,546651,Sha1(5a8dfb09204bc56366f3095f30cb435fa2c30f28))
+	figs\img_gif_Aegypti\6.png -> FileSignature(1476295815000,199749,Sha1(91062143f5390257e771c5c0c3ec5bf71e26fae6))
+	figs\img_gif_Albopictus\10.png -> FileSignature(1476295914000,201556,Sha1(c194070e973c8fd27995cfedb8d0faef39c525d0))
+	figs\img_gif_Both\2.png -> FileSignature(1476295942000,199624,Sha1(cbc15b7c9d376dc3c0a6a59a7b3713c4375325df))
+	figs\img_gif_Albopictus\5.png -> FileSignature(1476295882000,199514,Sha1(24b34ead1fd54259cbbdcca4bb5898c254626ac9))
+	requirements.txt -> FileSignature(1476578382000,351,Sha1(99e573fade6b8bf40609557b4820c00049acc232))
+	input_data_simulation\csv_files\Series_model_outcomes.csv -> FileSignature(1476432627000,53954,Sha1(729fbbbc4f69d3e74b4cd8b445a1e9b0d0def81d))
+	figs\img_gif_Albopictus\4.png -> FileSignature(1476295878000,198824,Sha1(991afa44de1ca6d8ab387a445661d50ca76265e5))
+	figs\share_poor_aggregated_low_Res_low_res.png -> FileSignature(1476313016000,204582,Sha1(d4e98db9ff0aea09c4789437d2b9aaa39ffb46b7))
+	figs\img_gif_Both\7.png -> FileSignature(1476295975000,201131,Sha1(936ac01fad7981bdb2fe43be2d80ed706c93a44d))
+	04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb -> FileSignature(1476437363000,278433,Sha1(f7f8dff17b875820aad77aac5c661385231088ae))
+	03_Visualization of georeferenced static data projected on map.ipynb -> FileSignature(1476366138000,1391435,Sha1(e379fc1d867f4b39f3dc01f5a0419ed5a86b5a91))
+	figs\img_gif_Both\12.png -> FileSignature(1476296006000,200779,Sha1(74e1047d3b3d804f3708f65e861f207518adfab2))
+	01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb -> FileSignature(1476366855000,795885,Sha1(ae50adcb5caae9b6bd9203b965e3e1045fa6f4d8))
+2016-10-16 02:40:11,897 CEST TRACE FileStructureRepo - Starting fetch: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), refs/remotes/origin/master = Some(AnyObjectId[0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57]).
+2016-10-16 02:40:14,270 CEST TRACE FileStructureRepo - Fetch complete: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), refs/remotes/origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:14,272 CEST TRACE FileStructureRepo - Fetch result = TrackingRefUpdate[refs/heads/master -> refs/remotes/origin/master (forced) 0b84274..17b405a]
+2016-10-16 02:40:14,273 CEST  INFO FileStructureRepoSynchronizer - Upload failed: working directory was out of date. fetchResult=TrackingRefUpdate[refs/heads/master -> refs/remotes/origin/master (forced) 0b84274..17b405a] workingDirectory=D:\Git_Repositories\Modeling_and_Simulating_Zika_epidemic\.domino\repo
+2016-10-16 02:40:14,274 CEST DEBUG FileSyncClient - Push result: Failed: Working directory was out of date.
+2016-10-16 02:40:14,275 CEST  INFO SyncCommand - Upload failed: Failed: Working directory was out of date.
+2016-10-16 02:40:14,279 CEST  INFO ProjectControllerProxy - getting git host from https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic
+2016-10-16 02:40:14,279 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:14,279 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:14,279 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:14,279 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:14,280 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:14,280 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 60000
+2016-10-16 02:40:14,280 CEST DEBUG MainClientExec - Executing request GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:14,280 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:14,280 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> Host: app.dominodatalab.com
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> Connection: Keep-Alive
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:14,280 CEST DEBUG headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:14,450 CEST DEBUG headers - http-outgoing-0 << HTTP/1.1 200 OK
+2016-10-16 02:40:14,450 CEST DEBUG headers - http-outgoing-0 << Server: nginx/1.7.12
+2016-10-16 02:40:14,450 CEST DEBUG headers - http-outgoing-0 << Date: Sun, 16 Oct 2016 00:40:35 GMT
+2016-10-16 02:40:14,450 CEST DEBUG headers - http-outgoing-0 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:14,451 CEST DEBUG headers - http-outgoing-0 << Transfer-Encoding: chunked
+2016-10-16 02:40:14,451 CEST DEBUG headers - http-outgoing-0 << Connection: keep-alive
+2016-10-16 02:40:14,451 CEST DEBUG headers - http-outgoing-0 << Play-Processing-Time: 5
+2016-10-16 02:40:14,451 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:14,456 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:14,456 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:14,456 CEST DEBUG ProjectControllerProxy - response from server: https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git
+2016-10-16 02:40:14,457 CEST  INFO CLIFileSyncClient - checking whether remote (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git) needs to be upgraded to match new desired url (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git)
+2016-10-16 02:40:14,459 CEST  INFO CLIFileSyncClient - Running in cloud mode, so using AnonymousS3BlobStore
+2016-10-16 02:40:14,461 CEST TRACE FileSyncClient - Starting download...
+2016-10-16 02:40:14,536 CEST TRACE FileStructureRepo - Staging structure. Current branch = master, head commit ID = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]).
+2016-10-16 02:40:14,565 CEST DEBUG FileStructureRepo - Staging structure complete. Head advanced to commit ID = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]).
+2016-10-16 02:40:14,565 CEST TRACE FileStructureRepoSynchronizer - Starting download...
+2016-10-16 02:40:14,576 CEST TRACE FileStructureRepoSynchronizer - Asserting repo is safe to operate.  repo state = SAFE, isClean = true, isSafe = true, currentBranch = master.
+2016-10-16 02:40:14,581 CEST TRACE FileStructureRepo - Starting fetch: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), refs/remotes/origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,626 CEST TRACE FileStructureRepo - Fetch complete: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), refs/remotes/origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,626 CEST TRACE FileStructureRepo - Fetch result = [No Update]
+2016-10-16 02:40:15,629 CEST TRACE FileStructureRepo - Finding shared ancestor between commit 6bcba92de7e3cc6eab07b372054a0d7ce5093911 1476578411 -----p and commit 17b405a0af2b078955885c0f51f5e1d71729404d 1476578375 -----p
+2016-10-16 02:40:15,637 CEST DEBUG FileStructureRepo - Ancestors of Commit B, up until ancestors of A:
+commit 17b405a0af2b078955885c0f51f5e1d71729404d 1476578375 ----sp
+commit 37f1fbc3641d6a583d4459cdb7e73475d65e9fda 1476578319 ----sp
+commit cae5c1b57d795ca98442671918c44e92bf66827b 1476578205 ----sp
+2016-10-16 02:40:15,641 CEST DEBUG FileStructureRepo - Shared ancestor computed as commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp
+2016-10-16 02:40:15,644 CEST DEBUG FileStructureRepo - BranchState between master and refs/remotes/origin/master with currentHeadCommitId=AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911], sharedAncestorId=commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp, serverTipCommitId=AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d] is BranchState(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911],commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp,AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,645 CEST TRACE FileStructureRepoSynchronizer - Integrating fetch changes into local...
+2016-10-16 02:40:15,647 CEST TRACE FileStructureRepo - Starting fast-forward: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,658 CEST DEBUG FileStructureRepo - Merge result = Merge of revisions 6bcba92de7e3cc6eab07b372054a0d7ce5093911, 17b405a0af2b078955885c0f51f5e1d71729404d with base 17b405a0af2b078955885c0f51f5e1d71729404d using strategy recursive resulted in: Aborted. 
+2016-10-16 02:40:15,659 CEST DEBUG FileStructureRepo - Fast-forward failed with status = Aborted
+2016-10-16 02:40:15,659 CEST DEBUG FileStructureRepo - Fast-forward complete: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,660 CEST TRACE FileStructureRepo - Finding shared ancestor between commit 6bcba92de7e3cc6eab07b372054a0d7ce5093911 1476578411 -----p and commit 17b405a0af2b078955885c0f51f5e1d71729404d 1476578375 -----p
+2016-10-16 02:40:15,661 CEST DEBUG FileStructureRepo - Ancestors of Commit B, up until ancestors of A:
+commit 17b405a0af2b078955885c0f51f5e1d71729404d 1476578375 ----sp
+commit 37f1fbc3641d6a583d4459cdb7e73475d65e9fda 1476578319 ----sp
+commit cae5c1b57d795ca98442671918c44e92bf66827b 1476578205 ----sp
+2016-10-16 02:40:15,661 CEST DEBUG FileStructureRepo - Shared ancestor computed as commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp
+2016-10-16 02:40:15,661 CEST DEBUG FileStructureRepo - BranchState between master and refs/remotes/origin/master with currentHeadCommitId=AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911], sharedAncestorId=commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp, serverTipCommitId=AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d] is BranchState(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911],commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp,AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,662 CEST DEBUG FileStructureRepo - Starting rebase onto origin: master = Some(AnyObjectId[6bcba92de7e3cc6eab07b372054a0d7ce5093911]), origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,729 CEST DEBUG FileStructureRepo - Rebase stopped with status = STOPPED
+2016-10-16 02:40:15,729 CEST DEBUG FileStructureRepo - Rebase complete: 17b405a0af2b078955885c0f51f5e1d71729404d = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]), origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:15,730 CEST DEBUG FileStructureRepoSynchronizer - Resolving rebase conflicted commit commit 6bcba92de7e3cc6eab07b372054a0d7ce5093911 1476578411 -t--sp in favor of local changes starting...
+2016-10-16 02:40:15,730 CEST TRACE FileStructureRepo - Computing updates between: local = commit 6bcba92de7e3cc6eab07b372054a0d7ce5093911 1476578411 -t--sp, shared = commit 0b842745fd5cc8e2d5585f3fd48da6d8a26a2a57 1476577766 ---usp, origin = AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]
+2016-10-16 02:40:15,764 CEST DEBUG FileStructureRepo - Local changes:
+. File figs\img_gif_Aegypti\11.png up to date.
+. File figs\Animation_Aegypti_v2.gif up to date.
+. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.
+x Modifying file requirements.txt
+. File figs\img_gif_Albopictus\8.png up to date.
+. File figs\img_gif_Both\6.png up to date.
+. File figs\img_gif_Both\8.png up to date.
+. File figs\img_gif_Albopictus\2.png up to date.
+. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.
+. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.
+. File figs\img_gif_Both\3.png up to date.
+. File figs\population_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Albopictus\11.png up to date.
+. File figs\img_gif_Aegypti\3.png up to date.
+. File figs\img_gif_Both\10.png up to date.
+. File figs\img_gif_Both\5.png up to date.
+. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.
+. File figs\img_gif_Aegypti\1.png up to date.
+. File figs\img_gif_Both\1.png up to date.
+. File figs\img_gif_Aegypti\7.png up to date.
+. File .dominoresults up to date.
+. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.
+. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.
+. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.
+. File figs\img_gif_Aegypti\5.png up to date.
+. File figs\img_gif_Both\11.png up to date.
+. File figs\Env_suitability_July_low_res.png up to date.
+. File input_data_simulation\read_input up to date.
+. File figs\img_gif_Albopictus\7.png up to date.
+. File figs\share_poor_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Albopictus\10.png up to date.
+. File figs\img_gif_Aegypti\4.png up to date.
+. File figs\Countries_worldmap_low_res.png up to date.
+. File figs\img_gif_Albopictus\6.png up to date.
+. File figs\img_gif_Albopictus\12.png up to date.
+. File figs\img_gif_Albopictus\4.png up to date.
+. File figs\img_gif_Both\12.png up to date.
+. File figs\img_gif_Aegypti\9.png up to date.
+. File figs\img_gif_Albopictus\1.png up to date.
+. File figs\img_gif_Albopictus\5.png up to date.
+. File figs\Countries_worldmap_hig_res.png up to date.
+. File .dominoignore up to date.
+. File figs\img_gif_Aegypti\6.png up to date.
+. File input_data_simulation\read_input~ up to date.
+. File figs\Env_suitability_July_hig_res.png up to date.
+. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.
+. File figs\img_gif_Albopictus\9.png up to date.
+. File Run 2 regions.ipynb up to date.
+. File 06_Preprocessing Part III_monthly flights.ipynb up to date.
+. File figs\img_gif_Both\7.png up to date.
+. File figs\Animation_Albopictus_v2.gif up to date.
+. File figs\img_gif_Aegypti\10.png up to date.
+. File figs\Continents_worldmap_low_res.png up to date.
+. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.
+. File figs\img_gif_Aegypti\12.png up to date.
+. File figs\img_gif_Both\2.png up to date.
+. File figs\img_gif_Aegypti\8.png up to date.
+. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.
+. File figs\population_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\2.png up to date.
+. File figs\img_gif_Both\9.png up to date.
+. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.
+. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.
+. File dominostats.json up to date.
+. File figs\img_gif_Albopictus\3.png up to date.
+. File figs\Continents_worldmap_hig_res.png up to date.
+. File figs\Animation_Both_v2.gif up to date.
+. File figs\img_gif_Both\4.png up to date.
+2016-10-16 02:40:15,785 CEST DEBUG FileStructureRepo - Origin changes:
+. File figs\img_gif_Aegypti\11.png up to date.
+. File figs\Animation_Aegypti_v2.gif up to date.
+. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.
+x Modifying file requirements.txt
+. File figs\img_gif_Albopictus\8.png up to date.
+. File figs\img_gif_Both\6.png up to date.
+. File figs\img_gif_Both\8.png up to date.
+. File figs\img_gif_Albopictus\2.png up to date.
+. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.
+. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.
+. File figs\img_gif_Both\3.png up to date.
+. File figs\population_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Albopictus\11.png up to date.
+. File figs\img_gif_Aegypti\3.png up to date.
+. File figs\img_gif_Both\10.png up to date.
+. File figs\img_gif_Both\5.png up to date.
+. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.
+. File figs\img_gif_Aegypti\1.png up to date.
+. File figs\img_gif_Both\1.png up to date.
+. File figs\img_gif_Aegypti\7.png up to date.
+. File .dominoresults up to date.
+. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.
+. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.
+. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.
+. File figs\img_gif_Aegypti\5.png up to date.
+. File figs\img_gif_Both\11.png up to date.
+. File figs\Env_suitability_July_low_res.png up to date.
+. File input_data_simulation\read_input up to date.
+. File figs\img_gif_Albopictus\7.png up to date.
+. File figs\share_poor_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Albopictus\10.png up to date.
+. File figs\img_gif_Aegypti\4.png up to date.
+. File figs\Countries_worldmap_low_res.png up to date.
+. File figs\img_gif_Albopictus\6.png up to date.
+. File figs\img_gif_Albopictus\12.png up to date.
+. File figs\img_gif_Albopictus\4.png up to date.
+. File figs\img_gif_Both\12.png up to date.
+. File figs\img_gif_Aegypti\9.png up to date.
+. File figs\img_gif_Albopictus\1.png up to date.
+. File figs\img_gif_Albopictus\5.png up to date.
+. File figs\Countries_worldmap_hig_res.png up to date.
+. File .dominoignore up to date.
+. File figs\img_gif_Aegypti\6.png up to date.
+. File input_data_simulation\read_input~ up to date.
+. File figs\Env_suitability_July_hig_res.png up to date.
+. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.
+. File figs\img_gif_Albopictus\9.png up to date.
+. File Run 2 regions.ipynb up to date.
+. File 06_Preprocessing Part III_monthly flights.ipynb up to date.
+. File figs\img_gif_Both\7.png up to date.
+. File figs\Animation_Albopictus_v2.gif up to date.
+. File figs\img_gif_Aegypti\10.png up to date.
+. File figs\Continents_worldmap_low_res.png up to date.
+. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.
+. File figs\img_gif_Aegypti\12.png up to date.
+. File figs\img_gif_Both\2.png up to date.
+. File figs\img_gif_Aegypti\8.png up to date.
+. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.
+. File figs\population_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\2.png up to date.
+. File figs\img_gif_Both\9.png up to date.
+. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.
+. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.
+. File dominostats.json up to date.
+. File figs\img_gif_Albopictus\3.png up to date.
+. File figs\Continents_worldmap_hig_res.png up to date.
+. File figs\Animation_Both_v2.gif up to date.
+. File figs\img_gif_Both\4.png up to date.
+2016-10-16 02:40:15,796 CEST DEBUG FileStructureRepo - Merged updates:
+FileUpdate(. File figs\img_gif_Aegypti\2.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\9.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.,None)
+FileUpdate(. File figs\img_gif_Both\4.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\10.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\11.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\4.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\9.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\5.png up to date.,None)
+FileUpdate(. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.,None)
+FileUpdate(. File figs\img_gif_Both\6.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\9.png up to date.,None)
+FileUpdate(. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Both\7.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\1.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\1.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\10.png up to date.,None)
+FileUpdate(. File figs\Continents_worldmap_hig_res.png up to date.,None)
+FileUpdate(. File input_data_simulation\read_input~ up to date.,None)
+FileUpdate(. File figs\img_gif_Both\3.png up to date.,None)
+FileUpdate(. File input_data_simulation\read_input up to date.,None)
+FileUpdate(. File figs\img_gif_Both\11.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.,None)
+FileUpdate(. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.,None)
+FileUpdate(. File figs\Countries_worldmap_low_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\7.png up to date.,None)
+FileUpdate(. File 06_Preprocessing Part III_monthly flights.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\12.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\11.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\7.png up to date.,None)
+FileUpdate(. File figs\Countries_worldmap_hig_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\3.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\10.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\5.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\12.png up to date.,None)
+FileUpdate(. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Both\12.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\6.png up to date.,None)
+FileUpdate(. File .dominoresults up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\2.png up to date.,None)
+FileUpdate(. File figs\population_aggregated_low_Res_low_res.png up to date.,None)
+FileUpdate(. File figs\Animation_Albopictus_v2.gif up to date.,None)
+FileUpdate(. File Run 2 regions.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Both\2.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\3.png up to date.,None)
+FileUpdate(. File .dominoignore up to date.,None)
+FileUpdate(. File figs\population_aggregated_low_Res_hig_res.png up to date.,None)
+FileUpdate(. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\5.png up to date.,None)
+FileUpdate(. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.,None)
+FileUpdate(. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\8.png up to date.,None)
+FileUpdate(. File figs\Animation_Aegypti_v2.gif up to date.,None)
+FileUpdate(. File figs\Env_suitability_July_low_res.png up to date.,None)
+FileUpdate(. File figs\Env_suitability_July_hig_res.png up to date.,None)
+FileUpdate(. File figs\share_poor_aggregated_low_Res_low_res.png up to date.,None)
+FileUpdate(+ Adding file results\stdout.txt,None)
+FileUpdate(- Deleting file dominostats.json,None)
+FileUpdate(. File figs\Continents_worldmap_low_res.png up to date.,None)
+FileUpdate(. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\8.png up to date.,None)
+FileUpdate(. File figs\Animation_Both_v2.gif up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\1.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\4.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\8.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\6.png up to date.,None)
+FileUpdate(x Modifying file requirements.txt,Some(x Modifying file requirements.txt))
+2016-10-16 02:40:15,813 CEST TRACE FileStructureRepo - Starting finishRebase...
+2016-10-16 02:40:15,866 CEST DEBUG FileStructureRepo - finishRebase complete.  Status = OK
+2016-10-16 02:40:15,867 CEST DEBUG FileStructureRepoSynchronizer - Resolving rebase in favor of local changes complete. Updates size = 69
+2016-10-16 02:40:15,887 CEST DEBUG FileStructureRepo - Local changes:
+. File figs\Animation_Aegypti_v2.gif up to date.
+. File figs\img_gif_Both\1.png up to date.
+. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\4.png up to date.
+. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.
+. File figs\img_gif_Albopictus\1.png up to date.
+. File figs\img_gif_Aegypti\5.png up to date.
+. File 06_Preprocessing Part III_monthly flights.ipynb up to date.
++ Adding file results\stdout.txt
+. File figs\img_gif_Albopictus\8.png up to date.
+. File figs\img_gif_Albopictus\9.png up to date.
+. File figs\img_gif_Both\11.png up to date.
+. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.
+. File figs\Animation_Albopictus_v2.gif up to date.
+. File figs\share_poor_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Aegypti\3.png up to date.
+. File figs\img_gif_Albopictus\7.png up to date.
+. File figs\img_gif_Both\12.png up to date.
+. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.
+- Deleting file dominostats.json
+. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.
+. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.
+. File figs\img_gif_Albopictus\3.png up to date.
+. File figs\Countries_worldmap_low_res.png up to date.
+. File figs\img_gif_Albopictus\12.png up to date.
+. File figs\img_gif_Both\5.png up to date.
+. File figs\img_gif_Albopictus\10.png up to date.
+. File figs\img_gif_Aegypti\10.png up to date.
+. File figs\img_gif_Aegypti\11.png up to date.
+. File figs\img_gif_Albopictus\5.png up to date.
+. File figs\Env_suitability_July_low_res.png up to date.
+. File figs\population_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\6.png up to date.
+. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.
+. File figs\img_gif_Both\6.png up to date.
+. File figs\img_gif_Aegypti\1.png up to date.
+. File input_data_simulation\read_input~ up to date.
+. File figs\img_gif_Aegypti\8.png up to date.
+. File figs\img_gif_Both\4.png up to date.
+. File input_data_simulation\read_input up to date.
+. File figs\img_gif_Aegypti\12.png up to date.
+. File figs\img_gif_Albopictus\11.png up to date.
+. File .dominoresults up to date.
+. File figs\Env_suitability_July_hig_res.png up to date.
+. File figs\img_gif_Albopictus\2.png up to date.
+. File Run 2 regions.ipynb up to date.
+. File figs\population_aggregated_low_Res_low_res.png up to date.
+. File figs\Continents_worldmap_hig_res.png up to date.
+. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.
+. File figs\img_gif_Aegypti\7.png up to date.
+. File figs\img_gif_Both\3.png up to date.
+. File figs\img_gif_Both\9.png up to date.
+. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.
+. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.
+. File figs\img_gif_Both\10.png up to date.
+. File figs\img_gif_Aegypti\9.png up to date.
+. File figs\Animation_Both_v2.gif up to date.
+. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.
+. File figs\img_gif_Albopictus\4.png up to date.
+. File figs\img_gif_Both\2.png up to date.
+. File requirements.txt up to date.
+. File figs\Countries_worldmap_hig_res.png up to date.
+. File figs\img_gif_Albopictus\6.png up to date.
+. File .dominoignore up to date.
+. File figs\img_gif_Aegypti\2.png up to date.
+. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.
+. File figs\img_gif_Both\8.png up to date.
+. File figs\img_gif_Both\7.png up to date.
+. File figs\Continents_worldmap_low_res.png up to date.
+2016-10-16 02:40:15,904 CEST DEBUG FileStructureRepo - Origin changes:
+. File figs\Animation_Aegypti_v2.gif up to date.
+. File figs\img_gif_Both\1.png up to date.
+. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\4.png up to date.
+. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.
+. File figs\img_gif_Albopictus\1.png up to date.
+. File figs\img_gif_Aegypti\5.png up to date.
+. File 06_Preprocessing Part III_monthly flights.ipynb up to date.
++ Adding file results\stdout.txt
+. File figs\img_gif_Albopictus\8.png up to date.
+. File figs\img_gif_Albopictus\9.png up to date.
+. File figs\img_gif_Both\11.png up to date.
+. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.
+. File figs\Animation_Albopictus_v2.gif up to date.
+. File figs\share_poor_aggregated_low_Res_low_res.png up to date.
+. File figs\img_gif_Aegypti\3.png up to date.
+. File figs\img_gif_Albopictus\7.png up to date.
+. File figs\img_gif_Both\12.png up to date.
+. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.
+- Deleting file dominostats.json
+. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.
+. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.
+. File figs\img_gif_Albopictus\3.png up to date.
+. File figs\Countries_worldmap_low_res.png up to date.
+. File figs\img_gif_Albopictus\12.png up to date.
+. File figs\img_gif_Both\5.png up to date.
+. File figs\img_gif_Albopictus\10.png up to date.
+. File figs\img_gif_Aegypti\10.png up to date.
+. File figs\img_gif_Aegypti\11.png up to date.
+. File figs\img_gif_Albopictus\5.png up to date.
+. File figs\Env_suitability_July_low_res.png up to date.
+. File figs\population_aggregated_low_Res_hig_res.png up to date.
+. File figs\img_gif_Aegypti\6.png up to date.
+. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.
+. File figs\img_gif_Both\6.png up to date.
+. File figs\img_gif_Aegypti\1.png up to date.
+. File input_data_simulation\read_input~ up to date.
+. File figs\img_gif_Aegypti\8.png up to date.
+. File figs\img_gif_Both\4.png up to date.
+. File input_data_simulation\read_input up to date.
+. File figs\img_gif_Aegypti\12.png up to date.
+. File figs\img_gif_Albopictus\11.png up to date.
+. File .dominoresults up to date.
+. File figs\Env_suitability_July_hig_res.png up to date.
+. File figs\img_gif_Albopictus\2.png up to date.
+. File Run 2 regions.ipynb up to date.
+. File figs\population_aggregated_low_Res_low_res.png up to date.
+. File figs\Continents_worldmap_hig_res.png up to date.
+. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.
+. File figs\img_gif_Aegypti\7.png up to date.
+. File figs\img_gif_Both\3.png up to date.
+. File figs\img_gif_Both\9.png up to date.
+. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.
+. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.
+. File figs\img_gif_Both\10.png up to date.
+. File figs\img_gif_Aegypti\9.png up to date.
+. File figs\Animation_Both_v2.gif up to date.
+. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.
+. File figs\img_gif_Albopictus\4.png up to date.
+. File figs\img_gif_Both\2.png up to date.
+. File requirements.txt up to date.
+. File figs\Countries_worldmap_hig_res.png up to date.
+. File figs\img_gif_Albopictus\6.png up to date.
+. File .dominoignore up to date.
+. File figs\img_gif_Aegypti\2.png up to date.
+. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.
+. File figs\img_gif_Both\8.png up to date.
+. File figs\img_gif_Both\7.png up to date.
+. File figs\Continents_worldmap_low_res.png up to date.
+2016-10-16 02:40:15,911 CEST DEBUG FileStructureRepo - Merged updates:
+FileUpdate(. File figs\population_aggregated_low_Res_low_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\8.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\4.png up to date.,None)
+FileUpdate(. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.,None)
+FileUpdate(. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Both\1.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.,None)
+FileUpdate(. File figs\Animation_Albopictus_v2.gif up to date.,None)
+FileUpdate(. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Both\10.png up to date.,None)
+FileUpdate(. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\10.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\1.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\3.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\11.png up to date.,None)
+FileUpdate(. File input_data_simulation\read_input up to date.,None)
+FileUpdate(- Deleting file dominostats.json,None)
+FileUpdate(. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\11.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\12.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\5.png up to date.,None)
+FileUpdate(. File figs\population_aggregated_low_Res_hig_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\6.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\11.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\12.png up to date.,None)
+FileUpdate(. File figs\Env_suitability_July_low_res.png up to date.,None)
+FileUpdate(. File .dominoresults up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\5.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\10.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\5.png up to date.,None)
+FileUpdate(. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\6.png up to date.,None)
+FileUpdate(. File 06_Preprocessing Part III_monthly flights.ipynb up to date.,None)
+FileUpdate(. File figs\Animation_Aegypti_v2.gif up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.,None)
+FileUpdate(. File Run 2 regions.ipynb up to date.,None)
+FileUpdate(. File input_data_simulation\read_input~ up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\2.png up to date.,None)
+FileUpdate(. File figs\Env_suitability_July_hig_res.png up to date.,None)
+FileUpdate(. File .dominoignore up to date.,None)
+FileUpdate(. File figs\Animation_Both_v2.gif up to date.,None)
+FileUpdate(. File figs\Continents_worldmap_hig_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\9.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\4.png up to date.,None)
+FileUpdate(. File figs\Countries_worldmap_low_res.png up to date.,None)
+FileUpdate(. File requirements.txt up to date.,Some(x Modifying file requirements.txt))
+FileUpdate(. File figs\img_gif_Aegypti\3.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\2.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\12.png up to date.,None)
+FileUpdate(. File figs\share_poor_aggregated_low_Res_low_res.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\8.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\8.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\7.png up to date.,None)
+FileUpdate(. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.,None)
+FileUpdate(+ Adding file results\stdout.txt,None)
+FileUpdate(. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\1.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\4.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\9.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\9.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\3.png up to date.,None)
+FileUpdate(. File figs\img_gif_Both\6.png up to date.,None)
+FileUpdate(. File figs\img_gif_Albopictus\7.png up to date.,None)
+FileUpdate(. File figs\Countries_worldmap_hig_res.png up to date.,None)
+FileUpdate(. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.,None)
+FileUpdate(. File figs\img_gif_Both\2.png up to date.,None)
+FileUpdate(. File figs\img_gif_Aegypti\7.png up to date.,None)
+FileUpdate(. File figs\Continents_worldmap_low_res.png up to date.,None)
+2016-10-16 02:40:15,912 CEST TRACE FileStructureRepoSynchronizer - Integrating changes complete.
+2016-10-16 02:40:15,914 CEST TRACE FileStructureRepoSynchronizer - Download updates: FileUpdate(. File figs\population_aggregated_low_Res_low_res.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\8.png up to date.,None);FileUpdate(. File figs\img_gif_Both\4.png up to date.,None);FileUpdate(. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.,None);FileUpdate(. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.,None);FileUpdate(. File figs\img_gif_Both\1.png up to date.,None);FileUpdate(. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.,None);FileUpdate(. File figs\Animation_Albopictus_v2.gif up to date.,None);FileUpdate(. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.,None);FileUpdate(. File figs\img_gif_Both\10.png up to date.,None);FileUpdate(. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\10.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\1.png up to date.,None);FileUpdate(. File figs\img_gif_Both\3.png up to date.,None);FileUpdate(. File figs\img_gif_Both\11.png up to date.,None);FileUpdate(. File input_data_simulation\read_input up to date.,None);FileUpdate(- Deleting file dominostats.json,None);FileUpdate(. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\11.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\12.png up to date.,None);FileUpdate(. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\5.png up to date.,None);FileUpdate(. File figs\population_aggregated_low_Res_hig_res.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\6.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\11.png up to date.,None);FileUpdate(. File figs\img_gif_Both\12.png up to date.,None);FileUpdate(. File figs\Env_suitability_July_low_res.png up to date.,None);FileUpdate(. File .dominoresults up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\5.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\10.png up to date.,None);FileUpdate(. File figs\img_gif_Both\5.png up to date.,None);FileUpdate(. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\6.png up to date.,None);FileUpdate(. File 06_Preprocessing Part III_monthly flights.ipynb up to date.,None);FileUpdate(. File figs\Animation_Aegypti_v2.gif up to date.,None);FileUpdate(. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.,None);FileUpdate(. File Run 2 regions.ipynb up to date.,None);FileUpdate(. File input_data_simulation\read_input~ up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\2.png up to date.,None);FileUpdate(. File figs\Env_suitability_July_hig_res.png up to date.,None);FileUpdate(. File .dominoignore up to date.,None);FileUpdate(. File figs\Animation_Both_v2.gif up to date.,None);FileUpdate(. File figs\Continents_worldmap_hig_res.png up to date.,None);FileUpdate(. File figs\img_gif_Both\9.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\4.png up to date.,None);FileUpdate(. File figs\Countries_worldmap_low_res.png up to date.,None);FileUpdate(. File requirements.txt up to date.,Some(x Modifying file requirements.txt));FileUpdate(. File figs\img_gif_Aegypti\3.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\2.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\12.png up to date.,None);FileUpdate(. File figs\share_poor_aggregated_low_Res_low_res.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\8.png up to date.,None);FileUpdate(. File figs\img_gif_Both\8.png up to date.,None);FileUpdate(. File figs\img_gif_Both\7.png up to date.,None);FileUpdate(. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.,None);FileUpdate(+ Adding file results\stdout.txt,None);FileUpdate(. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\1.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\4.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\9.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\9.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\3.png up to date.,None);FileUpdate(. File figs\img_gif_Both\6.png up to date.,None);FileUpdate(. File figs\img_gif_Albopictus\7.png up to date.,None);FileUpdate(. File figs\Countries_worldmap_hig_res.png up to date.,None);FileUpdate(. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.,None);FileUpdate(. File figs\img_gif_Both\2.png up to date.,None);FileUpdate(. File figs\img_gif_Aegypti\7.png up to date.,None);FileUpdate(. File figs\Continents_worldmap_low_res.png up to date.,None)
+2016-10-16 02:40:15,914 CEST DEBUG FileStructureRepoSynchronizer - Download updates size = 69
+2016-10-16 02:40:15,947 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/blobs/signedGetUrl/163dbe91367eb43b532bdf7257d0c12f55fd85dd (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/blobs/signedGetUrl/163dbe91367eb43b532bdf7257d0c12f55fd85dd,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:15,948 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/blobs/signedGetUrl/da39a3ee5e6b4b0d3255bfef95601890afd80709 (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/blobs/signedGetUrl/da39a3ee5e6b4b0d3255bfef95601890afd80709,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:15,949 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:15,949 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:15,949 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:15,949 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:15,950 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:15,950 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:15,950 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-10-16 02:40:15,950 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 60000
+2016-10-16 02:40:15,950 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 0; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:15,950 CEST DEBUG MainClientExec - Executing request POST /blobs/signedGetUrl/163dbe91367eb43b532bdf7257d0c12f55fd85dd HTTP/1.1
+2016-10-16 02:40:15,950 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:15,950 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:15,950 CEST DEBUG MainClientExec - Opening connection {s}->https://app.dominodatalab.com:443
+2016-10-16 02:40:15,950 CEST DEBUG headers - http-outgoing-0 >> POST /blobs/signedGetUrl/163dbe91367eb43b532bdf7257d0c12f55fd85dd HTTP/1.1
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> Content-Length: 0
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> Host: app.dominodatalab.com
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> Connection: Keep-Alive
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:15,951 CEST DEBUG DefaultHttpClientConnectionOperator - Connecting to app.dominodatalab.com/54.70.76.25:443
+2016-10-16 02:40:15,951 CEST DEBUG headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:15,951 CEST DEBUG SSLConnectionSocketFactory - Connecting socket to app.dominodatalab.com/54.70.76.25:443 with timeout 60000
+2016-10-16 02:40:16,124 CEST DEBUG SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2016-10-16 02:40:16,124 CEST DEBUG SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2016-10-16 02:40:16,124 CEST DEBUG SSLConnectionSocketFactory - Starting handshake
+2016-10-16 02:40:16,207 CEST DEBUG headers - http-outgoing-0 << HTTP/1.1 200 OK
+2016-10-16 02:40:16,208 CEST DEBUG headers - http-outgoing-0 << Server: nginx/1.7.12
+2016-10-16 02:40:16,208 CEST DEBUG headers - http-outgoing-0 << Date: Sun, 16 Oct 2016 00:40:36 GMT
+2016-10-16 02:40:16,208 CEST DEBUG headers - http-outgoing-0 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:16,208 CEST DEBUG headers - http-outgoing-0 << Transfer-Encoding: chunked
+2016-10-16 02:40:16,208 CEST DEBUG headers - http-outgoing-0 << Connection: keep-alive
+2016-10-16 02:40:16,209 CEST DEBUG headers - http-outgoing-0 << Play-Processing-Time: 3
+2016-10-16 02:40:16,209 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:16,211 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:16,211 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:16,212 CEST  INFO AnonymousS3SingleProjectBlobStore - Generated signed GET url: https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/163dbe91367eb43b532bdf7257d0c12f55fd85dd?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578496&Signature=C8yTV92c3PO6xpYH9hpWxUll1js%3D
+2016-10-16 02:40:16,212 CEST  INFO AnonymousS3SingleProjectBlobStore - Starting signed GET request
+2016-10-16 02:40:16,259 CEST DEBUG Jets3tProperties - s3service.https-only=true
+2016-10-16 02:40:16,259 CEST DEBUG Jets3tProperties - storage-service.internal-error-retry-max=5
+2016-10-16 02:40:16,259 CEST DEBUG Jets3tProperties - storage-service.apply-recommended-dns-caching-defaults=true
+2016-10-16 02:40:16,259 CEST DEBUG StorageService - Setting recommended DNS caching defaults
+2016-10-16 02:40:16,260 CEST DEBUG StorageService - Using DNS caching system settings: networkaddress.cache.ttl=300, networkaddress.cache.negative.ttl=1
+2016-10-16 02:40:16,262 CEST DEBUG Jets3tProperties - http.connection-manager.factory-class-name=org.jets3t.service.utils.RestUtils$ConnManagerFactory
+2016-10-16 02:40:16,262 CEST DEBUG Jets3tProperties - httpclient.connection-timeout-ms=60000
+2016-10-16 02:40:16,262 CEST DEBUG Jets3tProperties - httpclient.socket-timeout-ms=60000
+2016-10-16 02:40:16,262 CEST DEBUG Jets3tProperties - httpclient.stale-checking-enabled=true
+2016-10-16 02:40:16,262 CEST DEBUG Jets3tProperties - httpclient.useragent=null
+2016-10-16 02:40:16,265 CEST DEBUG RestUtils - Setting user agent string: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:16,265 CEST DEBUG Jets3tProperties - http.protocol.expect-continue=true
+2016-10-16 02:40:16,265 CEST DEBUG Jets3tProperties - httpclient.connection-manager-timeout=0
+2016-10-16 02:40:16,268 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:16,268 CEST DEBUG Jets3tProperties - httpclient.proxy-autodetect=true
+2016-10-16 02:40:16,268 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:16,269 CEST DEBUG PluginProxyUtil - About to attempt auto proxy detection under Java version:1.8.0_66-b18
+2016-10-16 02:40:16,269 CEST DEBUG PluginProxyUtil - Sun Plugin reported java version not 1.3.X, 1.4.X, 1.5.X or 1.6.X - trying failover detection...
+2016-10-16 02:40:16,269 CEST DEBUG PluginProxyUtil - Using failover proxy detection...
+2016-10-16 02:40:16,269 CEST DEBUG PluginProxyUtil - Plugin Proxy Config List Property:null
+2016-10-16 02:40:16,269 CEST DEBUG PluginProxyUtil - No configured plugin proxy list
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - s3service.default-storage-class=null
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - s3service.server-side-encryption=null
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - devpay.user-token=null
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - devpay.product-token=null
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - httpclient.requester-pays-buckets-enabled=false
+2016-10-16 02:40:16,269 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:16,269 CEST DEBUG RestStorageService - Performing GET request for 'https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/163dbe91367eb43b532bdf7257d0c12f55fd85dd?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578496&Signature=C8yTV92c3PO6xpYH9hpWxUll1js%3D', expecting response codes: [200]
+2016-10-16 02:40:16,270 CEST DEBUG RestStorageService - Headers: []
+2016-10-16 02:40:16,270 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:16,270 CEST DEBUG RestStorageService - Service has no Credential and is un-authenticated, skipping authorization
+2016-10-16 02:40:16,280 CEST DEBUG Jets3tProperties - httpclient.max-connections=20
+2016-10-16 02:40:16,280 CEST DEBUG Jets3tProperties - httpclient.max-connections-per-host=0
+2016-10-16 02:40:16,281 CEST DEBUG Jets3tProperties - httpclient.connection.ttl=-1
+2016-10-16 02:40:16,291 CEST DEBUG RestUtils$ThreadSafeConnManager - Get connection: {s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443, timeout = 0
+2016-10-16 02:40:16,292 CEST DEBUG ConnPoolByRoute - [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443] total kept alive: 0, total issued: 0, total allocated: 0 out of 20
+2016-10-16 02:40:16,292 CEST DEBUG ConnPoolByRoute - No free connections [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:16,292 CEST DEBUG ConnPoolByRoute - Available capacity: 20 out of 20 [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:16,292 CEST DEBUG ConnPoolByRoute - Creating new connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443]
+2016-10-16 02:40:16,304 CEST DEBUG SSLConnectionSocketFactory - Secure session established
+2016-10-16 02:40:16,305 CEST DEBUG SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+2016-10-16 02:40:16,305 CEST DEBUG SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2016-10-16 02:40:16,305 CEST DEBUG SSLConnectionSocketFactory -  peer principal: OU=PositiveSSL Multi-Domain, OU=Domain Control Validated
+2016-10-16 02:40:16,305 CEST DEBUG SSLConnectionSocketFactory -  peer alternative names: [*.dominodatalab.com, *.dominoup.com, dominodatalab.com, dominoup.com]
+2016-10-16 02:40:16,305 CEST DEBUG SSLConnectionSocketFactory -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2016-10-16 02:40:16,305 CEST DEBUG DefaultHttpClientConnectionOperator - Connection established 192.168.1.66:56540<->54.70.76.25:443
+2016-10-16 02:40:16,305 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 60000
+2016-10-16 02:40:16,305 CEST DEBUG MainClientExec - Executing request POST /blobs/signedGetUrl/da39a3ee5e6b4b0d3255bfef95601890afd80709 HTTP/1.1
+2016-10-16 02:40:16,305 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:16,305 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:16,305 CEST DEBUG headers - http-outgoing-1 >> POST /blobs/signedGetUrl/da39a3ee5e6b4b0d3255bfef95601890afd80709 HTTP/1.1
+2016-10-16 02:40:16,305 CEST DEBUG headers - http-outgoing-1 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:16,305 CEST DEBUG headers - http-outgoing-1 >> Content-Length: 0
+2016-10-16 02:40:16,306 CEST DEBUG headers - http-outgoing-1 >> Host: app.dominodatalab.com
+2016-10-16 02:40:16,306 CEST DEBUG headers - http-outgoing-1 >> Connection: Keep-Alive
+2016-10-16 02:40:16,306 CEST DEBUG headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:16,306 CEST DEBUG headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:16,351 CEST DEBUG DefaultClientConnectionOperator - Connecting to com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443
+2016-10-16 02:40:16,490 CEST DEBUG headers - http-outgoing-1 << HTTP/1.1 200 OK
+2016-10-16 02:40:16,490 CEST DEBUG headers - http-outgoing-1 << Server: nginx/1.7.12
+2016-10-16 02:40:16,491 CEST DEBUG headers - http-outgoing-1 << Date: Sun, 16 Oct 2016 00:40:37 GMT
+2016-10-16 02:40:16,491 CEST DEBUG headers - http-outgoing-1 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:16,491 CEST DEBUG headers - http-outgoing-1 << Transfer-Encoding: chunked
+2016-10-16 02:40:16,491 CEST DEBUG headers - http-outgoing-1 << Connection: keep-alive
+2016-10-16 02:40:16,491 CEST DEBUG headers - http-outgoing-1 << Play-Processing-Time: 3
+2016-10-16 02:40:16,491 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:16,493 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:16,493 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 2; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:16,493 CEST  INFO AnonymousS3SingleProjectBlobStore - Generated signed GET url: https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/da39a3ee5e6b4b0d3255bfef95601890afd80709?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578497&Signature=joFO%2FwgO%2Bz8ligEaOXgVG6%2FXy6M%3D
+2016-10-16 02:40:16,494 CEST  INFO AnonymousS3SingleProjectBlobStore - Starting signed GET request
+2016-10-16 02:40:16,495 CEST DEBUG Jets3tProperties - s3service.https-only=true
+2016-10-16 02:40:16,495 CEST DEBUG Jets3tProperties - storage-service.internal-error-retry-max=5
+2016-10-16 02:40:16,495 CEST DEBUG Jets3tProperties - storage-service.apply-recommended-dns-caching-defaults=true
+2016-10-16 02:40:16,495 CEST DEBUG StorageService - Setting recommended DNS caching defaults
+2016-10-16 02:40:16,496 CEST DEBUG StorageService - Using DNS caching system settings: networkaddress.cache.ttl=300, networkaddress.cache.negative.ttl=1
+2016-10-16 02:40:16,496 CEST DEBUG Jets3tProperties - http.connection-manager.factory-class-name=org.jets3t.service.utils.RestUtils$ConnManagerFactory
+2016-10-16 02:40:16,496 CEST DEBUG Jets3tProperties - httpclient.connection-timeout-ms=60000
+2016-10-16 02:40:16,496 CEST DEBUG Jets3tProperties - httpclient.socket-timeout-ms=60000
+2016-10-16 02:40:16,496 CEST DEBUG Jets3tProperties - httpclient.stale-checking-enabled=true
+2016-10-16 02:40:16,496 CEST DEBUG Jets3tProperties - httpclient.useragent=null
+2016-10-16 02:40:16,496 CEST DEBUG RestUtils - Setting user agent string: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:16,497 CEST DEBUG Jets3tProperties - http.protocol.expect-continue=true
+2016-10-16 02:40:16,497 CEST DEBUG Jets3tProperties - httpclient.connection-manager-timeout=0
+2016-10-16 02:40:16,497 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:16,497 CEST DEBUG Jets3tProperties - httpclient.proxy-autodetect=true
+2016-10-16 02:40:16,497 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:16,498 CEST DEBUG PluginProxyUtil - About to attempt auto proxy detection under Java version:1.8.0_66-b18
+2016-10-16 02:40:16,498 CEST DEBUG PluginProxyUtil - Sun Plugin reported java version not 1.3.X, 1.4.X, 1.5.X or 1.6.X - trying failover detection...
+2016-10-16 02:40:16,498 CEST DEBUG PluginProxyUtil - Using failover proxy detection...
+2016-10-16 02:40:16,498 CEST DEBUG PluginProxyUtil - Plugin Proxy Config List Property:null
+2016-10-16 02:40:16,498 CEST DEBUG PluginProxyUtil - No configured plugin proxy list
+2016-10-16 02:40:16,498 CEST DEBUG Jets3tProperties - s3service.default-storage-class=null
+2016-10-16 02:40:16,498 CEST DEBUG Jets3tProperties - s3service.server-side-encryption=null
+2016-10-16 02:40:16,499 CEST DEBUG Jets3tProperties - devpay.user-token=null
+2016-10-16 02:40:16,499 CEST DEBUG Jets3tProperties - devpay.product-token=null
+2016-10-16 02:40:16,499 CEST DEBUG Jets3tProperties - httpclient.requester-pays-buckets-enabled=false
+2016-10-16 02:40:16,499 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:16,499 CEST DEBUG RestStorageService - Performing GET request for 'https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/da39a3ee5e6b4b0d3255bfef95601890afd80709?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578497&Signature=joFO%2FwgO%2Bz8ligEaOXgVG6%2FXy6M%3D', expecting response codes: [200]
+2016-10-16 02:40:16,500 CEST DEBUG RestStorageService - Headers: []
+2016-10-16 02:40:16,500 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:16,500 CEST DEBUG RestStorageService - Service has no Credential and is un-authenticated, skipping authorization
+2016-10-16 02:40:16,505 CEST DEBUG Jets3tProperties - httpclient.max-connections=20
+2016-10-16 02:40:16,505 CEST DEBUG Jets3tProperties - httpclient.max-connections-per-host=0
+2016-10-16 02:40:16,505 CEST DEBUG Jets3tProperties - httpclient.connection.ttl=-1
+2016-10-16 02:40:16,506 CEST DEBUG RestUtils$ThreadSafeConnManager - Get connection: {s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443, timeout = 0
+2016-10-16 02:40:16,507 CEST DEBUG ConnPoolByRoute - [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443] total kept alive: 0, total issued: 0, total allocated: 0 out of 20
+2016-10-16 02:40:16,507 CEST DEBUG ConnPoolByRoute - No free connections [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:16,507 CEST DEBUG ConnPoolByRoute - Available capacity: 20 out of 20 [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:16,507 CEST DEBUG ConnPoolByRoute - Creating new connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443]
+2016-10-16 02:40:16,509 CEST DEBUG DefaultClientConnectionOperator - Connecting to com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443
+2016-10-16 02:40:17,122 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:17,122 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:17,122 CEST DEBUG RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2016-10-16 02:40:17,123 CEST DEBUG RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:17,123 CEST DEBUG DefaultHttpClient - Attempt 1 to execute request
+2016-10-16 02:40:17,123 CEST DEBUG DefaultClientConnection - Sending request: GET /163dbe91367eb43b532bdf7257d0c12f55fd85dd?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578496&Signature=C8yTV92c3PO6xpYH9hpWxUll1js%3D HTTP/1.1
+2016-10-16 02:40:17,123 CEST DEBUG headers - >> GET /163dbe91367eb43b532bdf7257d0c12f55fd85dd?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578496&Signature=C8yTV92c3PO6xpYH9hpWxUll1js%3D HTTP/1.1
+2016-10-16 02:40:17,124 CEST DEBUG headers - >> Host: com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com
+2016-10-16 02:40:17,124 CEST DEBUG headers - >> Connection: Keep-Alive
+2016-10-16 02:40:17,124 CEST DEBUG headers - >> User-Agent: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:17,271 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:17,272 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:17,272 CEST DEBUG RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2016-10-16 02:40:17,273 CEST DEBUG RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:17,273 CEST DEBUG DefaultHttpClient - Attempt 1 to execute request
+2016-10-16 02:40:17,274 CEST DEBUG DefaultClientConnection - Sending request: GET /da39a3ee5e6b4b0d3255bfef95601890afd80709?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578497&Signature=joFO%2FwgO%2Bz8ligEaOXgVG6%2FXy6M%3D HTTP/1.1
+2016-10-16 02:40:17,274 CEST DEBUG headers - >> GET /da39a3ee5e6b4b0d3255bfef95601890afd80709?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578497&Signature=joFO%2FwgO%2Bz8ligEaOXgVG6%2FXy6M%3D HTTP/1.1
+2016-10-16 02:40:17,274 CEST DEBUG headers - >> Host: com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com
+2016-10-16 02:40:17,274 CEST DEBUG headers - >> Connection: Keep-Alive
+2016-10-16 02:40:17,275 CEST DEBUG headers - >> User-Agent: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:17,323 CEST DEBUG DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2016-10-16 02:40:17,324 CEST DEBUG headers - << HTTP/1.1 200 OK
+2016-10-16 02:40:17,324 CEST DEBUG headers - << x-amz-id-2: hGpLW/Oh4wLzL2XelS1O9BGQJpnZTyllyaVrZN/zdshCU2bb+Na/Gx+Xu+dQgAKXCyZ2zWC8/gM=
+2016-10-16 02:40:17,324 CEST DEBUG headers - << x-amz-request-id: 12444A0F7D926794
+2016-10-16 02:40:17,324 CEST DEBUG headers - << Date: Sun, 16 Oct 2016 00:40:38 GMT
+2016-10-16 02:40:17,324 CEST DEBUG headers - << Last-Modified: Sun, 16 Oct 2016 00:38:40 GMT
+2016-10-16 02:40:17,324 CEST DEBUG headers - << ETag: "3251064ec746a1036e893bbba64e2c87"
+2016-10-16 02:40:17,325 CEST DEBUG headers - << x-amz-server-side-encryption: AES256
+2016-10-16 02:40:17,325 CEST DEBUG headers - << Content-Encoding: gzip
+2016-10-16 02:40:17,325 CEST DEBUG headers - << x-amz-meta-domino-original-blob-length: 352
+2016-10-16 02:40:17,325 CEST DEBUG headers - << Accept-Ranges: bytes
+2016-10-16 02:40:17,325 CEST DEBUG headers - << Content-Type: application/x-gzip
+2016-10-16 02:40:17,325 CEST DEBUG headers - << Content-Length: 245
+2016-10-16 02:40:17,325 CEST DEBUG headers - << Server: AmazonS3
+2016-10-16 02:40:17,326 CEST DEBUG DefaultHttpClient - Connection can be kept alive indefinitely
+2016-10-16 02:40:17,341 CEST DEBUG RestStorageService - Response for 'GET'. Content-Type: application/x-gzip, Headers: [x-amz-id-2: hGpLW/Oh4wLzL2XelS1O9BGQJpnZTyllyaVrZN/zdshCU2bb+Na/Gx+Xu+dQgAKXCyZ2zWC8/gM=, x-amz-request-id: 12444A0F7D926794, Date: Sun, 16 Oct 2016 00:40:38 GMT, Last-Modified: Sun, 16 Oct 2016 00:38:40 GMT, ETag: "3251064ec746a1036e893bbba64e2c87", x-amz-server-side-encryption: AES256, Content-Encoding: gzip, x-amz-meta-domino-original-blob-length: 352, Accept-Ranges: bytes, Content-Type: application/x-gzip, Content-Length: 245, Server: AmazonS3]
+2016-10-16 02:40:17,341 CEST DEBUG RestStorageService - Response entity: org.apache.http.conn.BasicManagedEntity@6adf5c
+2016-10-16 02:40:17,342 CEST DEBUG RestStorageService - Entity length: 245
+2016-10-16 02:40:17,342 CEST DEBUG RestStorageService - Received response code 200; matches one of expected set ([200])? true
+2016-10-16 02:40:17,348 CEST DEBUG ServiceUtils - Processing REST metadata items
+2016-10-16 02:40:17,348 CEST DEBUG ServiceUtils - Ignoring metadata item: Server=AmazonS3
+2016-10-16 02:40:17,348 CEST DEBUG ServiceUtils - Removed user metadata header prefix x-amz-meta- from key: x-amz-meta-domino-original-blob-length=>domino-original-blob-length
+2016-10-16 02:40:17,348 CEST DEBUG ServiceUtils - Parsing date string 'Sun, 16 Oct 2016 00:38:40 GMT' into Date object for key: Last-Modified
+2016-10-16 02:40:17,352 CEST DEBUG ServiceUtils - Leaving header item unchanged: Last-Modified=Sun Oct 16 02:38:40 CEST 2016
+2016-10-16 02:40:17,353 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-server-side-encryption=>server-side-encryption
+2016-10-16 02:40:17,353 CEST DEBUG ServiceUtils - Parsing date string 'Sun, 16 Oct 2016 00:40:38 GMT' into Date object for key: Date
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Leaving header item unchanged: Date=Sun Oct 16 02:40:38 CEST 2016
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Ignoring metadata item: Accept-Ranges=bytes
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Leaving header item unchanged: ETag="3251064ec746a1036e893bbba64e2c87"
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Encoding=gzip
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-request-id=>request-id
+2016-10-16 02:40:17,354 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-id-2=>id-2
+2016-10-16 02:40:17,359 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Length=245
+2016-10-16 02:40:17,360 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Type=application/x-gzip
+2016-10-16 02:40:17,372 CEST TRACE MultiThreadedBlobStoreSynchronizer - Downloading blob Sha1(163dbe91367eb43b532bdf7257d0c12f55fd85dd) of size 352
+2016-10-16 02:40:17,381 CEST DEBUG RestUtils$ThreadSafeConnManager - Released connection is reusable.
+2016-10-16 02:40:17,382 CEST DEBUG ConnPoolByRoute - Releasing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:17,382 CEST DEBUG ConnPoolByRoute - Pooling connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]; keep alive indefinitely
+2016-10-16 02:40:17,382 CEST DEBUG ConnPoolByRoute - Notifying no-one, there are no waiting threads
+2016-10-16 02:40:17,382 CEST DEBUG HttpMethodReleaseInputStream - Released HttpMethod as its response data stream is closed
+2016-10-16 02:40:17,382 CEST TRACE MultiThreadedBlobStoreSynchronizer - Downloaded blob Sha1(163dbe91367eb43b532bdf7257d0c12f55fd85dd) of size 352 in 10 ms
+2016-10-16 02:40:17,457 CEST DEBUG DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2016-10-16 02:40:17,457 CEST DEBUG headers - << HTTP/1.1 200 OK
+2016-10-16 02:40:17,457 CEST DEBUG headers - << x-amz-id-2: EQzi/KbC57L93pCU0UN7A81dbgM1faXOjlqxqW0LiwSMmIlTTKP9WNAJsoarWR1UM0AphXQBolI=
+2016-10-16 02:40:17,457 CEST DEBUG headers - << x-amz-request-id: CB1AF1137CE2D631
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Date: Sun, 16 Oct 2016 00:40:39 GMT
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Last-Modified: Sun, 16 Oct 2016 00:36:46 GMT
+2016-10-16 02:40:17,458 CEST DEBUG headers - << ETag: "3970e82605c7d109bb348fc94e9eecc0"
+2016-10-16 02:40:17,458 CEST DEBUG headers - << x-amz-server-side-encryption: AES256
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Content-Encoding: gzip
+2016-10-16 02:40:17,458 CEST DEBUG headers - << x-amz-meta-domino-original-blob-length: 0
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Accept-Ranges: bytes
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Content-Type: application/x-gzip
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Content-Length: 20
+2016-10-16 02:40:17,458 CEST DEBUG headers - << Server: AmazonS3
+2016-10-16 02:40:17,459 CEST DEBUG DefaultHttpClient - Connection can be kept alive indefinitely
+2016-10-16 02:40:17,459 CEST DEBUG RestStorageService - Response for 'GET'. Content-Type: application/x-gzip, Headers: [x-amz-id-2: EQzi/KbC57L93pCU0UN7A81dbgM1faXOjlqxqW0LiwSMmIlTTKP9WNAJsoarWR1UM0AphXQBolI=, x-amz-request-id: CB1AF1137CE2D631, Date: Sun, 16 Oct 2016 00:40:39 GMT, Last-Modified: Sun, 16 Oct 2016 00:36:46 GMT, ETag: "3970e82605c7d109bb348fc94e9eecc0", x-amz-server-side-encryption: AES256, Content-Encoding: gzip, x-amz-meta-domino-original-blob-length: 0, Accept-Ranges: bytes, Content-Type: application/x-gzip, Content-Length: 20, Server: AmazonS3]
+2016-10-16 02:40:17,459 CEST DEBUG RestStorageService - Response entity: org.apache.http.conn.BasicManagedEntity@ef8d36
+2016-10-16 02:40:17,460 CEST DEBUG RestStorageService - Entity length: 20
+2016-10-16 02:40:17,460 CEST DEBUG RestStorageService - Received response code 200; matches one of expected set ([200])? true
+2016-10-16 02:40:17,460 CEST DEBUG ServiceUtils - Processing REST metadata items
+2016-10-16 02:40:17,460 CEST DEBUG ServiceUtils - Ignoring metadata item: Server=AmazonS3
+2016-10-16 02:40:17,460 CEST DEBUG ServiceUtils - Removed user metadata header prefix x-amz-meta- from key: x-amz-meta-domino-original-blob-length=>domino-original-blob-length
+2016-10-16 02:40:17,461 CEST DEBUG ServiceUtils - Parsing date string 'Sun, 16 Oct 2016 00:36:46 GMT' into Date object for key: Last-Modified
+2016-10-16 02:40:17,461 CEST DEBUG ServiceUtils - Leaving header item unchanged: Last-Modified=Sun Oct 16 02:36:46 CEST 2016
+2016-10-16 02:40:17,461 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-server-side-encryption=>server-side-encryption
+2016-10-16 02:40:17,462 CEST DEBUG ServiceUtils - Parsing date string 'Sun, 16 Oct 2016 00:40:39 GMT' into Date object for key: Date
+2016-10-16 02:40:17,462 CEST DEBUG ServiceUtils - Leaving header item unchanged: Date=Sun Oct 16 02:40:39 CEST 2016
+2016-10-16 02:40:17,462 CEST DEBUG ServiceUtils - Ignoring metadata item: Accept-Ranges=bytes
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Leaving header item unchanged: ETag="3970e82605c7d109bb348fc94e9eecc0"
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Encoding=gzip
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-request-id=>request-id
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-id-2=>id-2
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Length=20
+2016-10-16 02:40:17,463 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Type=application/x-gzip
+2016-10-16 02:40:17,469 CEST TRACE MultiThreadedBlobStoreSynchronizer - Downloading blob Sha1(da39a3ee5e6b4b0d3255bfef95601890afd80709) of size 0
+2016-10-16 02:40:17,475 CEST DEBUG RestUtils$ThreadSafeConnManager - Released connection is reusable.
+2016-10-16 02:40:17,476 CEST DEBUG ConnPoolByRoute - Releasing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:17,476 CEST DEBUG ConnPoolByRoute - Pooling connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]; keep alive indefinitely
+2016-10-16 02:40:17,476 CEST DEBUG ConnPoolByRoute - Notifying no-one, there are no waiting threads
+2016-10-16 02:40:17,476 CEST DEBUG HttpMethodReleaseInputStream - Released HttpMethod as its response data stream is closed
+2016-10-16 02:40:17,477 CEST TRACE MultiThreadedBlobStoreSynchronizer - Downloaded blob Sha1(da39a3ee5e6b4b0d3255bfef95601890afd80709) of size 0 in 8 ms
+2016-10-16 02:40:17,484 CEST TRACE LocalFileDirectory - Starting local data directory processing...
+2016-10-16 02:40:17,485 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\population_aggregated_low_Res_low_res.png up to date.,None)...
+2016-10-16 02:40:17,486 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\population_aggregated_low_Res_low_res.png up to date.,None) complete.
+2016-10-16 02:40:17,487 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\8.png up to date.,None)...
+2016-10-16 02:40:17,487 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\8.png up to date.,None) complete.
+2016-10-16 02:40:17,487 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\4.png up to date.,None)...
+2016-10-16 02:40:17,487 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\4.png up to date.,None) complete.
+2016-10-16 02:40:17,488 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.,None)...
+2016-10-16 02:40:17,492 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,492 CEST DEBUG RestUtils$ThreadSafeConnManager - Shutting down
+2016-10-16 02:40:17,492 CEST DEBUG ConnPoolByRoute - Closing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:17,492 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.,None)...
+2016-10-16 02:40:17,493 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,493 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\1.png up to date.,None)...
+2016-10-16 02:40:17,493 CEST DEBUG DefaultClientConnection - Connection 0.0.0.0:56541<->54.231.185.25:443 closed
+2016-10-16 02:40:17,493 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\1.png up to date.,None) complete.
+2016-10-16 02:40:17,495 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.,None)...
+2016-10-16 02:40:17,495 CEST DEBUG RestUtils$ThreadSafeConnManager - Shutting down
+2016-10-16 02:40:17,495 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.,None) complete.
+2016-10-16 02:40:17,495 CEST DEBUG ConnPoolByRoute - Closing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:17,495 CEST DEBUG DefaultClientConnection - Connection 0.0.0.0:56542<->54.231.185.25:443 closed
+2016-10-16 02:40:17,495 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Albopictus_v2.gif up to date.,None)...
+2016-10-16 02:40:17,495 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Albopictus_v2.gif up to date.,None) complete.
+2016-10-16 02:40:17,496 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.,None)...
+2016-10-16 02:40:17,496 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,496 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\10.png up to date.,None)...
+2016-10-16 02:40:17,496 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\10.png up to date.,None) complete.
+2016-10-16 02:40:17,496 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.,None)...
+2016-10-16 02:40:17,497 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,497 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\10.png up to date.,None)...
+2016-10-16 02:40:17,497 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\10.png up to date.,None) complete.
+2016-10-16 02:40:17,497 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\1.png up to date.,None)...
+2016-10-16 02:40:17,498 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\1.png up to date.,None) complete.
+2016-10-16 02:40:17,498 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\3.png up to date.,None)...
+2016-10-16 02:40:17,498 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\3.png up to date.,None) complete.
+2016-10-16 02:40:17,498 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\11.png up to date.,None)...
+2016-10-16 02:40:17,499 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\11.png up to date.,None) complete.
+2016-10-16 02:40:17,499 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\read_input up to date.,None)...
+2016-10-16 02:40:17,499 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\read_input up to date.,None) complete.
+2016-10-16 02:40:17,499 CEST TRACE LocalFileDirectory - Processing update FileUpdate(- Deleting file dominostats.json,None)...
+2016-10-16 02:40:17,592 CEST TRACE LocalFileDirectory - Processing update FileUpdate(- Deleting file dominostats.json,None) complete.
+2016-10-16 02:40:17,592 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.,None)...
+2016-10-16 02:40:17,592 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,592 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\11.png up to date.,None)...
+2016-10-16 02:40:17,592 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\11.png up to date.,None) complete.
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\12.png up to date.,None)...
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\12.png up to date.,None) complete.
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.,None)...
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.,None) complete.
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\5.png up to date.,None)...
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\5.png up to date.,None) complete.
+2016-10-16 02:40:17,593 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\population_aggregated_low_Res_hig_res.png up to date.,None)...
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\population_aggregated_low_Res_hig_res.png up to date.,None) complete.
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\6.png up to date.,None)...
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\6.png up to date.,None) complete.
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\11.png up to date.,None)...
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\11.png up to date.,None) complete.
+2016-10-16 02:40:17,594 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\12.png up to date.,None)...
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\12.png up to date.,None) complete.
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Env_suitability_July_low_res.png up to date.,None)...
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Env_suitability_July_low_res.png up to date.,None) complete.
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File .dominoresults up to date.,None)...
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File .dominoresults up to date.,None) complete.
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\5.png up to date.,None)...
+2016-10-16 02:40:17,595 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\5.png up to date.,None) complete.
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\10.png up to date.,None)...
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\10.png up to date.,None) complete.
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\5.png up to date.,None)...
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\5.png up to date.,None) complete.
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.,None)...
+2016-10-16 02:40:17,596 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,597 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\6.png up to date.,None)...
+2016-10-16 02:40:17,597 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\6.png up to date.,None) complete.
+2016-10-16 02:40:17,597 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 06_Preprocessing Part III_monthly flights.ipynb up to date.,None)...
+2016-10-16 02:40:17,597 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File 06_Preprocessing Part III_monthly flights.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,597 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Aegypti_v2.gif up to date.,None)...
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Aegypti_v2.gif up to date.,None) complete.
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.,None)...
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.,None) complete.
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File Run 2 regions.ipynb up to date.,None)...
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File Run 2 regions.ipynb up to date.,None) complete.
+2016-10-16 02:40:17,598 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\read_input~ up to date.,None)...
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\read_input~ up to date.,None) complete.
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\2.png up to date.,None)...
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\2.png up to date.,None) complete.
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Env_suitability_July_hig_res.png up to date.,None)...
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Env_suitability_July_hig_res.png up to date.,None) complete.
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File .dominoignore up to date.,None)...
+2016-10-16 02:40:17,599 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File .dominoignore up to date.,None) complete.
+2016-10-16 02:40:17,600 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Both_v2.gif up to date.,None)...
+2016-10-16 02:40:17,600 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Animation_Both_v2.gif up to date.,None) complete.
+2016-10-16 02:40:17,600 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Continents_worldmap_hig_res.png up to date.,None)...
+2016-10-16 02:40:17,600 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Continents_worldmap_hig_res.png up to date.,None) complete.
+2016-10-16 02:40:17,600 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\9.png up to date.,None)...
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\9.png up to date.,None) complete.
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\4.png up to date.,None)...
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\4.png up to date.,None) complete.
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Countries_worldmap_low_res.png up to date.,None)...
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Countries_worldmap_low_res.png up to date.,None) complete.
+2016-10-16 02:40:17,601 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File requirements.txt up to date.,Some(x Modifying file requirements.txt))...
+2016-10-16 02:40:17,602 CEST DEBUG LocalFileDirectory - Update FileUpdate(. File requirements.txt up to date.,Some(x Modifying file requirements.txt)) is in conflict.
+2016-10-16 02:40:17,604 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File requirements.txt up to date.,Some(x Modifying file requirements.txt)) complete.
+2016-10-16 02:40:17,604 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\3.png up to date.,None)...
+2016-10-16 02:40:17,604 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\3.png up to date.,None) complete.
+2016-10-16 02:40:17,604 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\2.png up to date.,None)...
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\2.png up to date.,None) complete.
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\12.png up to date.,None)...
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\12.png up to date.,None) complete.
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\share_poor_aggregated_low_Res_low_res.png up to date.,None)...
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\share_poor_aggregated_low_Res_low_res.png up to date.,None) complete.
+2016-10-16 02:40:17,605 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\8.png up to date.,None)...
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\8.png up to date.,None) complete.
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\8.png up to date.,None)...
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\8.png up to date.,None) complete.
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\7.png up to date.,None)...
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\7.png up to date.,None) complete.
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.,None)...
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.,None) complete.
+2016-10-16 02:40:17,606 CEST TRACE LocalFileDirectory - Processing update FileUpdate(+ Adding file results\stdout.txt,None)...
+2016-10-16 02:40:17,607 CEST TRACE LocalFileDirectory - Processing update FileUpdate(+ Adding file results\stdout.txt,None) complete.
+2016-10-16 02:40:17,607 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.,None)...
+2016-10-16 02:40:17,607 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.,None) complete.
+2016-10-16 02:40:17,607 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\1.png up to date.,None)...
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\1.png up to date.,None) complete.
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\4.png up to date.,None)...
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\4.png up to date.,None) complete.
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\9.png up to date.,None)...
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\9.png up to date.,None) complete.
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\9.png up to date.,None)...
+2016-10-16 02:40:17,608 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\9.png up to date.,None) complete.
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\3.png up to date.,None)...
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\3.png up to date.,None) complete.
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\6.png up to date.,None)...
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\6.png up to date.,None) complete.
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\7.png up to date.,None)...
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Albopictus\7.png up to date.,None) complete.
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Countries_worldmap_hig_res.png up to date.,None)...
+2016-10-16 02:40:17,609 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Countries_worldmap_hig_res.png up to date.,None) complete.
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.,None)...
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.,None) complete.
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\2.png up to date.,None)...
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Both\2.png up to date.,None) complete.
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\7.png up to date.,None)...
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\img_gif_Aegypti\7.png up to date.,None) complete.
+2016-10-16 02:40:17,610 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Continents_worldmap_low_res.png up to date.,None)...
+2016-10-16 02:40:17,611 CEST TRACE LocalFileDirectory - Processing update FileUpdate(. File figs\Continents_worldmap_low_res.png up to date.,None) complete.
+2016-10-16 02:40:17,611 CEST DEBUG LocalFileDirectory - Local data directory processing complete.
+2016-10-16 02:40:17,612 CEST DEBUG FileSyncClient - Local data directory processing complete.
+2016-10-16 02:40:17,612 CEST DEBUG FileSyncClient - Clearing local blob directory
+2016-10-16 02:40:17,613 CEST DEBUG FileSyncClient - Download complete.
+2016-10-16 02:40:17,620 CEST  INFO ProjectControllerProxy - getting git host from https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic
+2016-10-16 02:40:17,620 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:17,620 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:17,620 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:17,620 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 2; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:17,620 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:17,620 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 60000
+2016-10-16 02:40:17,621 CEST DEBUG MainClientExec - Executing request GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:17,621 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:17,621 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> GET /gitRepoUri/philippschw/Modeling_and_Simulating_Zika_epidemic HTTP/1.1
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> Host: app.dominodatalab.com
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> Connection: Keep-Alive
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:17,621 CEST DEBUG headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:17,794 CEST DEBUG headers - http-outgoing-1 << HTTP/1.1 200 OK
+2016-10-16 02:40:17,794 CEST DEBUG headers - http-outgoing-1 << Server: nginx/1.7.12
+2016-10-16 02:40:17,795 CEST DEBUG headers - http-outgoing-1 << Date: Sun, 16 Oct 2016 00:40:38 GMT
+2016-10-16 02:40:17,795 CEST DEBUG headers - http-outgoing-1 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:17,795 CEST DEBUG headers - http-outgoing-1 << Transfer-Encoding: chunked
+2016-10-16 02:40:17,795 CEST DEBUG headers - http-outgoing-1 << Connection: keep-alive
+2016-10-16 02:40:17,795 CEST DEBUG headers - http-outgoing-1 << Play-Processing-Time: 10
+2016-10-16 02:40:17,795 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:17,800 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:17,801 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 2; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:17,801 CEST DEBUG ProjectControllerProxy - response from server: https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git
+2016-10-16 02:40:17,802 CEST  INFO CLIFileSyncClient - checking whether remote (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git) needs to be upgraded to match new desired url (https://git.dominoup.com/projectrepos/5802/5802c9d83174ec708e65403d.git)
+2016-10-16 02:40:17,803 CEST  INFO CLIFileSyncClient - Running in cloud mode, so using AnonymousS3BlobStore
+2016-10-16 02:40:17,911 CEST TRACE FileSyncClient - Starting upload...
+2016-10-16 02:40:17,954 CEST TRACE FileStructureRepo - Staging structure. Current branch = master, head commit ID = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]).
+2016-10-16 02:40:17,980 CEST DEBUG FileStructureRepo - Staging structure complete. Head advanced to commit ID = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]).
+2016-10-16 02:40:17,980 CEST TRACE FileStructureRepoSynchronizer - Upload starting...
+2016-10-16 02:40:17,990 CEST TRACE FileStructureRepoSynchronizer - Asserting repo is safe to operate.  repo state = SAFE, isClean = true, isSafe = true, currentBranch = master.
+2016-10-16 02:40:18,005 CEST DEBUG FileStructureRepoSynchronizer - Local paths:
+	figs\img_gif_Albopictus\6.png -> FileSignature(1476295886000,199702,Sha1(514508da4b7fe5fbd1ae3dc0d4d91230033d68c3))
+	figs\Countries_worldmap_hig_res.png -> FileSignature(1476313056000,1585961,Sha1(696a887a627e942c8b00df49c1f65547f0e81148))
+	figs\Animation_Both_v2.gif -> FileSignature(1476296019000,813689,Sha1(facda755b866d640e1c8baa045f165f34cec4a5c))
+	figs\img_gif_Both\6.png -> FileSignature(1476295969000,200418,Sha1(7531e12ea40b3c2b85bd52bac85857892cb76960))
+	figs\Animation_Aegypti_v2.gif -> FileSignature(1476296009000,777640,Sha1(f6bd9a70044bb9cf979e1e4aae568298965cffb6))
+	figs\img_gif_Albopictus\3.png -> FileSignature(1476295873000,198836,Sha1(e9141b7f4b87a5e5e111a1f2ad04caf1cbdc7013))
+	figs\img_gif_Albopictus\12.png -> FileSignature(1476295927000,200459,Sha1(072fd886c3315d23c7d3a09f43bb8ababf7aa561))
+	figs\img_gif_Aegypti\5.png -> FileSignature(1476295806000,199647,Sha1(5d864420df7eb2fafd7d3ac4783f960de5b50de8))
+	figs\Countries_worldmap_low_res.png -> FileSignature(1476313047000,225114,Sha1(a2546cf6c9c91b476d9ad5f73e29e12582d6c66e))
+	figs\Animation_Albopictus_v2.gif -> FileSignature(1476296014000,793837,Sha1(652b91bcf2dcba2b40c4d3e10e6058010ea0f6ec))
+	Run 2 regions.ipynb -> FileSignature(1476577139000,25391,Sha1(f1cbe836013cd420ca300609b3b9e3d8f45348b4))
+	figs\img_gif_Aegypti\10.png -> FileSignature(1476295840000,200511,Sha1(1645b8b5dd544698e869ecede8eb2b1d42604acc))
+	02_Cluster similiar regions & add Worldbank data.ipynb -> FileSignature(1476438133000,35317,Sha1(7628fb79ba7c4afb10d96ff0b9e01ae58a2a4552))
+	figs\img_gif_Both\3.png -> FileSignature(1476295947000,199378,Sha1(e6f45d8946bc124efb115f0008cf63ab08c060cb))
+	input_data_simulation\geojson\gdf_model_elements.geojson -> FileSignature(1476437040000,25333832,Sha1(a66a12ee349ea41fb32a85c6d146aa55aa15ebfe))
+	figs\img_gif_Both\5.png -> FileSignature(1476295961000,200182,Sha1(4d257c090170eea2d13cab8ee6764249d4fe2ab8))
+	figs\img_gif_Albopictus\11.png -> FileSignature(1476295920000,200870,Sha1(a297906dab2e3a76d8b4c3ecaf223e184d4abca9))
+	figs\img_gif_Aegypti\7.png -> FileSignature(1476295819000,200011,Sha1(a6ea7f0746773c2a9610fea6dde839d2dc48b37c))
+	results\stdout.txt -> FileSignature(1476578372000,0,Sha1(da39a3ee5e6b4b0d3255bfef95601890afd80709))
+	.dominoignore -> FileSignature(1475278162000,538,Sha1(ac5546165f3b05a1732fef59bc841c3fc2d5c33f))
+	figs\img_gif_Both\8.png -> FileSignature(1476295981000,202284,Sha1(3ce7388718ef779cd427fd224715b9816458f5bc))
+	.dominoresults -> FileSignature(1455506055000,313,Sha1(21dd498c2501c732b021ce2f28133e8c6d108f75))
+	figs\Continents_worldmap_hig_res.png -> FileSignature(1476313072000,1577532,Sha1(2550cc0800c883254965abc7d71f593f2fa8ca68))
+	figs\img_gif_Albopictus\2.png -> FileSignature(1476295867000,199084,Sha1(a8a735884726fa61dd8e06c6acdaf9ada6751932))
+	figs\Env_suitability_July_hig_res.png -> FileSignature(1476313007000,1438419,Sha1(f93ce27c8dbf3962fe0c499a96a2f99c40b1d27d))
+	figs\share_poor_aggregated_low_Res_hig_res.png -> FileSignature(1476313023000,1442031,Sha1(fedd174dba162b51dc4fea6c5c59b4658366276a))
+	figs\img_gif_Aegypti\11.png -> FileSignature(1476295849000,199927,Sha1(5528934f786c61c02d3d14def5821e4498a72c11))
+	input_data_simulation\csv_files\monthly_FlightData.csv -> FileSignature(1476437335000,16318219,Sha1(caff1c3c99ba2abba812456c73d78bba054116d4))
+	figs\img_gif_Both\9.png -> FileSignature(1476295986000,202807,Sha1(3ac335d5499f58d50628fa7e9488ad0bb692ea26))
+	figs\img_gif_Aegypti\4.png -> FileSignature(1476295800000,198841,Sha1(3c40c4977ffa6864efcd154ee60f7a5e6cb5da2a))
+	figs\img_gif_Albopictus\1.png -> FileSignature(1476295861000,199166,Sha1(32701f686923cbade55089de3b830bb36f9f2e9d))
+	figs\img_gif_Both\10.png -> FileSignature(1476295993000,202288,Sha1(4e13d0d501e28118e05066a30169166db252a6ac))
+	06_Preprocessing Part III_monthly flights.ipynb -> FileSignature(1476437359000,2521925,Sha1(3f719331c5f43556a41f4719c20aec572744bc83))
+	figs\Env_suitability_July_low_res.png -> FileSignature(1476312999000,205397,Sha1(b9c038a8f2a7d0ddadc24dad3bab5e62d214d3cc))
+	figs\img_gif_Albopictus\9.png -> FileSignature(1476295908000,202176,Sha1(3935d222600e81ccb4b849528942629df0ff62c4))
+	figs\img_gif_Aegypti\12.png -> FileSignature(1476295853000,199218,Sha1(fbad0762b4d01e45ed78381f964bedb96e9beaaa))
+	figs\img_gif_Albopictus\7.png -> FileSignature(1476295892000,200659,Sha1(4add832c9eaba7c014bc82e3b8d09f27ff020b51))
+	figs\img_gif_Both\1.png -> FileSignature(1476295936000,199546,Sha1(e7f0b678e98356b2d3f80bb9dbbfd40f74342fcb))
+	figs\img_gif_Aegypti\9.png -> FileSignature(1476295833000,200793,Sha1(4e7a165ef40bcb2a4ef3df5cc511a1586d4b296f))
+	00_Installed_Python_Modules_and_Environment_Setup.ipynb -> FileSignature(1476437532000,18819,Sha1(57c3b0387c34d53253770c9085e1c7d47d2c665e))
+	input_data_simulation\csv_files\Env_suitability_monthly.csv -> FileSignature(1476367380000,331001,Sha1(0a09106617bfbb997f1e96940503f1dd20c20abd))
+	figs\Continents_worldmap_low_res.png -> FileSignature(1476313065000,223686,Sha1(532b5f6c3e9d3984a992333bc59654c31f1b5ebf))
+	figs\img_gif_Aegypti\8.png -> FileSignature(1476295827000,200742,Sha1(2f13ac5a978f91dbfdbdda4c7814ded21ae40c85))
+	figs\img_gif_Both\4.png -> FileSignature(1476295955000,199536,Sha1(b370c08074ae6885e9c0b0390ea29f2228af8546))
+	figs\img_gif_Aegypti\2.png -> FileSignature(1476295786000,198725,Sha1(101d0977a21f573a3f7b3dc8238b01d52c25fa6e))
+	input_data_simulation\csv_files\adjacency_matrix.csv -> FileSignature(1476432839000,1547339,Sha1(950ed9b06de901c01c498077d1a1967a260aa9b0))
+	figs\img_gif_Both\11.png -> FileSignature(1476296001000,201414,Sha1(eece7cbb784eebe75aefe885252f606b77d9e6a6))
+	figs\img_gif_Albopictus\8.png -> FileSignature(1476295902000,201500,Sha1(300088ce77b8ba5d585089b8c047d9e8f826e055))
+	figs\population_aggregated_low_Res_hig_res.png -> FileSignature(1476313039000,1449444,Sha1(b65a2e694ab1f22490f5396b34969386487db7e9))
+	figs\img_gif_Aegypti\3.png -> FileSignature(1476295794000,198629,Sha1(b2758b9d5aeb89821724c09840c1f4ca5744878b))
+	figs\img_gif_Aegypti\1.png -> FileSignature(1476295780000,198364,Sha1(879c3413cb9eee7cefa8ebcadfbbd9164832bd1f))
+	figs\population_aggregated_low_Res_low_res.png -> FileSignature(1476313032000,209351,Sha1(9a53d1aa131b0319d25d1f48e52994165add2754))
+	input_data_simulation\read_input -> FileSignature(1476438085000,706,Sha1(24b9b124b18b3366e53e3c774d1fa9a782a40152))
+	input_data_simulation\read_input~ -> FileSignature(1476433030000,89,Sha1(64a27410303b177a1768e467ac782c3321aafb37))
+	05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb -> FileSignature(1476437253000,546651,Sha1(5a8dfb09204bc56366f3095f30cb435fa2c30f28))
+	figs\img_gif_Aegypti\6.png -> FileSignature(1476295815000,199749,Sha1(91062143f5390257e771c5c0c3ec5bf71e26fae6))
+	figs\img_gif_Albopictus\10.png -> FileSignature(1476295914000,201556,Sha1(c194070e973c8fd27995cfedb8d0faef39c525d0))
+	figs\img_gif_Both\2.png -> FileSignature(1476295942000,199624,Sha1(cbc15b7c9d376dc3c0a6a59a7b3713c4375325df))
+	figs\img_gif_Albopictus\5.png -> FileSignature(1476295882000,199514,Sha1(24b34ead1fd54259cbbdcca4bb5898c254626ac9))
+	requirements.txt -> FileSignature(1476578382000,351,Sha1(99e573fade6b8bf40609557b4820c00049acc232))
+	input_data_simulation\csv_files\Series_model_outcomes.csv -> FileSignature(1476432627000,53954,Sha1(729fbbbc4f69d3e74b4cd8b445a1e9b0d0def81d))
+	figs\img_gif_Albopictus\4.png -> FileSignature(1476295878000,198824,Sha1(991afa44de1ca6d8ab387a445661d50ca76265e5))
+	figs\share_poor_aggregated_low_Res_low_res.png -> FileSignature(1476313016000,204582,Sha1(d4e98db9ff0aea09c4789437d2b9aaa39ffb46b7))
+	figs\img_gif_Both\7.png -> FileSignature(1476295975000,201131,Sha1(936ac01fad7981bdb2fe43be2d80ed706c93a44d))
+	04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb -> FileSignature(1476437363000,278433,Sha1(f7f8dff17b875820aad77aac5c661385231088ae))
+	03_Visualization of georeferenced static data projected on map.ipynb -> FileSignature(1476366138000,1391435,Sha1(e379fc1d867f4b39f3dc01f5a0419ed5a86b5a91))
+	figs\img_gif_Both\12.png -> FileSignature(1476296006000,200779,Sha1(74e1047d3b3d804f3708f65e861f207518adfab2))
+	01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb -> FileSignature(1476366855000,795885,Sha1(ae50adcb5caae9b6bd9203b965e3e1045fa6f4d8))
+2016-10-16 02:40:18,006 CEST TRACE FileStructureRepo - Starting fetch: master = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]), refs/remotes/origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:19,083 CEST TRACE FileStructureRepo - Fetch complete: master = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]), refs/remotes/origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:19,084 CEST TRACE FileStructureRepo - Fetch result = [No Update]
+2016-10-16 02:40:19,095 CEST DEBUG FileStructureRepo - Computing diffs between base = refs/remotes/origin/master (17b405a0af2b078955885c0f51f5e1d71729404d) and target = HEAD (8b792401b96e54d2ba8a239e3d5eae7d13bb06bf).
+2016-10-16 02:40:19,142 CEST DEBUG FileStructureRepo - Updates:
+	. File figs\img_gif_Albopictus\11.png up to date.
+	. File figs\img_gif_Aegypti\4.png up to date.
+	. File figs\img_gif_Both\4.png up to date.
+	. File results\stdout.txt up to date.
+	. File figs\img_gif_Albopictus\6.png up to date.
+	. File figs\img_gif_Aegypti\8.png up to date.
+	. File 03_Visualization of georeferenced static data projected on map.ipynb up to date.
+	. File figs\img_gif_Aegypti\12.png up to date.
+	. File figs\img_gif_Both\7.png up to date.
+	. File figs\Animation_Aegypti_v2.gif up to date.
+	. File figs\img_gif_Aegypti\10.png up to date.
+	. File figs\share_poor_aggregated_low_Res_hig_res.png up to date.
+	. File .dominoignore up to date.
+	. File input_data_simulation\csv_files\monthly_FlightData.csv up to date.
+	. File figs\img_gif_Albopictus\5.png up to date.
+	. File figs\img_gif_Aegypti\11.png up to date.
+	. File figs\img_gif_Both\10.png up to date.
+	. File 02_Cluster similiar regions & add Worldbank data.ipynb up to date.
+	. File input_data_simulation\csv_files\Series_model_outcomes.csv up to date.
+	. File figs\img_gif_Aegypti\2.png up to date.
+	. File figs\img_gif_Both\1.png up to date.
+	. File figs\population_aggregated_low_Res_hig_res.png up to date.
+	. File input_data_simulation\csv_files\Env_suitability_monthly.csv up to date.
+	. File .dominoresults up to date.
+	. File figs\img_gif_Aegypti\7.png up to date.
+	. File figs\Env_suitability_July_hig_res.png up to date.
+	. File figs\Animation_Both_v2.gif up to date.
+	. File figs\Countries_worldmap_low_res.png up to date.
+	. File figs\img_gif_Both\6.png up to date.
+	. File figs\img_gif_Both\12.png up to date.
+	. File figs\img_gif_Aegypti\1.png up to date.
+	. File figs\Env_suitability_July_low_res.png up to date.
+	. File figs\img_gif_Albopictus\8.png up to date.
+	. File figs\population_aggregated_low_Res_low_res.png up to date.
+	. File figs\img_gif_Both\8.png up to date.
+	. File figs\img_gif_Albopictus\9.png up to date.
+	. File figs\img_gif_Aegypti\6.png up to date.
+	. File figs\Continents_worldmap_low_res.png up to date.
+	x Modifying file requirements.txt
+	. File figs\img_gif_Albopictus\1.png up to date.
+	. File figs\img_gif_Albopictus\4.png up to date.
+	. File figs\Animation_Albopictus_v2.gif up to date.
+	. File 06_Preprocessing Part III_monthly flights.ipynb up to date.
+	. File figs\img_gif_Albopictus\10.png up to date.
+	. File figs\img_gif_Albopictus\12.png up to date.
+	. File input_data_simulation\csv_files\adjacency_matrix.csv up to date.
+	. File input_data_simulation\geojson\gdf_model_elements.geojson up to date.
+	. File figs\img_gif_Aegypti\9.png up to date.
+	. File 05_Preprocessing Part II _adjacencymatrix_outcome_collector.ipynb up to date.
+	. File figs\img_gif_Aegypti\3.png up to date.
+	. File 01_Exploring and Standardizing Environmental suitability for Zika_monthly_province level.ipynb up to date.
+	. File figs\img_gif_Albopictus\7.png up to date.
+	. File figs\img_gif_Both\5.png up to date.
+	. File figs\Continents_worldmap_hig_res.png up to date.
+	. File input_data_simulation\read_input up to date.
+	. File Run 2 regions.ipynb up to date.
+	. File 00_Installed_Python_Modules_and_Environment_Setup.ipynb up to date.
+	. File figs\img_gif_Both\11.png up to date.
+	. File figs\Countries_worldmap_hig_res.png up to date.
+	. File figs\img_gif_Both\3.png up to date.
+	. File input_data_simulation\read_input~ up to date.
+	. File figs\share_poor_aggregated_low_Res_low_res.png up to date.
+	. File figs\img_gif_Albopictus\2.png up to date.
+	. File figs\img_gif_Both\9.png up to date.
+	. File 04_Creates dynamic Choropleth map in Notebook and as GIF.ipynb up to date.
+	. File figs\img_gif_Albopictus\3.png up to date.
+	. File figs\img_gif_Aegypti\5.png up to date.
+	. File figs\img_gif_Both\2.png up to date.
+2016-10-16 02:40:19,142 CEST TRACE FileStructureRepoSynchronizer - Upload before push starting
+2016-10-16 02:40:19,166 CEST TRACE MultiThreadedBlobStoreSynchronizer - Batch-uploading 1 blobs of total size 351
+2016-10-16 02:40:19,170 CEST DEBUG DefaultTransport - Issuing request to https://app.dominodatalab.com/blobs/signedPutUrl/99e573fade6b8bf40609557b4820c00049acc232/351?x=true (full request = ApacheHttpClientRequest(https://app.dominodatalab.com/blobs/signedPutUrl/99e573fade6b8bf40609557b4820c00049acc232/351?x=true,GET,Map(),Map(X-Domino-Api-Key -> [API key redacted]),1 minute,1 minute,true,EmptyBody,com.cerebro.domino.common.util.http.HttpService@ba6ce3))
+2016-10-16 02:40:19,170 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:19,170 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:19,171 CEST DEBUG PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://app.dominodatalab.com:443][total kept alive: 2; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:19,171 CEST DEBUG PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 1; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:19,171 CEST DEBUG DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 60000
+2016-10-16 02:40:19,171 CEST DEBUG MainClientExec - Executing request POST /blobs/signedPutUrl/99e573fade6b8bf40609557b4820c00049acc232/351?x=true HTTP/1.1
+2016-10-16 02:40:19,171 CEST DEBUG MainClientExec - Target auth state: UNCHALLENGED
+2016-10-16 02:40:19,171 CEST DEBUG MainClientExec - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> POST /blobs/signedPutUrl/99e573fade6b8bf40609557b4820c00049acc232/351?x=true HTTP/1.1
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> X-Domino-Api-Key: eJVsNlZd8yIuV7MC41mWyOn6XVz31sBEHLE78l5OxVQGqlG3nGB2OABcioF71Oiz
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> Content-Length: 0
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> Host: app.dominodatalab.com
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> Connection: Keep-Alive
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_66)
+2016-10-16 02:40:19,171 CEST DEBUG headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2016-10-16 02:40:19,358 CEST DEBUG headers - http-outgoing-1 << HTTP/1.1 200 OK
+2016-10-16 02:40:19,358 CEST DEBUG headers - http-outgoing-1 << Server: nginx/1.7.12
+2016-10-16 02:40:19,358 CEST DEBUG headers - http-outgoing-1 << Date: Sun, 16 Oct 2016 00:40:39 GMT
+2016-10-16 02:40:19,358 CEST DEBUG headers - http-outgoing-1 << Content-Type: text/plain; charset=utf-8
+2016-10-16 02:40:19,358 CEST DEBUG headers - http-outgoing-1 << Transfer-Encoding: chunked
+2016-10-16 02:40:19,359 CEST DEBUG headers - http-outgoing-1 << Connection: keep-alive
+2016-10-16 02:40:19,359 CEST DEBUG headers - http-outgoing-1 << Play-Processing-Time: 3
+2016-10-16 02:40:19,359 CEST DEBUG MainClientExec - Connection can be kept alive indefinitely
+2016-10-16 02:40:19,360 CEST DEBUG PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}->https://app.dominodatalab.com:443] can be kept alive indefinitely
+2016-10-16 02:40:19,360 CEST DEBUG PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}->https://app.dominodatalab.com:443][total kept alive: 2; route allocated: 2 of 2; total allocated: 2 of 20]
+2016-10-16 02:40:19,360 CEST  INFO AnonymousS3SingleProjectBlobStore - Generated signed PUT url: https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/99e573fade6b8bf40609557b4820c00049acc232?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578499&Signature=sMEB8v8i%2Fldh1mf7kVGLZexT1Qw%3D
+2016-10-16 02:40:19,361 CEST  INFO AnonymousS3SingleProjectBlobStore - Starting signed PUT request
+2016-10-16 02:40:19,361 CEST DEBUG Jets3tProperties - s3service.https-only=true
+2016-10-16 02:40:19,361 CEST DEBUG Jets3tProperties - storage-service.internal-error-retry-max=5
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - storage-service.apply-recommended-dns-caching-defaults=true
+2016-10-16 02:40:19,362 CEST DEBUG StorageService - Setting recommended DNS caching defaults
+2016-10-16 02:40:19,362 CEST DEBUG StorageService - Using DNS caching system settings: networkaddress.cache.ttl=300, networkaddress.cache.negative.ttl=1
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - http.connection-manager.factory-class-name=org.jets3t.service.utils.RestUtils$ConnManagerFactory
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - httpclient.connection-timeout-ms=60000
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - httpclient.socket-timeout-ms=60000
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - httpclient.stale-checking-enabled=true
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - httpclient.useragent=null
+2016-10-16 02:40:19,362 CEST DEBUG RestUtils - Setting user agent string: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - http.protocol.expect-continue=true
+2016-10-16 02:40:19,362 CEST DEBUG Jets3tProperties - httpclient.connection-manager-timeout=0
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - httpclient.proxy-autodetect=true
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:19,363 CEST DEBUG PluginProxyUtil - About to attempt auto proxy detection under Java version:1.8.0_66-b18
+2016-10-16 02:40:19,363 CEST DEBUG PluginProxyUtil - Sun Plugin reported java version not 1.3.X, 1.4.X, 1.5.X or 1.6.X - trying failover detection...
+2016-10-16 02:40:19,363 CEST DEBUG PluginProxyUtil - Using failover proxy detection...
+2016-10-16 02:40:19,363 CEST DEBUG PluginProxyUtil - Plugin Proxy Config List Property:null
+2016-10-16 02:40:19,363 CEST DEBUG PluginProxyUtil - No configured plugin proxy list
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - s3service.default-storage-class=null
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - s3service.server-side-encryption=null
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - devpay.user-token=null
+2016-10-16 02:40:19,363 CEST DEBUG Jets3tProperties - devpay.product-token=null
+2016-10-16 02:40:19,364 CEST DEBUG Jets3tProperties - httpclient.requester-pays-buckets-enabled=false
+2016-10-16 02:40:19,365 CEST DEBUG Jets3tProperties - storage-service.disable-live-md5=false
+2016-10-16 02:40:19,365 CEST DEBUG Jets3tProperties - s3service.s3-endpoint=s3.amazonaws.com
+2016-10-16 02:40:19,368 CEST DEBUG RepeatableRequestEntity - Setting maximal read-ahead mark limit for markable input stream com.cerebro.domino.common.sync.ConsoleProgressMonitoredInputStream assuming it doesn't use in-memory storage: 245
+2016-10-16 02:40:19,368 CEST DEBUG RepeatableRequestEntity - Setting maximal read-ahead mark limit for markable input stream java.io.ByteArrayInputStream assuming it doesn't use in-memory storage: 245
+2016-10-16 02:40:19,368 CEST DEBUG Jets3tProperties - httpclient.read-throttle=0
+2016-10-16 02:40:19,368 CEST DEBUG RestStorageService - Performing PUT request for 'https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com/99e573fade6b8bf40609557b4820c00049acc232?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578499&Signature=sMEB8v8i%2Fldh1mf7kVGLZexT1Qw%3D', expecting response codes: [200]
+2016-10-16 02:40:19,369 CEST DEBUG RestStorageService - Headers: [Content-Encoding: gzip, x-amz-meta-domino-original-blob-length: 351, x-amz-server-side-encryption: AES256, Content-Type: application/x-gzip]
+2016-10-16 02:40:19,369 CEST DEBUG Jets3tProperties - httpclient.retry-max=5
+2016-10-16 02:40:19,369 CEST DEBUG RestStorageService - Service has no Credential and is un-authenticated, skipping authorization
+2016-10-16 02:40:19,372 CEST DEBUG Jets3tProperties - httpclient.max-connections=20
+2016-10-16 02:40:19,373 CEST DEBUG Jets3tProperties - httpclient.max-connections-per-host=0
+2016-10-16 02:40:19,373 CEST DEBUG Jets3tProperties - httpclient.connection.ttl=-1
+2016-10-16 02:40:19,374 CEST DEBUG RestUtils$ThreadSafeConnManager - Get connection: {s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443, timeout = 0
+2016-10-16 02:40:19,374 CEST DEBUG ConnPoolByRoute - [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443] total kept alive: 0, total issued: 0, total allocated: 0 out of 20
+2016-10-16 02:40:19,374 CEST DEBUG ConnPoolByRoute - No free connections [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:19,374 CEST DEBUG ConnPoolByRoute - Available capacity: 20 out of 20 [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:19,374 CEST DEBUG ConnPoolByRoute - Creating new connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443]
+2016-10-16 02:40:19,376 CEST DEBUG DefaultClientConnectionOperator - Connecting to com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443
+2016-10-16 02:40:20,157 CEST DEBUG RequestAddCookies - CookieSpec selected: default
+2016-10-16 02:40:20,158 CEST DEBUG RequestAuthCache - Auth cache not set in the context
+2016-10-16 02:40:20,158 CEST DEBUG RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2016-10-16 02:40:20,158 CEST DEBUG RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2016-10-16 02:40:20,158 CEST DEBUG DefaultHttpClient - Attempt 1 to execute request
+2016-10-16 02:40:20,158 CEST DEBUG DefaultClientConnection - Sending request: PUT /99e573fade6b8bf40609557b4820c00049acc232?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578499&Signature=sMEB8v8i%2Fldh1mf7kVGLZexT1Qw%3D HTTP/1.1
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> PUT /99e573fade6b8bf40609557b4820c00049acc232?x-amz-security-token=FQoDYXdzEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDLA6G2N3iuWGk2XK5SK3Aw8YQSkuNVey6oQvxGUIVU5nCAvIOZZ62g2okPvtubHX14p2O6rBWP1hZknBEH%2BntW1ERMZYwXSBQx63rRpdIVC1N15IPYpYA4dsZR%2BUNL%2BBpQi9QbBk9Wms7YlCVe9aRr1aYdPfFvxzdc0uprP%2BbFbSWCTX4p2ERoWGqdHWtApyZyOb4fubauKpX63nFdYJqRQkcJc6d6OeLmDMnLnf5eIKwgciigA8LYqw7IzTTDtvxyryesx9RTxOyHRpEhWfJqD%2BGdj8nws7rhOtYR8fknjlhwVEZX0XwCtXzExR%2BqplGggC1eRLQahelE2qyG7uuSZSS9Mrd5y86HxsbIdTS7KUxJ3p2lrssmO%2FCTdBYavN4xTD5zIDuUCC8QSK4%2BlR1TC5D90eqGIxmEaxEkN%2B9DhGNxTGnZn0M7JEwW4PI025ooKhNYm6mUtAzDCiXrUNoxLwn5GAwKjA9dZPFHOsvJsO4cxnE7xyWkUtvtxTzqc6irAqvvoYEdF5vo9GFFVkKLBz%2BwtUachLPfwHVKEbfjm3ybOiyGQwn577KS02lmWEafTExhCRCKrNSImTt7HnH1o31N7evcYogtmKwAU%3D&AWSAccessKeyId=ASIAJLXMRWTN4RKAMEVA&Expires=1476578499&Signature=sMEB8v8i%2Fldh1mf7kVGLZexT1Qw%3D HTTP/1.1
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Content-Encoding: gzip
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> x-amz-meta-domino-original-blob-length: 351
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> x-amz-server-side-encryption: AES256
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Content-Type: application/x-gzip
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Content-Length: 245
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Host: com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Connection: Keep-Alive
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> User-Agent: JetS3t/0.9.4 (Windows 8/6.2; x86; en; JVM 1.8.0_66)
+2016-10-16 02:40:20,159 CEST DEBUG headers - >> Expect: 100-continue
+2016-10-16 02:40:20,342 CEST DEBUG DefaultClientConnection - Receiving response: HTTP/1.1 100 Continue
+2016-10-16 02:40:20,342 CEST DEBUG headers - << HTTP/1.1 100 Continue
+2016-10-16 02:40:20,348 CEST DEBUG RepeatableRequestEntity - MD5 digest of data sent for '99e573fade6b8bf40609557b4820c00049acc232' - B64:6lO8LqvPT2DjmPzNwso6gQ== Hex:ea53bc2eabcf4f60e398fccdc2ca3a81
+2016-10-16 02:40:20,531 CEST DEBUG DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2016-10-16 02:40:20,531 CEST DEBUG headers - << HTTP/1.1 200 OK
+2016-10-16 02:40:20,531 CEST DEBUG headers - << x-amz-id-2: /nvZyyaBBmQqVXEt2NPUg5r6iUBze5PMTmF3hhBAOYiy3RFX+P+O6ySCBDZPxZ7frJRhIz6Aqu0=
+2016-10-16 02:40:20,532 CEST DEBUG headers - << x-amz-request-id: 6475A5BB8D2DBB7C
+2016-10-16 02:40:20,532 CEST DEBUG headers - << Date: Sun, 16 Oct 2016 00:40:41 GMT
+2016-10-16 02:40:20,532 CEST DEBUG headers - << x-amz-server-side-encryption: AES256
+2016-10-16 02:40:20,532 CEST DEBUG headers - << ETag: "ea53bc2eabcf4f60e398fccdc2ca3a81"
+2016-10-16 02:40:20,532 CEST DEBUG headers - << Content-Length: 0
+2016-10-16 02:40:20,532 CEST DEBUG headers - << Server: AmazonS3
+2016-10-16 02:40:20,532 CEST DEBUG DefaultHttpClient - Connection can be kept alive indefinitely
+2016-10-16 02:40:20,532 CEST DEBUG RestStorageService - Response for 'PUT'. Content-Type: , Headers: [x-amz-id-2: /nvZyyaBBmQqVXEt2NPUg5r6iUBze5PMTmF3hhBAOYiy3RFX+P+O6ySCBDZPxZ7frJRhIz6Aqu0=, x-amz-request-id: 6475A5BB8D2DBB7C, Date: Sun, 16 Oct 2016 00:40:41 GMT, x-amz-server-side-encryption: AES256, ETag: "ea53bc2eabcf4f60e398fccdc2ca3a81", Content-Length: 0, Server: AmazonS3]
+2016-10-16 02:40:20,533 CEST DEBUG RestStorageService - Response entity: org.apache.http.conn.BasicManagedEntity@1a639ce
+2016-10-16 02:40:20,533 CEST DEBUG RestStorageService - Entity length: 0
+2016-10-16 02:40:20,533 CEST DEBUG RestStorageService - Received response code 200; matches one of expected set ([200])? true
+2016-10-16 02:40:20,533 CEST DEBUG RestUtils$ThreadSafeConnManager - Released connection is reusable.
+2016-10-16 02:40:20,533 CEST DEBUG ConnPoolByRoute - Releasing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:20,533 CEST DEBUG ConnPoolByRoute - Pooling connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]; keep alive indefinitely
+2016-10-16 02:40:20,533 CEST DEBUG ConnPoolByRoute - Notifying no-one, there are no waiting threads
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Processing REST metadata items
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Ignoring metadata item: Server=AmazonS3
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Leaving header item unchanged: ETag="ea53bc2eabcf4f60e398fccdc2ca3a81"
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-request-id=>request-id
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-id-2=>id-2
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Removed header prefix x-amz- from key: x-amz-server-side-encryption=>server-side-encryption
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Leaving HTTP header item unchanged: Content-Length=0
+2016-10-16 02:40:20,534 CEST DEBUG ServiceUtils - Parsing date string 'Sun, 16 Oct 2016 00:40:41 GMT' into Date object for key: Date
+2016-10-16 02:40:20,535 CEST DEBUG ServiceUtils - Leaving header item unchanged: Date=Sun Oct 16 02:40:41 CEST 2016
+2016-10-16 02:40:20,535 CEST DEBUG RestStorageService - Object upload was automatically verified, the calculated MD5 hash value matched the ETag returned by S3: 99e573fade6b8bf40609557b4820c00049acc232
+2016-10-16 02:40:20,537 CEST TRACE MultiThreadedBlobStoreSynchronizer - Finished batch-uploading 1 blobs of total size 351 in 1369 ms
+2016-10-16 02:40:20,539 CEST TRACE FileStructureRepoSynchronizer - Upload before push complete
+2016-10-16 02:40:20,574 CEST TRACE FileStructureRepo - Starting push to origin: local/master = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]), origin/master = Some(AnyObjectId[17b405a0af2b078955885c0f51f5e1d71729404d]).
+2016-10-16 02:40:20,763 CEST DEBUG RestUtils$ThreadSafeConnManager - Shutting down
+2016-10-16 02:40:20,763 CEST DEBUG ConnPoolByRoute - Closing connection [{s}->https://com-cerebro-domino-prod-blobs.s3-us-west-2.amazonaws.com:443][null]
+2016-10-16 02:40:20,764 CEST DEBUG DefaultClientConnection - Connection 0.0.0.0:56545<->54.231.185.25:443 closed
+2016-10-16 02:40:22,347 CEST DEBUG FileStructureRepo - Push result: [RemoteRefUpdate[remoteName=refs/heads/master, OK, (null)...8b792401b96e54d2ba8a239e3d5eae7d13bb06bf, fastForward, srcRef=refs/heads/master, message=null]]
+2016-10-16 02:40:22,350 CEST DEBUG FileStructureRepo - Push to origin complete: local/master = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]), origin/master = Some(AnyObjectId[8b792401b96e54d2ba8a239e3d5eae7d13bb06bf]).
+2016-10-16 02:40:22,352 CEST DEBUG FileStructureRepoSynchronizer - Push to origin result: Succeeded.
+2016-10-16 02:40:22,352 CEST DEBUG FileSyncClient - Push result: Succeeded.

@@ -1,0 +1,1242 @@
+{UTF-8}
+inital susceptible poor=
+	100000
+	~	
+	~		|
+
+inital susceptible rich=
+	100000
+	~	
+	~		|
+
+Rich population=
+	h asymptomatic infectious poor+h exposed poor+h recovered immune poor+h susceptible poor\
+		+h symptomatic infectious poor
+	~	
+	~		|
+
+max awareness= INTEG (
+	-building up awareness,
+		init max awareness)
+	~	
+	~		|
+
+Mosquito bites poor pop=
+	normal blood meals a day*(ratio of vectors per person)*Total Adult Mosquito Population\
+		*(1-personal protection poor)
+	~	
+	~	normal blood meals a day*(ratio of vectors per person)*Total Adult \
+		Mosquito Population*(1-personal protection poor)
+	|
+
+Mosquito bites rich pop=
+	normal blood meals a day*(ratio of vectors per person)*Total Adult Mosquito Population\
+		*(1-personal protection rich)
+	~	
+	~	normal blood meals a day*(ratio of vectors per person)*Total Adult \
+		Mosquito Population*(1-personal protection rich)
+	|
+
+Availability breeding rich= INTEG (
+	creation of new breeding sites rich-Elimination of potential breeding grounds rich neighb\
+		,
+		init breeding sites rich)
+	~	
+	~		|
+
+building awareness based on reports=
+	MIN((report case-Public awareness)/Human population, report case)
+	~	
+	~		|
+
+Human population=
+	10000
+	~	
+	~		|
+
+initial recovered poor=
+	1000
+	~	
+	~		|
+
+init cumulative cases=
+	0
+	~	
+	~		|
+
+cumulative cases= INTEG (
+	Zika Cases,
+		init cumulative cases)
+	~	
+	~		|
+
+init max awareness=
+	100
+	~	
+	~		|
+
+init public awareness=
+	0
+	~	
+	~		|
+
+init reported cases=
+	0
+	~	
+	~		|
+
+initial recovered rich=
+	1000
+	~	
+	~		|
+
+initial susceptible m=
+	10000
+	~	
+	~		|
+
+ratio of vectors per person=
+	0.4
+	~	
+	~		|
+
+init diagnosed cases=
+	0
+	~	
+	~		|
+
+intial infectious m=
+	0
+	~	
+	~		|
+
+report case=
+	diagnosed zika cases/delaytime of reporting
+	~	
+	~	DELAY N( diagnose Zika case,  delaytime of reporting, Diagnosed Zika \
+		Cases/delaytime of reporting, 3)
+	|
+
+personal protection rich=
+	normal personal protection rich+Public awareness
+	~	
+	~		|
+
+normal personal protection rich=
+	0.9
+	~	
+	~		|
+
+personal protection poor=
+	normal personal protection poor+Public awareness
+	~	
+	~		|
+
+transmission probability vector to human=
+	transmission probability
+	~	
+	~		|
+
+Transmission probability human to vector=
+	transmission probability
+	~	
+	~	Assumed
+	|
+
+transmission probability=
+	0.4
+	~	
+	~		|
+
+disease sank into oblivion=
+	Public awareness/delay time until it falls into oblivion
+	~	
+	~	DELAY N(building up awareness, delay time until it falls into oblivion, Public \
+		awareness of ongoing outbreak/delay time until it falls into oblivion
+		, 10)
+	|
+
+building up awareness=
+	MIN(building awareness based on reports, max awareness)
+	~	
+	~		|
+
+creation of new breeding sites poor=
+	(init breeding sites poor-Availability breeding poor)*rate of breeding site recreation poor
+	~	
+	~		|
+
+Mosquito renewal rate=
+	Normal Mosquito Renewal rate+Man made Mosquito renewal rate
+	~	
+	~	Normal Mosquito Renewal rate+Man made Mosquito renewal rate
+	|
+
+init breeding sites rich=
+	100
+	~	
+	~		|
+
+Availability breeding poor= INTEG (
+	creation of new breeding sites poor-Elimination of potential breeding grounds poor neighb\
+		,
+		init breeding sites poor)
+	~	
+	~		|
+
+creation of new breeding sites rich=
+	(init breeding sites rich-Availability breeding rich)*rate of breeding site recreation rich
+	~	
+	~		|
+
+rate of breeding site recreation poor=
+	0.01
+	~	
+	~		|
+
+rate of breeding site recreation rich=
+	0.015
+	~	
+	~		|
+
+init breeding sites poor=
+	70
+	~	
+	~		|
+
+initial exposed m=
+	0
+	~	
+	~		|
+
+Man made Mosquito renewal rate no effort=
+	0.009
+	~	
+	~		|
+
+Elimination of potential breeding grounds rich neighb=
+	MIN((Public awareness*100)/destruction time of water ponds,Availability breeding rich
+	)
+	~	
+	~		|
+
+delay time until it falls into oblivion=
+	60
+	~	
+	~		|
+
+m exposed= INTEG (
+	Mosquito infection poor+Mosquito Infection rich-Incubation Mosquito-Mosquito E Death\
+		,
+		initial exposed m)
+	~	
+	~		|
+
+Mosquito probability decease=
+	Normal Mosquito Renewal rate+Man made Mosquito renewal rate no effort
+	~	
+	~		|
+
+m susceptible= INTEG (
+	Mosquito renewal-Mosquito Infection rich-Mosquito infection poor-Mosquito S Death,
+		initial susceptible m)
+	~	
+	~		|
+
+Man made Mosquito renewal rate=
+	Man made Mosquito renewal rate no effort * ((Availability breeding poor/140)+(Availability breeding rich\
+		/200))
+	~	
+	~		|
+
+Public awareness= INTEG (
+	building up awareness-disease sank into oblivion,
+		init public awareness)
+	~	
+	~		|
+
+destruction time of water ponds=
+	15
+	~	
+	~		|
+
+Elimination of potential breeding grounds poor neighb=
+	MIN((Public awareness*100)/destruction time of water ponds, Availability breeding poor
+	-stock min level consequence of slum conditions
+	)
+	~	
+	~		|
+
+rich pop Human Infection=
+	Mosquito bites rich pop*ratio infectious Mosquitos*rich pop ratio of susceptible people\
+		*transmission probability vector to human
+	~	
+	~	Mosquito bites*ratio infectious Mosquitos*pop poor ratio of susceptible \
+		people*pop poor Transmission probability vector to huma
+	|
+
+share reported cases=
+	0.6
+	~	
+	~	Medical equipment operational/(Medical equipment needed per case*(pop poor \
+		Human Incubation+rich pop Human Incubation))
+	|
+
+Mosquito infection poor=
+	Mosquito bites poor pop*ratio of susceptible mosquitos*share viremic poor population\
+		*Transmission probability human to vector
+	~	
+	~		|
+
+Mosquito Infection rich=
+	Mosquito bites rich pop*ratio of susceptible mosquitos*share viremic rich population\
+		*Transmission probability human to vector
+	~	
+	~		|
+
+share viremic rich population=
+	rich pop Infectious/Rich population
+	~	
+	~		|
+
+share viremic poor population=
+	poor pop Infectious/Poor population
+	~	
+	~		|
+
+Mosquito renewal=
+	(m infectious*(1-vertical transmission infection rate)+(Total Adult Mosquito Population\
+		-m infectious))*Mosquito renewal rate
+	~	
+	~		|
+
+normal personal protection poor=
+	0.05
+	~	
+	~		|
+
+stock min level consequence of slum conditions=
+	30
+	~	
+	~		|
+
+Arrival airtravel passengers asumptomatic=
+	0
+	~	
+	~		|
+
+Arrival airtravel passengers exposed=
+	0
+	~	
+	~		|
+
+Arrival airtravel passengers recovered=
+	0
+	~	
+	~		|
+
+Arrival airtravel passengers susceptible=
+	0
+	~	
+	~		|
+
+Arrival airtravel passengers symptomatic=
+	0
+	~	
+	~		|
+
+Poor population=
+	h asymptomatic infectious rich+h exposed rich+h recovered immune rich+h susceptible rich\
+		+h symptomatic infectious rich
+	~	
+	~		|
+
+Departures=
+	0
+	~	
+	~		|
+
+Departure airtravel passengers asymptomatic=
+	Departures*(h asymptomatic infectious rich/Rich population)
+	~	
+	~		|
+
+Departure airtravel passengers exposed=
+	Departures*(h exposed rich/Rich population)
+	~	
+	~		|
+
+Departure airtravel passengers recovered=
+	Departures*(h recovered immune rich/Rich population)
+	~	
+	~		|
+
+Departure airtravel passengers susceptible=
+	Departures*(h susceptible rich/Rich population)
+	~	
+	~		|
+
+Departure airtravel passengers symptomatic=
+	Departures*(h symptomatic infectious rich/Rich population)
+	~	
+	~		|
+
+h asymptomatic infectious rich= INTEG (
+	Arrival airtravel passengers asumptomatic+rich pop asym incubation-Departure airtravel passengers asymptomatic\
+		-rich pop Asym Human Recovery,
+		initial infectious rich asym)
+	~	
+	~		|
+
+h susceptible rich= INTEG (
+	Arrival airtravel passengers susceptible-Departure airtravel passengers susceptible-\
+		rich pop Human Infection-rich pop sexual transmission,
+		inital susceptible rich)
+	~	
+	~		|
+
+h symptomatic infectious rich= INTEG (
+	Arrival airtravel passengers symptomatic+rich pop Human Incubation-Departure airtravel passengers symptomatic\
+		-rich pop Human Recovery,
+		initial infectious rich sym)
+	~	
+	~		|
+
+Total Human Population=
+	Poor population+Rich population
+	~	
+	~		|
+
+h exposed rich= INTEG (
+	Arrival airtravel passengers exposed+rich pop Human Infection+rich pop sexual transmission\
+		-Departure airtravel passengers exposed-rich pop asym incubation-rich pop Human Incubation\
+		,
+		initial exposed rich)
+	~	
+	~		|
+
+h recovered immune rich= INTEG (
+	Arrival airtravel passengers recovered+rich pop Asym Human Recovery+rich pop Human Recovery\
+		-Departure airtravel passengers recovered,
+		initial recovered rich)
+	~	
+	~		|
+
+delaytime of reporting=
+	14
+	~	
+	~		|
+
+diagnose Zika case=
+	(rich pop Human Incubation+pop poor Human Incubation)*share reported cases
+	~	
+	~		|
+
+diagnosed zika cases= INTEG (
+	diagnose Zika case-report case,
+		init diagnosed cases)
+	~	
+	~		|
+
+reported cases= INTEG (
+	report case,
+		init reported cases)
+	~	
+	~		|
+
+rich pop Asym Human Recovery=
+	h asymptomatic infectious rich/recovery period human
+	~	
+	~		|
+
+rich pop asym incubation=
+	(h exposed rich*(1-share symptomatic humans))/intrinsic incubation period
+	~	
+	~		|
+
+rich pop Human Incubation=
+	(share symptomatic humans * h exposed rich)/intrinsic incubation period
+	~	
+	~		|
+
+rich pop Human Recovery=
+	h symptomatic infectious rich/recovery period human
+	~	
+	~		|
+
+rich pop sexual transmission=
+	rich pop sexual intercourse per person and day*share viremic poor population*h susceptible rich\
+		*transmission probability sexual transmission
+	~	
+	~		|
+
+Zika Cases=
+	pop poor Asym Human Incubation+pop poor Human Incubation+rich pop asym incubation+rich pop Human Incubation
+	~	
+	~		|
+
+ratio infectious Mosquitos=
+	m infectious/Total Adult Mosquito Population
+	~	
+	~		|
+
+normal blood meals a day=
+	1.5
+	~	
+	~	1.5
+	|
+
+h symptomatic infectious poor= INTEG (
+	pop poor Human Incubation-pop poor Human Recovery,
+		initial infectious poor sym)
+	~	
+	~		|
+
+pop poor Human Incubation=
+	(share symptomatic humans * h exposed poor)/intrinsic incubation period
+	~	
+	~		|
+
+rich pop Infectious=
+	h symptomatic infectious rich+h asymptomatic infectious rich
+	~	
+	~		|
+
+pop poor Asym Human Incubation=
+	(h exposed poor*(1-share symptomatic humans))/intrinsic incubation period
+	~	
+	~		|
+
+pop poor Asym Human Recovery=
+	h asymptomatic infectious poor/recovery period human
+	~	
+	~		|
+
+h asymptomatic infectious poor= INTEG (
+	pop poor Asym Human Incubation-pop poor Asym Human Recovery,
+		initial infectious poor asym)
+	~	
+	~		|
+
+h exposed poor= INTEG (
+	pop poor Human Infection+pop poor Sexual transmission-pop poor Asym Human Incubation\
+		-pop poor Human Incubation,
+		initial exposed poor)
+	~	
+	~		|
+
+h recovered immune poor= INTEG (
+	pop poor Asym Human Recovery+pop poor Human Recovery,
+		initial recovered poor)
+	~	
+	~		|
+
+h susceptible poor= INTEG (
+	-pop poor Human Infection-pop poor Sexual transmission,
+		inital susceptible poor)
+	~	
+	~		|
+
+pop poor Human Infection=
+	Mosquito bites poor pop*ratio infectious Mosquitos*poor pop ratio of susceptible people\
+		*transmission probability vector to human
+	~	
+	~		|
+
+pop poor Human Recovery=
+	h symptomatic infectious poor/recovery period human
+	~	
+	~		|
+
+poor pop Infectious=
+	h symptomatic infectious poor+h asymptomatic infectious poor
+	~	
+	~		|
+
+initial infectious poor asym=
+	5
+	~	
+	~		|
+
+initial exposed poor=
+	0
+	~	
+	~	100
+	|
+
+initial infectious poor sym=
+	10
+	~	
+	~		|
+
+intrinsic incubation period=
+	5.5
+	~	
+	~	Human incubation period
+		RANDOM NORMAL( 2, 12, 5.5, 1.5, 1)
+	|
+
+poor pop ratio of susceptible people=
+	h susceptible poor/Total Human Population
+	~	
+	~		|
+
+recovery period human=
+	5
+	~	
+	~		|
+
+poor pop sexual intercourse per person and day=
+	0.2
+	~	
+	~		|
+
+pop poor Sexual transmission=
+	poor pop sexual intercourse per person and day*share viremic poor population*h susceptible poor\
+		*transmission probability sexual transmission
+	~	
+	~		|
+
+share symptomatic humans=
+	0.2
+	~	
+	~		|
+
+transmission probability sexual transmission=
+	0.1
+	~	
+	~		|
+
+rich pop ratio of susceptible people=
+	h susceptible rich/Total Human Population
+	~	
+	~		|
+
+rich pop sexual intercourse per person and day=
+	0.2
+	~	
+	~		|
+
+initial infectious rich asym=
+	5
+	~	
+	~		|
+
+initial infectious rich sym=
+	10
+	~	
+	~		|
+
+initial exposed rich=
+	0
+	~	
+	~	100
+	|
+
+ratio of susceptible mosquitos=
+	m susceptible/Total Adult Mosquito Population
+	~	
+	~		|
+
+Mosquito S Death=
+	Mosquito probability decease*m susceptible
+	~	
+	~		|
+
+m infectious= INTEG (
+	Incubation Mosquito+Vertical transmission of Zika viruses-Mosquito I Death,
+		intial infectious m)
+	~	
+	~		|
+
+vertical transmission infection rate=
+	0
+	~	
+	~	26% http://www.ncbi.nlm.nih.gov/pubmed/23540126
+		11.1% http://www.ncbi.nlm.nih.gov/pubmed/24843934
+		0.111
+	|
+
+Normal Mosquito Renewal rate=
+	0.15
+	~	
+	~	0.025
+	|
+
+Mosquito I Death=
+	m infectious*Mosquito probability decease
+	~	
+	~		|
+
+Mosquito E Death=
+	m exposed*Mosquito probability decease
+	~	
+	~		|
+
+Vertical transmission of Zika viruses=
+	m infectious*vertical transmission infection rate*Normal Mosquito Renewal rate
+	~	
+	~		|
+
+Total Adult Mosquito Population=
+	m exposed+m infectious+m susceptible
+	~	
+	~		|
+
+extrinsic incubation period=
+	7
+	~	
+	~	Center for Disease control 2011
+	|
+
+Incubation Mosquito=
+	m exposed/extrinsic incubation period
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 2
+	~	Day
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Day
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Day [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Day [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|120,120,60,3
+10,1,m susceptible,698,455,92,50,3,131,0,0,0,0,0,0
+10,2,m exposed,1408,433,107,45,3,131,0,0,0,0,0,0
+10,3,m infectious,1820,426,97,30,3,131,0,0,0,0,0,0
+1,4,6,2,4,0,0,22,0,0,0,-1--1--1,,1|(1252,409)|
+1,5,6,1,100,0,0,22,0,0,0,-1--1--1,,1|(990,409)|
+11,6,1388,1197,409,6,8,34,3,0,0,1,0,0,0
+10,7,Mosquito Infection rich,1197,439,58,22,40,3,0,0,-1,0,0,0
+1,8,10,3,4,0,0,22,0,0,0,-1--1--1,,1|(1678,426)|
+1,9,10,2,100,0,0,22,0,0,0,-1--1--1,,1|(1568,426)|
+11,10,1100,1628,426,6,8,34,3,0,0,1,0,0,0
+10,11,Incubation Mosquito,1628,456,44,22,40,3,0,0,-1,0,0,0
+10,12,extrinsic incubation period,1664,534,74,22,8,3,0,0,0,0,0,0
+1,13,12,11,1,0,0,0,0,128,0,-1--1--1,,1|(1650,509)|
+10,14,Total Human Population,2664,533,54,22,8,3,0,0,0,0,0,0
+1,15,2,11,1,0,0,0,0,128,0,-1--1--1,,1|(1538,495)|
+10,16,m susceptible,2335,24,53,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,17,m exposed,2496,-21,57,12,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,18,m infectious,2626,39,47,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,19,Transmission probability human to vector,1215,345,111,31,8,131,0,0,0,0,0,0
+1,20,19,7,0,0,0,0,0,128,0,-1--1--1,,1|(1206,389)|
+10,21,initial susceptible m,673,552,90,39,8,131,0,0,0,0,0,0
+10,22,initial exposed m,1473,511,87,22,8,3,0,0,0,0,0,0
+10,23,intial infectious m,1819,482,87,22,8,3,0,0,0,0,0,0
+10,24,Total Adult Mosquito Population,2495,96,87,22,8,3,0,0,-1,0,0,0
+1,25,16,24,0,0,0,0,0,128,0,-1--1--1,,1|(2408,57)|
+1,26,17,24,0,0,0,0,0,128,0,-1--1--1,,1|(2495,25)|
+1,27,18,24,0,0,0,0,0,128,0,-1--1--1,,1|(2568,63)|
+12,28,48,1848,185,10,8,0,3,0,0,-1,0,0,0
+1,29,31,3,4,0,0,22,0,0,0,-1--1--1,,1|(1859,331)|
+1,30,31,28,100,0,0,22,0,0,0,-1--1--1,,1|(1848,261)|
+11,31,48,1859,261,8,6,33,3,0,0,4,0,0,0
+10,32,Vertical transmission of Zika viruses,1951,261,84,33,40,3,0,0,-1,0,0,0
+1,33,3,32,1,0,0,0,0,128,0,-1--1--1,,1|(1987,363)|
+10,34,vertical transmission infection rate,2111,302,55,33,8,3,0,0,0,0,0,0
+1,35,34,32,0,0,0,0,0,128,0,-1--1--1,,1|(2052,286)|
+12,36,48,613,188,10,8,0,3,0,0,-1,0,0,0
+1,37,39,1,4,0,0,22,0,0,0,-1--1--1,,1|(619,349)|
+1,38,39,36,100,0,0,22,0,0,0,-1--1--1,,1|(619,238)|
+11,39,48,619,287,8,6,33,3,0,0,4,0,0,0
+10,40,Mosquito renewal,680,287,53,22,40,3,0,0,-1,0,0,0
+12,41,48,767,212,10,8,0,3,0,0,-1,0,0,0
+1,42,44,41,4,0,0,22,0,0,0,-1--1--1,,1|(770,261)|
+1,43,44,1,100,0,0,22,0,0,0,-1--1--1,,1|(770,362)|
+11,44,48,770,311,6,8,34,3,0,0,1,0,0,0
+10,45,Mosquito S Death,770,341,48,22,40,3,0,0,-1,0,0,0
+1,46,47,2,100,0,0,22,0,0,0,-1--1--1,,1|(1372,362)|
+11,47,1196,1372,330,8,6,33,3,0,0,4,0,0,0
+10,48,Mosquito E Death,1429,330,49,22,40,3,0,0,-1,0,0,0
+12,49,48,1373,259,10,8,0,3,0,0,-1,0,0,0
+1,50,47,49,4,0,0,22,0,0,0,-1--1--1,,1|(1372,295)|
+10,51,Mosquito probability decease,1341,-24,83,22,8,3,0,0,0,0,0,0
+12,52,48,1740,192,10,8,0,3,0,0,-1,0,0,0
+1,53,55,52,4,0,0,22,0,0,0,-1--1--1,,1|(1743,246)|
+1,54,55,3,100,0,0,22,0,0,0,-1--1--1,,1|(1743,352)|
+11,55,48,1743,301,6,8,34,3,0,0,1,0,0,0
+10,56,Mosquito I Death,1743,331,46,22,40,3,0,0,-1,0,0,0
+1,57,51,45,0,0,0,0,0,128,0,-1--1--1,,1|(1061,154)|
+1,58,51,48,0,0,0,0,0,128,0,-1--1--1,,1|(1382,146)|
+1,59,51,56,0,0,0,0,0,128,0,-1--1--1,,1|(1536,148)|
+1,60,1,45,1,0,0,0,0,128,0,-1--1--1,,1|(808,391)|
+1,61,2,48,1,0,0,0,0,128,0,-1--1--1,,1|(1476,353)|
+1,62,3,56,1,0,0,0,0,128,0,-1--1--1,,1|(1778,360)|
+10,63,vertical transmission infection rate,508,203,61,33,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,64,63,40,0,0,0,0,0,128,0,-1--1--1,,1|(595,245)|
+10,65,Total Adult Mosquito Population,788,76,93,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,66,65,40,1,0,0,0,0,128,0,-1--1--1,,1|(725,153)|
+1,67,23,3,0,0,0,0,0,64,1,-1--1--1,,1|(1819,465)|
+10,68,m infectious,868,165,60,23,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,69,68,40,1,0,0,0,0,128,0,-1--1--1,,1|(703,250)|
+10,70,Normal Mosquito Renewal rate,1027,-18,77,23,8,3,0,18,-1,0,0,0,-1--1--1,0-0-0,|12|B|128-0-128
+10,71,Normal Mosquito Renewal rate,1976,150,80,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,72,71,32,0,0,0,0,0,128,0,-1--1--1,,1|(1966,193)|
+1,73,70,51,0,0,0,0,0,128,0,-1--1--1,,1|(1174,-20)|
+10,74,cumulative cases,109,1382,85,44,3,131,0,0,0,0,0,0
+12,75,48,462,1385,10,8,0,3,0,0,-1,0,0,0
+1,76,78,74,4,0,0,22,0,0,0,-1--1--1,,1|(273,1386)|
+1,77,78,75,100,0,0,22,0,0,0,-1--1--1,,1|(408,1386)|
+11,78,48,359,1386,6,8,34,3,0,0,1,0,0,0
+10,79,Zika Cases,359,1406,46,12,40,3,0,0,-1,0,0,0
+10,80,share viremic poor population,930,630,79,22,8,131,0,0,0,0,0,0
+10,81,ratio of susceptible mosquitos,964,352,80,22,8,3,0,0,0,0,0,0
+1,82,1,81,0,0,0,0,0,128,0,-1--1--1,,1|(841,399)|
+10,83,Total Adult Mosquito Population,1048,246,93,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,84,83,81,0,0,0,0,0,128,0,-1--1--1,,1|(1010,293)|
+1,85,81,7,0,0,0,0,0,128,0,-1--1--1,,1|(1073,393)|
+10,86,Total Human Population,1910,589,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,87,h susceptible poor,2033,1248,80,32,3,131,0,0,0,0,0,0
+10,88,h exposed poor,1419,1250,94,36,3,131,0,0,0,0,0,0
+10,89,h symptomatic infectious poor,930,1274,89,34,3,131,0,0,0,0,0,0
+10,90,h recovered immune poor,548,1251,93,36,3,131,0,0,0,0,0,0
+1,91,93,90,4,0,0,22,0,0,0,-1--1--1,,1|(677,1263)|
+1,92,93,89,100,0,0,22,0,0,0,-1--1--1,,1|(783,1263)|
+11,93,220,720,1263,6,8,34,3,0,0,1,0,0,0
+10,94,pop poor Human Recovery,720,1293,70,22,40,3,0,0,-1,0,0,0
+1,95,97,89,4,0,0,22,0,0,0,-1--1--1,,1|(1091,1267)|
+1,96,97,88,100,0,0,22,0,0,0,-1--1--1,,1|(1250,1267)|
+11,97,1964,1170,1267,6,8,34,3,0,0,1,0,0,0
+10,98,pop poor Human Incubation,1170,1297,70,22,40,3,0,0,-1,0,0,0
+1,99,101,88,4,0,0,22,0,0,0,-1--1--1,,1|(1650,1217)|
+1,100,101,87,100,0,0,22,0,0,0,-1--1--1,,1|(1876,1217)|
+11,101,1836,1794,1217,6,8,34,3,0,0,1,0,0,0
+10,102,pop poor Human Infection,1794,1247,70,22,40,3,0,0,-1,0,0,0
+10,103,Total Human Population,2188,1143,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,104,recovery period human,743,1180,78,22,8,131,0,0,0,0,0,0
+1,105,104,94,0,0,0,0,0,128,0,-1--1--1,,1|(732,1229)|
+1,106,89,94,1,0,0,0,0,128,0,-1--1--1,,1|(803,1334)|
+10,107,transmission probability vector to human,1605,1165,96,33,8,131,0,0,0,0,0,0
+1,108,107,102,0,0,0,0,0,128,0,-1--1--1,,1|(1705,1208)|
+10,109,intrinsic incubation period,1163,1100,75,22,8,3,0,0,0,0,0,0
+1,110,109,98,0,0,0,0,0,128,0,-1--1--1,,1|(1165,1191)|
+1,111,88,98,1,0,0,0,0,128,0,-1--1--1,,1|(1319,1362)|
+10,112,initial recovered poor,543,1322,77,33,8,3,0,0,0,0,0,0
+10,113,initial exposed poor,1383,1333,66,33,8,3,0,0,0,0,0,0
+10,114,inital susceptible poor,2070,1318,80,33,8,3,0,0,0,0,0,0
+10,115,initial infectious poor sym,948,1341,72,33,8,3,0,0,-1,0,0,0
+1,116,115,89,0,0,0,0,0,64,1,-1--1--1,,1|(946,1308)|
+10,117,Total Adult Mosquito Population,1941,708,93,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,118,h asymptomatic infectious poor,867,1014,98,40,3,131,0,0,0,0,0,0
+1,119,121,90,4,0,0,22,0,0,0,-1--1--1,,1|(548,1014)|
+1,120,121,118,100,0,0,22,0,0,0,-1--1--1,,1|(720,1014)|
+11,121,188,666,1014,6,8,34,3,0,0,1,0,0,0
+10,122,pop poor Asym Human Recovery,666,1044,72,22,40,3,0,0,-1,0,0,0
+1,123,104,122,0,0,0,0,0,128,0,-1--1--1,,1|(707,1118)|
+1,124,126,118,4,0,0,22,0,0,0,-1--1--1,,1|(1161,1002)|
+1,125,126,88,100,0,0,22,0,0,0,-1--1--1,,1|(1364,1112)|
+11,126,1996,1364,1002,6,8,34,3,0,0,1,0,0,0
+10,127,pop poor Asym Human Incubation,1364,1032,75,33,40,3,0,0,-1,0,0,0
+1,128,109,127,1,0,0,0,0,128,0,-1--1--1,,1|(1307,1009)|
+10,129,share symptomatic humans,1296,1181,85,22,8,3,0,0,0,0,0,0
+1,130,129,98,0,0,0,0,0,128,0,-1--1--1,,1|(1238,1234)|
+1,131,129,127,0,0,0,0,0,128,0,-1--1--1,,1|(1324,1118)|
+1,132,88,127,1,0,0,0,0,128,0,-1--1--1,,1|(1430,1029)|
+1,133,118,122,1,0,0,0,0,128,0,-1--1--1,,1|(724,989)|
+1,134,112,90,0,0,0,0,0,64,1,-1--1--1,,1|(545,1295)|
+10,135,poor pop Infectious,990,1171,41,22,8,3,0,0,0,0,0,0
+1,136,89,135,0,0,0,0,0,128,0,-1--1--1,,1|(959,1222)|
+1,137,118,135,0,0,0,0,0,128,0,-1--1--1,,1|(930,1095)|
+1,138,140,88,4,0,0,22,0,0,0,-1--1--1,,1|(1621,1277)|
+1,139,140,87,100,0,0,22,0,0,0,-1--1--1,,1|(1847,1277)|
+11,140,1356,1735,1277,6,8,34,3,0,0,1,0,0,0
+10,141,pop poor Sexual transmission,1735,1307,69,22,40,3,0,0,-1,0,0,0
+10,142,transmission probability sexual transmission,1541,1333,96,33,8,3,0,0,0,0,0,0
+1,143,142,141,0,0,0,0,0,128,0,-1--1--1,,1|(1644,1319)|
+10,144,poor pop sexual intercourse per person and day,1743,1457,99,34,8,3,0,18,0,0,0,0,-1--1--1,0-0-0,|12|B|128-0-128
+1,145,144,141,0,0,0,0,0,128,0,-1--1--1,,1|(1739,1382)|
+1,146,114,87,0,0,0,0,0,64,1,-1--1--1,,1|(2055,1287)|
+1,147,113,88,0,0,0,0,0,64,1,-1--1--1,,1|(1397,1299)|
+1,148,87,141,1,0,0,0,0,128,0,-1--1--1,,1|(1905,1313)|
+10,149,initial infectious poor asym,839,1089,89,33,8,3,0,0,0,0,0,0
+1,150,149,118,1,0,0,0,0,128,1,-1--1--1,,1|(825,1081)|
+1,151,117,159,0,0,0,0,0,128,0,-1--1--1,,1|(1928,818)|
+10,152,poor pop ratio of susceptible people,1997,1152,78,22,8,3,0,0,0,0,0,0
+1,153,87,152,0,0,0,0,0,128,0,-1--1--1,,1|(2015,1201)|
+1,154,103,152,0,0,0,0,0,128,0,-1--1--1,,1|(2108,1146)|
+1,155,152,102,1,0,0,0,0,128,0,-1--1--1,,1|(1884,1159)|
+10,156,ratio infectious Mosquitos,1796,825,63,22,8,3,0,0,0,0,0,0
+1,157,117,156,0,0,0,0,0,128,0,-1--1--1,,1|(1873,762)|
+1,158,156,102,0,0,0,0,0,128,0,-1--1--1,,1|(1795,1029)|
+10,159,Mosquito bites poor pop,1915,943,62,22,8,131,0,5,0,0,0,0,0-255-0,0-255-0,|12||0-0-0
+1,160,159,102,0,0,0,0,0,128,0,-1--1--1,,1|(1857,1088)|
+10,161,share viremic poor population,2021,1432,72,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,162,161,141,0,0,0,0,0,128,0,-1--1--1,,1|(1884,1372)|
+10,163,h susceptible rich,2015,2092,80,32,3,131,0,0,0,0,0,0
+10,164,h exposed rich,1401,2094,94,36,3,131,0,0,0,0,0,0
+10,165,h symptomatic infectious rich,912,2118,89,34,3,131,0,0,0,0,0,0
+10,166,h recovered immune rich,475,2096,93,36,3,131,0,0,0,0,0,0
+1,167,169,166,4,0,0,22,0,0,0,-1--1--1,,1|(611,2107)|
+1,168,169,165,100,0,0,22,0,0,0,-1--1--1,,1|(744,2107)|
+11,169,1532,660,2107,6,8,34,3,0,0,1,0,0,0
+10,170,rich pop Human Recovery,660,2137,67,22,40,3,0,0,-1,0,0,0
+1,171,173,165,4,0,0,22,0,0,0,-1--1--1,,1|(1073,2111)|
+1,172,173,164,100,0,0,22,0,0,0,-1--1--1,,1|(1232,2111)|
+11,173,1756,1152,2111,6,8,34,3,0,0,1,0,0,0
+10,174,rich pop Human Incubation,1152,2141,67,22,40,3,0,0,-1,0,0,0
+1,175,177,164,4,0,0,22,0,0,0,-1--1--1,,1|(1632,2061)|
+1,176,177,163,100,0,0,22,0,0,0,-1--1--1,,1|(1858,2061)|
+11,177,1740,1776,2061,6,8,34,3,0,0,1,0,0,0
+10,178,rich pop Human Infection,1776,2091,67,22,40,3,0,0,-1,0,0,0
+10,179,Total Human Population,2086,1911,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,180,165,170,1,0,0,0,0,128,0,-1--1--1,,1|(759,2199)|
+1,181,164,174,1,0,0,0,0,128,0,-1--1--1,,1|(1301,2206)|
+10,182,initial recovered rich,478,2165,77,33,8,3,0,0,0,0,0,0
+10,183,initial exposed rich,1384,2176,66,33,8,3,0,0,0,0,0,0
+10,184,inital susceptible rich,2059,2164,80,33,8,3,0,0,0,0,0,0
+10,185,initial infectious rich sym,914,2194,72,33,8,3,0,0,-1,0,0,0
+10,186,h asymptomatic infectious rich,847,1834,98,40,3,131,0,0,0,0,0,0
+1,187,189,166,4,0,0,22,0,0,0,-1--1--1,,1|(475,1858)|
+1,188,189,186,100,0,0,22,0,0,0,-1--1--1,,1|(701,1858)|
+11,189,1500,648,1858,6,8,34,3,0,0,1,0,0,0
+10,190,rich pop Asym Human Recovery,648,1888,72,22,40,3,0,0,-1,0,0,0
+1,191,193,186,4,0,0,22,0,0,0,-1--1--1,,1|(1143,1855)|
+1,192,193,164,100,0,0,22,0,0,0,-1--1--1,,1|(1348,1960)|
+11,193,1692,1348,1855,6,8,34,3,0,0,1,0,0,0
+10,194,rich pop asym incubation,1348,1885,59,22,40,3,0,0,-1,0,0,0
+1,195,164,194,1,0,0,0,0,128,0,-1--1--1,,1|(1409,1883)|
+1,196,186,190,1,0,0,0,0,128,0,-1--1--1,,1|(700,1825)|
+10,197,rich pop Infectious,952,2007,41,22,8,3,0,0,0,0,0,0
+1,198,165,197,0,0,0,0,0,128,0,-1--1--1,,1|(931,2063)|
+1,199,186,197,0,0,0,0,0,128,0,-1--1--1,,1|(900,1923)|
+1,200,202,164,4,0,0,22,0,0,0,-1--1--1,,1|(1603,2121)|
+1,201,202,163,100,0,0,22,0,0,0,-1--1--1,,1|(1829,2121)|
+11,202,1340,1717,2121,6,8,34,3,0,0,1,0,0,0
+10,203,rich pop sexual transmission,1717,2151,66,22,40,3,0,0,-1,0,0,0
+10,204,rich pop sexual intercourse per person and day,1741,2303,99,34,8,3,0,18,0,0,0,0,-1--1--1,0-0-0,|12|B|128-0-128
+1,205,204,203,0,0,0,0,0,128,0,-1--1--1,,1|(1729,2227)|
+1,206,163,203,1,0,0,0,0,128,0,-1--1--1,,1|(1887,2157)|
+10,207,initial infectious rich asym,848,1930,86,33,8,3,0,0,0,0,0,0
+10,208,rich pop ratio of susceptible people,1979,1996,78,22,8,3,0,0,0,0,0,0
+1,209,163,208,0,0,0,0,0,128,0,-1--1--1,,1|(1997,2045)|
+1,210,179,208,0,0,0,0,0,128,0,-1--1--1,,1|(2038,1949)|
+1,211,208,178,1,0,0,0,0,128,0,-1--1--1,,1|(1866,2003)|
+10,212,rich pop Infectious,1370,641,47,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,213,212,426,0,0,0,0,0,128,0,-1--1--1,,1|(1282,610)|
+10,214,ratio infectious Mosquitos,1724,1874,69,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,215,214,178,0,0,0,0,0,128,0,-1--1--1,,1|(1747,1975)|
+10,216,diagnosed zika cases,75,1142,89,47,3,131,0,0,0,0,0,0
+10,217,normal blood meals a day,2097,765,56,22,8,3,0,0,0,0,0,0
+1,218,217,159,1,0,0,0,0,128,0,-1--1--1,,1|(2013,877)|
+10,219,Mosquito bites poor pop,880,560,68,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,220,219,411,0,0,0,0,0,128,0,-1--1--1,,1|(933,536)|
+12,221,48,409,1132,10,8,0,3,0,0,-1,0,0,0
+1,222,224,216,4,0,0,22,0,0,0,-1--1--1,,1|(217,1146)|
+1,223,224,221,100,0,0,22,0,0,0,-1--1--1,,1|(409,1146)|
+11,224,48,277,1146,6,8,34,3,0,0,1,0,0,0
+10,225,diagnose Zika case,277,1182,75,28,40,131,0,0,-1,0,0,0
+10,226,delaytime of reporting,-231,1251,52,26,8,131,0,0,0,0,0,0
+1,227,3,156,0,0,0,0,0,128,0,-1--1--1,,1|(1808,622)|
+10,228,share reported cases,300,1065,60,22,8,3,0,0,0,0,0,0
+10,229,rich pop asym incubation,307,1512,65,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,230,rich pop Human Incubation,199,1285,72,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,231,pop poor Asym Human Incubation,493,1491,81,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,232,pop poor Human Incubation,356,1257,75,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,233,229,79,0,0,0,0,0,128,0,-1--1--1,,1|(331,1460)|
+1,234,231,79,1,0,0,0,0,128,0,-1--1--1,,1|(431,1405)|
+1,235,232,225,0,0,0,0,0,128,0,-1--1--1,,1|(324,1227)|
+1,236,230,225,1,0,0,0,0,128,0,-1--1--1,,1|(236,1250)|
+1,237,230,79,0,0,0,0,0,128,0,-1--1--1,,1|(279,1346)|
+1,238,232,79,0,0,0,0,0,128,0,-1--1--1,,1|(356,1329)|
+1,239,228,225,0,0,0,0,0,128,0,-1--1--1,,1|(290,1113)|
+10,240,reported cases,-356,1142,83,41,3,131,0,0,0,0,0,0
+1,241,243,240,4,0,0,22,0,0,0,-1--1--1,,1|(-192,1141)|
+1,242,243,216,100,0,0,22,0,0,0,-1--1--1,,1|(-56,1141)|
+11,243,1852,-105,1141,6,8,34,3,0,0,1,0,0,0
+10,244,report case,-105,1161,46,12,40,3,0,0,-1,0,0,0
+1,245,226,244,0,0,0,0,0,128,0,-1--1--1,,1|(-163,1203)|
+10,246,recovery period human,674,2000,73,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,247,246,190,0,0,0,0,0,128,0,-1--1--1,,1|(662,1950)|
+1,248,246,170,0,0,0,0,0,128,0,-1--1--1,,1|(667,2061)|
+10,249,share viremic poor population,1965,2276,72,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,250,249,203,0,0,0,0,0,128,0,-1--1--1,,1|(1847,2216)|
+10,251,transmission probability vector to human,1624,1957,86,33,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,252,251,178,0,0,0,0,0,128,0,-1--1--1,,1|(1700,2024)|
+10,253,transmission probability sexual transmission,1541,2199,75,33,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,254,253,203,0,0,0,0,0,128,0,-1--1--1,,1|(1626,2175)|
+10,255,share symptomatic humans,1260,2018,83,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,256,255,194,0,0,0,0,0,128,0,-1--1--1,,1|(1299,1957)|
+10,257,intrinsic incubation period,1132,1948,79,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,258,257,194,0,0,0,0,0,128,0,-1--1--1,,1|(1241,1915)|
+1,259,257,174,1,0,0,0,0,128,0,-1--1--1,,1|(1155,2115)|
+1,260,255,174,0,0,0,0,0,128,0,-1--1--1,,1|(1210,2074)|
+12,261,48,532,2519,10,8,0,3,0,0,-1,0,0,0
+1,262,264,166,4,0,0,22,0,0,0,-1--1--1,,1|(532,2223)|
+1,263,264,261,100,0,0,22,0,0,0,-1--1--1,,1|(532,2419)|
+11,264,48,532,2321,8,6,33,3,0,0,4,0,0,0
+10,265,Arrival airtravel passengers recovered,610,2321,90,22,40,3,0,0,-1,0,0,0
+12,266,48,960,2579,10,8,0,3,0,0,-1,0,0,0
+1,267,269,165,4,0,0,22,0,0,0,-1--1--1,,1|(954,2274)|
+1,268,269,266,100,0,0,22,0,0,0,-1--1--1,,1|(954,2490)|
+11,269,48,954,2403,8,6,33,3,0,0,4,0,0,0
+10,270,Arrival airtravel passengers symptomatic,1036,2403,70,33,40,3,0,0,-1,0,0,0
+12,271,48,796,2551,10,8,0,3,0,0,-1,0,0,0
+1,272,274,186,4,0,0,22,0,0,0,-1--1--1,,1|(790,2110)|
+1,273,274,271,100,0,0,22,0,0,0,-1--1--1,,1|(790,2450)|
+11,274,48,790,2352,8,6,33,3,0,0,4,0,0,0
+10,275,Arrival airtravel passengers asumptomatic,877,2352,70,33,40,3,0,0,-1,0,0,0
+12,276,48,1452,2589,10,8,0,3,0,0,-1,0,0,0
+1,277,279,164,4,0,0,22,0,0,0,-1--1--1,,1|(1454,2247)|
+1,278,279,276,100,0,0,22,0,0,0,-1--1--1,,1|(1454,2479)|
+11,279,48,1454,2371,8,6,33,3,0,0,4,0,0,0
+10,280,Arrival airtravel passengers exposed,1532,2371,82,22,40,3,0,0,-1,0,0,0
+12,281,48,2076,2537,10,8,0,3,0,0,-1,0,0,0
+1,282,284,163,4,0,0,22,0,0,0,-1--1--1,,1|(2076,2222)|
+1,283,284,281,100,0,0,22,0,0,0,-1--1--1,,1|(2076,2430)|
+11,284,48,2076,2326,8,6,33,3,0,0,4,0,0,0
+10,285,Arrival airtravel passengers susceptible,2154,2326,95,22,40,3,0,0,-1,0,0,0
+12,286,48,388,1699,10,8,0,3,0,0,-1,0,0,0
+1,287,289,286,4,0,0,22,0,0,0,-1--1--1,,1|(397,1744)|
+1,288,289,166,100,0,0,22,0,0,0,-1--1--1,,1|(397,1926)|
+11,289,48,397,1787,8,6,33,3,0,0,4,0,0,0
+10,290,Departure airtravel passengers recovered,495,1787,90,22,40,3,0,0,-1,0,0,0
+12,291,48,748,1685,10,8,0,3,0,0,-1,0,0,0
+1,292,294,291,4,0,0,22,0,0,0,-1--1--1,,1|(753,1715)|
+1,293,294,186,100,0,0,22,0,0,0,-1--1--1,,1|(753,1771)|
+11,294,48,753,1743,8,6,33,3,0,0,4,0,0,0
+10,295,Departure airtravel passengers asymptomatic,841,1743,80,33,40,3,0,0,-1,0,0,0
+12,296,48,998,1665,10,8,0,3,0,0,-1,0,0,0
+1,297,299,296,4,0,0,22,0,0,0,-1--1--1,,1|(1000,1735)|
+1,298,299,165,100,0,0,22,0,0,0,-1--1--1,,1|(1000,1947)|
+11,299,48,1000,1804,8,6,33,3,0,0,4,0,0,0
+10,300,Departure airtravel passengers symptomatic,1108,1804,100,22,40,3,0,0,-1,0,0,0
+12,301,48,1446,1747,10,8,0,3,0,0,-1,0,0,0
+1,302,304,301,4,0,0,22,0,0,0,-1--1--1,,1|(1444,1799)|
+1,303,304,164,100,0,0,22,0,0,0,-1--1--1,,1|(1444,1957)|
+11,304,48,1444,1850,8,6,33,3,0,0,4,0,0,0
+10,305,Departure airtravel passengers exposed,1534,1850,82,22,40,3,0,0,-1,0,0,0
+12,306,48,2092,1761,10,8,0,3,0,0,-1,0,0,0
+1,307,309,306,4,0,0,22,0,0,0,-1--1--1,,1|(2096,1802)|
+1,308,309,163,100,0,0,22,0,0,0,-1--1--1,,1|(2015,1842)|
+11,309,48,2096,1842,8,6,33,3,0,0,4,0,0,0
+10,310,Departure airtravel passengers susceptible,2199,1842,95,22,40,3,0,0,-1,0,0,0
+1,311,166,290,1,0,0,0,0,128,0,-1--1--1,,1|(312,1916)|
+1,312,186,295,1,0,0,0,0,128,0,-1--1--1,,1|(926,1745)|
+1,313,165,300,1,0,0,0,0,128,0,-1--1--1,,1|(1009,1960)|
+1,314,164,305,1,0,0,0,0,128,0,-1--1--1,,1|(1498,1935)|
+1,315,163,310,1,0,0,0,0,128,0,-1--1--1,,1|(2152,1983)|
+10,316,Departures,1266,1687,46,12,8,3,0,0,0,0,0,0
+1,317,316,290,1,0,0,0,0,128,0,-1--1--1,,1|(762,1651)|
+1,318,316,295,1,0,0,0,0,128,0,-1--1--1,,1|(1066,1682)|
+1,319,316,300,1,0,0,0,0,128,0,-1--1--1,,1|(1116,1739)|
+1,320,316,305,1,0,0,0,0,128,0,-1--1--1,,1|(1486,1751)|
+1,321,316,310,1,0,0,0,0,128,0,-1--1--1,,1|(1862,1735)|
+10,322,h asymptomatic infectious poor,2466,648,70,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,323,h exposed poor,2506,460,48,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,324,h recovered immune poor,2412,516,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,325,h susceptible poor,2406,576,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,326,h symptomatic infectious poor,2600,640,69,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,327,182,166,0,0,0,0,0,64,1,-1--1--1,,1|(483,2132)|
+1,328,185,165,0,0,0,0,0,64,1,-1--1--1,,1|(914,2163)|
+1,329,183,164,0,0,0,0,0,64,1,-1--1--1,,1|(1389,2143)|
+1,330,184,163,0,0,0,0,0,64,1,-1--1--1,,1|(2040,2133)|
+1,331,207,186,0,0,0,0,0,64,1,-1--1--1,,1|(847,1892)|
+10,332,h asymptomatic infectious rich,2846,450,70,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,333,h exposed rich,2798,636,48,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,334,h recovered immune rich,2964,514,57,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,335,h susceptible rich,2950,564,60,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,336,h symptomatic infectious rich,2904,628,66,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,337,Rich population,2538,546,45,22,8,3,0,0,0,0,0,0
+10,338,Poor population,2790,540,45,22,8,3,0,0,0,0,0,0
+1,339,337,14,0,0,0,0,0,128,0,-1--1--1,,1|(2589,541)|
+1,340,338,14,0,0,0,0,0,128,0,-1--1--1,,1|(2738,537)|
+1,341,322,337,0,0,0,0,0,128,0,-1--1--1,,1|(2497,602)|
+1,342,323,337,0,0,0,0,0,128,0,-1--1--1,,1|(2519,496)|
+1,343,324,337,0,0,0,0,0,128,0,-1--1--1,,1|(2475,530)|
+1,344,325,337,0,0,0,0,0,128,0,-1--1--1,,1|(2472,561)|
+1,345,326,337,0,0,0,0,0,128,0,-1--1--1,,1|(2572,598)|
+1,346,332,338,0,0,0,0,0,128,0,-1--1--1,,1|(2821,489)|
+1,347,333,338,0,0,0,0,0,128,0,-1--1--1,,1|(2794,594)|
+1,348,334,338,0,0,0,0,0,128,0,-1--1--1,,1|(2877,526)|
+1,349,335,338,0,0,0,0,0,128,0,-1--1--1,,1|(2869,551)|
+1,350,336,338,0,0,0,0,0,128,0,-1--1--1,,1|(2852,588)|
+10,351,Rich population,496,1663,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,352,351,290,0,0,0,0,0,128,0,-1--1--1,,1|(495,1718)|
+10,353,Rich population,870,1669,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,354,Rich population,1552,1753,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,355,Rich population,2248,1743,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,356,Rich population,1220,1741,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,357,353,295,0,0,0,0,0,128,0,-1--1--1,,1|(860,1694)|
+1,358,356,300,0,0,0,0,0,128,0,-1--1--1,,1|(1170,1769)|
+1,359,354,305,0,0,0,0,0,128,0,-1--1--1,,1|(1544,1794)|
+1,360,355,310,0,0,0,0,0,128,0,-1--1--1,,1|(2226,1786)|
+1,361,135,80,1,0,0,0,0,128,0,-1--1--1,,1|(978,815)|
+10,362,Availability breeding poor,-181,546,104,46,3,131,0,0,0,0,0,0
+12,363,48,-199,767,10,8,0,3,0,0,-1,0,0,0
+1,364,366,363,4,0,0,22,0,0,0,-1--1--1,,1|(-195,722)|
+1,365,366,362,100,0,0,22,0,0,0,-1--1--1,,1|(-195,633)|
+11,366,48,-195,680,8,6,33,3,0,0,4,0,0,0
+10,367,Elimination of potential breeding grounds poor neighb,-89,680,98,33,40,3,0,0,-1,0,0,0
+10,368,Availability breeding rich,-213,-20,104,46,3,131,0,0,0,0,0,0
+12,369,48,-220,230,10,8,0,3,0,0,-1,0,0,0
+1,370,372,369,4,0,0,22,0,0,0,-1--1--1,,1|(-218,179)|
+1,371,372,368,100,0,0,22,0,0,0,-1--1--1,,1|(-218,75)|
+11,372,48,-218,131,8,6,33,3,0,0,4,0,0,0
+10,373,Elimination of potential breeding grounds rich neighb,-112,131,98,33,40,3,0,0,-1,0,0,0
+1,374,362,386,1,0,0,0,0,128,0,-1--1--1,,1|(174,330)|
+1,375,362,367,1,0,0,0,0,128,0,-1--1--1,,1|(-97,609)|
+10,376,destruction time of water ponds,49,794,78,22,8,3,0,0,0,0,0,0
+1,377,376,367,0,0,0,0,0,128,0,-1--1--1,,1|(-7,746)|
+10,378,stock min level consequence of slum conditions,75,584,86,33,8,3,0,0,0,0,0,0
+1,379,378,367,0,0,0,0,0,128,0,-1--1--1,,1|(0,628)|
+10,380,destruction time of water ponds,95,73,83,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,381,380,373,0,0,0,0,0,128,0,-1--1--1,,1|(8,97)|
+10,382,Mosquito renewal rate,672,-22,53,22,8,3,0,0,0,0,0,0
+1,383,70,382,0,0,0,0,0,128,0,-1--1--1,,1|(844,-19)|
+1,384,382,40,0,0,0,0,0,128,0,-1--1--1,,1|(675,125)|
+1,385,368,386,0,0,0,0,0,128,0,-1--1--1,,1|(50,-20)|
+10,386,Man made Mosquito renewal rate,299,-21,76,33,8,3,0,0,0,0,0,0
+1,387,368,373,1,0,0,0,0,128,0,-1--1--1,,1|(-126,70)|
+10,388,Man made Mosquito renewal rate no effort,996,-147,90,22,8,3,0,0,0,0,0,0
+1,389,388,386,0,0,0,0,0,128,0,-1--1--1,,1|(647,-83)|
+1,390,388,51,0,0,0,0,0,128,0,-1--1--1,,1|(1161,-87)|
+10,391,Public awareness,-350,956,87,43,3,131,0,0,0,0,0,0
+1,392,393,391,4,0,0,22,0,0,0,-1--1--1,,1|(-213,981)|
+11,393,540,-158,981,6,8,34,3,0,0,1,0,0,0
+10,394,building up awareness,-158,1011,89,22,40,3,0,0,-1,0,0,0
+12,395,48,-683,971,10,8,0,3,0,0,-1,0,0,0
+1,396,398,395,4,0,0,22,0,0,0,-1--1--1,,1|(-618,971)|
+1,397,398,391,100,0,0,22,0,0,0,-1--1--1,,1|(-494,971)|
+11,398,48,-557,971,6,8,34,3,0,0,1,0,0,0
+10,399,disease sank into oblivion,-557,1001,71,22,40,3,0,0,-1,0,0,0
+10,400,delay time until it falls into oblivion,-658,870,75,22,8,3,0,0,0,0,0,0
+1,401,400,399,0,0,0,0,0,128,0,-1--1--1,,1|(-611,930)|
+10,402,max awareness,45,957,93,33,3,131,0,0,0,0,0,0
+1,403,393,402,100,0,0,22,0,0,0,-1--1--1,,1|(-100,981)|
+10,404,Public awareness,-412,132,90,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,405,Public awareness,-364,697,90,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,406,404,373,0,0,0,0,0,128,0,-1--1--1,,1|(-272,131)|
+1,407,405,367,0,0,0,0,0,128,0,-1--1--1,,1|(-237,689)|
+1,408,410,2,4,0,0,22,0,0,0,-1--1--1,,1|(1153,477)|
+1,409,410,1,100,0,0,22,0,0,0,-1--1--1,,1|(892,477)|
+11,410,540,1000,477,6,8,34,3,0,0,1,0,0,0
+10,411,Mosquito infection poor,1000,507,59,22,40,3,0,0,-1,0,0,0
+10,412,personal protection poor,2160,937,65,22,8,3,0,0,0,0,0,0
+10,413,Public awareness,2353,1003,90,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,414,Mosquito bites rich pop,1845,1796,62,22,8,3,0,4,0,0,0,0,-1--1--1,0-255-0,|12||0-0-0
+1,415,414,178,0,0,0,0,0,128,0,-1--1--1,,1|(1812,1936)|
+10,416,Total Adult Mosquito Population,1966,1580,93,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,417,416,414,0,0,0,0,0,128,0,-1--1--1,,1|(1908,1681)|
+10,418,normal blood meals a day,1541,1612,62,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,419,normal personal protection poor,2276,847,103,22,8,3,0,0,-1,0,0,0
+10,420,personal protection rich,2089,1669,61,22,8,3,0,0,0,0,0,0
+10,421,Public awareness,2293,1634,90,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,422,418,414,0,0,0,0,0,128,0,-1--1--1,,1|(1686,1700)|
+1,423,81,411,0,0,0,0,0,64,0,-1--1--1,,1|(979,422)|
+1,424,80,411,0,0,0,0,0,64,0,-1--1--1,,1|(961,574)|
+1,425,19,411,0,0,0,0,0,64,0,-1--1--1,,1|(1107,426)|
+10,426,share viremic rich population,1165,570,76,22,8,3,0,0,0,0,0,0
+1,427,426,7,0,0,0,0,0,128,0,-1--1--1,,1|(1178,511)|
+10,428,Mosquito bites rich pop,1315,531,68,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,429,428,7,0,0,0,0,0,128,0,-1--1--1,,1|(1261,489)|
+10,430,Poor population,712,707,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,431,430,80,0,0,0,0,0,128,0,-1--1--1,,1|(807,673)|
+10,432,Rich population,1194,686,50,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,433,432,426,0,0,0,0,0,128,0,-1--1--1,,1|(1181,634)|
+1,434,21,1,0,0,0,0,0,64,1,-1--1--1,,1|(682,515)|
+1,435,22,2,0,0,0,0,0,64,1,-1--1--1,,1|(1454,488)|
+1,436,402,394,1,0,0,0,0,128,0,-1--1--1,,1|(-86,938)|
+1,437,386,382,0,0,0,0,0,128,0,-1--1--1,,1|(490,-21)|
+1,438,412,159,0,0,0,0,0,128,0,-1--1--1,,1|(2042,939)|
+1,439,420,414,0,0,0,0,0,64,0,-1--1--1,,1|(1973,1729)|
+12,440,48,-240,-222,10,8,0,3,0,0,-1,0,0,0
+1,441,443,368,4,0,0,22,0,0,0,-1--1--1,,1|(-236,-113)|
+1,442,443,440,100,0,0,22,0,0,0,-1--1--1,,1|(-236,-193)|
+11,443,48,-236,-166,8,6,33,3,0,0,4,0,0,0
+10,444,creation of new breeding sites rich,-151,-166,77,22,40,3,0,0,-1,0,0,0
+12,445,48,-190,382,10,8,0,3,0,0,-1,0,0,0
+1,446,448,362,4,0,0,22,0,0,0,-1--1--1,,1|(-190,475)|
+1,447,448,445,100,0,0,22,0,0,0,-1--1--1,,1|(-190,414)|
+11,448,48,-190,445,8,6,33,3,0,0,4,0,0,0
+10,449,creation of new breeding sites poor,-102,445,80,22,40,3,0,0,-1,0,0,0
+1,450,362,449,1,0,0,0,0,128,0,-1--1--1,,1|(-82,470)|
+1,451,368,444,1,0,0,0,0,128,0,-1--1--1,,1|(-96,-97)|
+10,452,rate of breeding site recreation rich,-18,-268,83,22,8,3,0,0,0,0,0,0
+1,453,452,444,0,0,0,0,0,128,0,-1--1--1,,1|(-78,-221)|
+10,454,rate of breeding site recreation poor,-54,338,83,22,8,3,0,0,0,0,0,0
+1,455,454,449,0,0,0,0,0,128,0,-1--1--1,,1|(-74,385)|
+10,456,init breeding sites rich,-380,-217,53,22,8,3,0,0,-1,0,0,0
+10,457,init breeding sites poor,-405,426,86,33,8,3,0,0,0,0,0,0
+1,458,457,362,0,0,0,0,0,128,1,-1--1--1,,1|(-311,476)|
+1,459,457,449,1,0,0,0,0,128,0,-1--1--1,,1|(-232,408)|
+1,460,456,444,1,0,0,0,0,128,0,-1--1--1,,1|(-291,-221)|
+10,461,building awareness based on reports,-198,1083,81,22,8,3,0,0,0,0,0,0
+1,462,391,461,0,0,0,0,0,64,0,-1--1--1,,1|(-266,1025)|
+1,463,244,461,0,0,0,0,0,64,0,-1--1--1,,1|(-139,1131)|
+1,464,461,394,0,0,0,0,0,128,0,-1--1--1,,1|(-181,1053)|
+1,465,391,399,1,0,0,0,0,128,0,-1--1--1,,1|(-476,1030)|
+1,466,216,244,1,0,0,0,0,128,0,-1--1--1,,1|(-56,1230)|
+1,467,419,412,0,0,0,0,0,128,0,-1--1--1,,1|(2223,887)|
+1,468,413,412,0,0,0,0,0,128,0,-1--1--1,,1|(2263,972)|
+10,469,normal personal protection rich,2141,1547,68,22,8,3,0,0,0,0,0,0
+1,470,469,420,0,0,0,0,0,128,0,-1--1--1,,1|(2117,1601)|
+1,471,421,420,0,0,0,0,0,128,0,-1--1--1,,1|(2183,1652)|
+10,472,transmission probability,1601,1073,53,22,8,3,0,0,0,0,0,0
+1,473,472,107,0,0,0,0,0,128,0,-1--1--1,,1|(1601,1106)|
+10,474,transmission probability,1250,255,58,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,475,474,19,0,0,0,0,0,128,0,-1--1--1,,1|(1237,289)|
+10,476,Human population,-525,1083,45,22,8,3,0,4,-1,0,0,0,-1--1--1,255-0-0,|12||0-0-0
+1,477,476,461,0,0,0,0,0,64,0,-1--1--1,,1|(-386,1083)|
+10,478,ratio of vectors per person,2090,1025,64,22,8,3,0,0,-1,0,0,0
+1,479,478,159,0,0,0,0,0,64,0,-1--1--1,,1|(2008,986)|
+10,480,ratio of vectors per person,1771,1630,70,22,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,481,480,414,0,0,0,0,0,128,0,-1--1--1,,1|(1804,1706)|
+10,482,init cumulative cases,111,1450,62,22,8,3,0,0,0,0,0,0
+1,483,482,74,0,0,0,0,0,128,1,-1--1--1,,1|(113,1433)|
+10,484,init diagnosed cases,75,1211,59,22,8,3,0,0,-1,0,0,0
+1,485,484,216,0,0,0,0,0,64,1,-1--1--1,,1|(75,1196)|
+10,486,init reported cases,-356,1205,52,22,8,3,0,0,-1,0,0,0
+1,487,486,240,0,0,0,0,0,64,1,-1--1--1,,1|(-356,1183)|
+10,488,init max awareness,46,1014,44,22,8,3,0,0,0,0,0,0
+1,489,488,402,0,0,0,0,0,128,1,-1--1--1,,1|(48,997)|
+10,490,init public awareness,-350,1021,44,22,8,3,0,0,-1,0,0,0
+1,491,490,391,0,0,0,0,0,64,1,-1--1--1,,1|(-350,999)|
+1,492,456,368,0,0,0,0,0,128,1,-1--1--1,,1|(-311,-135)|
+///---\\\
+:L<%^E!@
+9:RAtio_20
+23:0
+18:SD Model_Dynamic Transmission of Zika_v1_Stochastic.vsc
+20:SD Model_Dynamic Transmission of Zika_v1_Stochastic.lst
+15:0,0,0,0,0,0
+19:60,0
+27:2,
+34:0,
+4:Time
+5:initial susceptible m
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:4
+41:0
+42:0
+24:0
+25:350
+26:350
