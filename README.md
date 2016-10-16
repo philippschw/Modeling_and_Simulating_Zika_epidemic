@@ -35,7 +35,7 @@ Raw raster dataset         |  Vector data after pre-processing
 * The proposed integrated design method has proven to be useful to study Zika and could be applied with relatively little effort also to other vector-borne diseases such as malaria and dengue
 
 ## Please consider citing this Publication
-Link to [Thesis](uuid:4957df8e-3de1-4b5e-8231-731287a4ede4) on http://repository.tudelft.nl/ 
+Link to [Master Thesis](http://repository.tudelft.nl/islandora/object/uuid:4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education)
 
 ## Future steps
 Upcoming journal paper
