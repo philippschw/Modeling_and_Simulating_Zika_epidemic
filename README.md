@@ -25,9 +25,7 @@ Simulation results are largelty driven by monthly resovled data about vector pre
 To address subnational heterogneity whenever possible as raw data high-resolution raster data rather than census data (on country level) was used. In the data preprocessing the raster data was transformed to vector data on the aggregation level needed for a fast global model. Similiar provinces within nations were clustered to single shapes.
 Raw raster dataset         |  Vector data after pre-processing
 :-------------------------:|:-------------------------:
-![](figs/population_raster_data.png)  |  ![](figs/population_aggregated_low_Res_hig_res.png)
-
-<img src="figs/population_raster_data.png" width="200"/> <img src="figs/population_aggregated_low_Res_hig_res.png" width="200"/> 
+<img src="figs/population_raster_data.png" width="500"/> <img src="figs/population_aggregated_low_Res_hig_res.png" width="500"/> 
 
 
 ## Preliminary Results
