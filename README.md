@@ -1,13 +1,13 @@
 # Modeling and simulating the Zika outbreak under deep uncertainty
 
-| Tables   |Graduation Committee|  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  Prof. dr. Bartel A. Van de Walle | $1600 |
-| col 2 is |  Prof. dr. Erik Pruyt |   $12 |
-| col 3 is |  Prof. dr. Michel Oey |    $1 |
+### Author Philipp Schwarz, MSc in Engineering and Policy Analysis
+#### Delft University of Technology, The Netherlands
 
-Author Philipp Schwarz, MSc in Engineering and Policy Analysis
-TU Delft, The Netherlands
+| Chair of graduation committee: |  Prof. dr. Bartel A. Van de Walle | TU Delft |
+| First Supervisor |  Prof. dr. Erik Pruyt |   TU Delft |
+| Second Supervisor |  Prof. dr. Michel Oey |    TU Delft |
+
+
 
 Graduation Committee
 
