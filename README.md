@@ -8,39 +8,28 @@
 | First Supervisor |  Prof. dr. Erik Pruyt |
 | Second Supervisor |  Prof. dr. Michel Oey |
 
-
-Graduation Committee
-
-***Short Summary*** 
-* Large-scale simulation model that pulls in big (geo-referenced) data from different sources including maps, census data and model-based predictions on global air travel and (mosquito) species distribution. 
+***In a Nutshell*** 
+Large-scale simulation model to study worldwide potential Zika outbreaks. 
+Methodological contributions: (1) Pulls in big (geo-referenced) data from different sources combining high-resolution raster data, census data and model-based predictions on global air travel (Mao et al. 2015) and Aedes Mosquito species distribution (Messina et al. 2016). (2) Account for deep uncertainty by sampling over high dimensional uncertainty space (3) Cope with seasonal dynamics by making use of monthly resolved exogenous data, (4) Ensure computational efficiency by switching from stochastic to differential equation-based model.
 
 ## Simulation input data
+Simulation results are largelty driven by monthly resovled data about vector presence of Aedes Aegypti and Aedes Albopictus produced by Moritz Kraemer and Oliver Brady.
 
-Simulation is based on monthly data on vector presence of Aedes Aegypti and Aedes Albopictus. 
-
+### Aedes Aegypti
 ![](figs/Animation_Aegypti_v2.gif)
 
+### Aedes Albopictus
 ![](figs/Animation_Albopictus_v2.gif)
 
-* Triangulate data with 
-
-![](results/population_aggregated_low_Res_hig_res.png)
+To address subnational heterogneity the raw data as far as possible based on high-resolution raster data rather than census data (on country level)
+![](figs/population_aggregated_low_Res_hig_res.png)
 
 ## Preliminary Results
-For each incident, the database records the:
+* Consistently over the complete ensemble of models, the recovery period (time human is infectious and can infect mosquito when being bitten) is the most important single variable that determines the speed of transmission and the Zika cases in the first wave of the global outbreak
+* Travel plays a crucial role in the diffusion of the disease 
+* The proposed integrated design method has proven to be useful to study Zika and could be applied with relatively little effort also to other vector-borne diseases such as malaria and dengue
 
-* Date
-* Country and specific location, including geocodes
-* Number of aid workers affected (victims)
-* Sex of victims
-* Institutional affiliation of victims (UN/Red Cross/NGO/other)
-* Type of staff (national or international)*
-* Outcome of the incident (victims killed/wounded/kidnapped)
-* Means of violence (e.g. shooting, IED, aerial bombardment)
-* Context of attack (ambush, armed incursion, etc.)
-* Summary of incident (public details)
-
-## Publications to cite
+## Please consider citing this Publication
 Link to [Thesis](uuid:4957df8e-3de1-4b5e-8231-731287a4ede4) on http://repository.tudelft.nl/ 
 
 ## Future steps
