@@ -21,7 +21,7 @@ Simulation results are largelty driven by monthly resovled data about vector pre
 ### Aedes Albopictus
 ![](figs/Animation_Albopictus_v2.gif)
 
-To address subnational heterogneity the raw data as far as possible based on high-resolution raster data rather than census data (on country level)
+To address subnational heterogneity whenever possible as raw data high-resolution raster data rather than census data (on country level) was used. In the data preprocessing the raster data was transformed to vector data on the aggregation level needed for a fast global model. 
 ![](figs/population_aggregated_low_Res_hig_res.png)
 
 ## Preliminary Results
