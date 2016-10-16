@@ -27,6 +27,8 @@ Raw raster dataset         |  Vector data after pre-processing
 :-------------------------:|:-------------------------:
 ![](figs/population_raster_data.png)  |  ![](figs/population_aggregated_low_Res_hig_res.png)
 
+<img src="figs/population_raster_data.png" width="200"/> <img src="figs/population_aggregated_low_Res_hig_res.png" width="200"/> 
+
 
 ## Preliminary Results
 * Consistently over the complete ensemble of models, the recovery period (time human is infectious and can infect mosquito when being bitten) is the most important single variable that determines the speed of transmission and the Zika cases in the first wave of the global outbreak
