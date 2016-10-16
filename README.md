@@ -15,9 +15,11 @@ Delft, The Netherlands
 ***Key Outcome:*** 
 * Risks to humanitarian aid workers are power law distributed. A small number of insecure locations (Afghanistan, Sudan, Somalia, Syria and Pakistan) account for most of the incidents.
 
-![](figs/Animation_Aegypti_v2.gif.png)
+![alt text][figs/Animation_Aegypti_v2.gif]
 
-![](figs/Animation_Albopictus_v2.gifp.png)
+![]()
+
+![](figs/Animation_Albopictus_v2.gif)
 
 * Over the last fifteen years the number of serious incidents has continously increased and is now more than 4 times higher than 15 years ago. 
 * The increase of attacks does primarily affected national humanitarian aid workers!
