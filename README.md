@@ -1,7 +1,6 @@
-# Modeling and simulating the Zika outbreak under deep uncertainty
+## Modeling and simulating the Zika outbreak under deep uncertainty
 
-### Author Philipp Schwarz
-[Contact](philipp.schw@gmail.com)
+#### Author Philipp Schwarz, 
 
 #### Researcher in Policy Analysis Section, Delft University of Technology, The Netherlands
 
@@ -52,3 +51,5 @@ Upcoming journal paper
 
 ***License***
 Data and scripts within this repository are released under the [CRAPL v0.1 License](http://matt.might.net/articles/crapl/).
+
+[Contact me](philipp.schw@gmail.com)
