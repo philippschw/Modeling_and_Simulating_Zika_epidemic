@@ -44,6 +44,7 @@ Computational experiments were produced making use of high performance cluster p
 * The proposed integrated design method has proven to be useful to study Zika and could be applied with relatively little effort also to other vector-borne diseases such as malaria and dengue
 
 ***Please consider citing this Publication***
+
 Schwarz P. Modeling and simulating the Zika outbreak under deep uncertainty | TU Delft Repositories [Internet]. Delft University of Technology; 2016 [cited 2016 Sep 19]. Available from: http://repository.tudelft.nl/islandora/object/uuid%3A4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education
 [Link](http://repository.tudelft.nl/islandora/object/uuid:4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education)
 
