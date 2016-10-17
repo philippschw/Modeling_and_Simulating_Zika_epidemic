@@ -11,7 +11,7 @@ This repository contains all Python scripts that were used to produce the simula
 ***In a Nutshell*** 
 
 Large-scale simulation model to study worldwide potential Zika outbreaks. 
-Methodological contributions: (1) Pulls in big (geo-referenced) data from different sources combining high-resolution raster data, census data and model-based predictions on global air travel [(Mao et al. 2015)](https://dx.doi.org/10.7554/eLife.15272) and Aedes Mosquito species distribution [(Messina et al. 2016)](https://dx.doi.org/10.7554/eLife.15272). (2) Account for deep uncertainty by sampling over high dimensional uncertainty space [(Kwakkel and Pruyt 2013](Exploratory Modeling and Analysis, an Approach for Model-Based Foresight under Deep Uncertainty.) (3) Cope with seasonal dynamics by making use of monthly resolved exogenous data, (4) Ensure computational efficiency by switching from stochastic to differential equation-based model.
+Methodological contributions: (1) Pulls in big (geo-referenced) data from different sources combining high-resolution raster data, census data and model-based predictions on global air travel [(Mao et al. 2015)](https://dx.doi.org/10.7554/eLife.15272) and Aedes Mosquito species distribution [(Messina et al. 2016)](https://dx.doi.org/10.7554/eLife.15272). (2) Account for deep uncertainty by sampling over high dimensional uncertainty space [(Kwakkel and Pruyt 2013)](Exploratory Modeling and Analysis, an Approach for Model-Based Foresight under Deep Uncertainty.) (3) Cope with seasonal dynamics by making use of monthly resolved exogenous data, (4) Ensure computational efficiency by switching from stochastic to differential equation-based model.
 
 
 ## Simulation input data
@@ -23,7 +23,7 @@ Raw raster dataset         |  Vector data after pre-processing
 :-------------------------:|:-------------------------:
 <img src="figs/population_raster_data.png" width="420"/>  |  <img src="figs/population_aggregated_low_Res_hig_res.png" width="420"/> 
 
-Where applicable we used monthly resolved data (vector presence and air travel). The following animations show the vector presence of Aedes Aegypti and Aedes Albopictus respectively. The raw raster dataset were produced by Moritz Kraemer and Oliver Brady (2016).
+Where applicable I used monthly resolved data (vector presence and air travel). The following animations show the vector presence of Aedes Aegypti and Aedes Albopictus respectively. The raw raster dataset were produced by Moritz Kraemer and Oliver Brady (2016).
 
 Aedes Aegypti         |  Aedes Albopictus
 :-------------------------:|:-------------------------:
@@ -44,7 +44,8 @@ Computational experiments were produced making use of high performance cluster p
 * The proposed integrated design method has proven to be useful to study Zika and could be applied with relatively little effort also to other vector-borne diseases such as malaria and dengue
 
 ## Please consider citing this Publication
-Link to [Master Thesis](http://repository.tudelft.nl/islandora/object/uuid:4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education)
+Schwarz P. Modeling and simulating the Zika outbreak under deep uncertainty | TU Delft Repositories [Internet]. Delft University of Technology; 2016 [cited 2016 Sep 19]. Available from: http://repository.tudelft.nl/islandora/object/uuid%3A4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education
+[Link](http://repository.tudelft.nl/islandora/object/uuid:4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education)
 
 ## Future steps
 Upcoming journal paper
