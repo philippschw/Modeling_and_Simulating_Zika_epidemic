@@ -1,1 +1,0 @@
-test = pd.read_csv(r'input_data_simulation/csv_files/adjacency_matrix.csv', index_col=0)
