@@ -1,7 +1,10 @@
 # Modeling and simulating the Zika outbreak under deep uncertainty
 
-### Author Philipp Schwarz, MSc in Engineering and Policy Analysis
-#### Delft University of Technology, The Netherlands
+### Author Philipp Schwarz
+
+#### Researcher in Policy Analysis, Delft University of Technology, The Netherlands
+
+##### [Contact](philipp.schw@gmail.com)
 |    |            |
 |----------|:-------------:|
 | Chair of graduation committee: |  Prof. dr. Bartel A. Van de Walle |
@@ -42,5 +45,7 @@ Upcoming journal paper
 
 ## License
 The MIT License (MIT)
+
 Delft, The Netherlands
+
 Copyright (c) 2016 Philipp Schwarz
