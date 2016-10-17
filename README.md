@@ -2,34 +2,40 @@
 
 ### Author Philipp Schwarz
 
-#### Researcher in Policy Analysis, Delft University of Technology, The Netherlands
+#### Researcher in Policy Analysis Section, Delft University of Technology, The Netherlands
 
 ##### [Contact](philipp.schw@gmail.com)
-|    |            |
-|----------|:-------------:|
-| Chair of graduation committee: |  Prof. dr. Bartel A. Van de Walle |
-| First Supervisor |  Prof. dr. Erik Pruyt |
-| Second Supervisor |  Prof. dr. Michel Oey |
+
+This repository contains all Python scripts that were used to produce the simulation results, however data and outcomes will only be made available once journal paper has been published.
 
 ***In a Nutshell*** 
 
 Large-scale simulation model to study worldwide potential Zika outbreaks. 
-Methodological contributions: (1) Pulls in big (geo-referenced) data from different sources combining high-resolution raster data, census data and model-based predictions on global air travel (Mao et al. 2015) and Aedes Mosquito species distribution (Messina et al. 2016). (2) Account for deep uncertainty by sampling over high dimensional uncertainty space (3) Cope with seasonal dynamics by making use of monthly resolved exogenous data, (4) Ensure computational efficiency by switching from stochastic to differential equation-based model.
+Methodological contributions: (1) Pulls in big (geo-referenced) data from different sources combining high-resolution raster data, census data and model-based predictions on global air travel [(Mao et al. 2015)](https://dx.doi.org/10.7554/eLife.15272) and Aedes Mosquito species distribution [(Messina et al. 2016)](https://dx.doi.org/10.7554/eLife.15272). (2) Account for deep uncertainty by sampling over high dimensional uncertainty space [(Kwakkel and Pruyt 2013](Exploratory Modeling and Analysis, an Approach for Model-Based Foresight under Deep Uncertainty.) (3) Cope with seasonal dynamics by making use of monthly resolved exogenous data, (4) Ensure computational efficiency by switching from stochastic to differential equation-based model.
+
 
 ## Simulation input data
-Simulation results are largelty driven by monthly resovled data about vector presence of Aedes Aegypti and Aedes Albopictus produced by Moritz Kraemer and Oliver Brady.
+To achieve a fast computational model on global scope but at the same time address subnational heterogneity. The world was divided into regions smaller than countries. Adjacent provinces within nations that are similiar with respect to vector presence were joined to one single regional unit. Furthermore, whenever possible high-resolution raster data rather than census data (typically reported on country level) was used to inform the parameterization of the model elements.
+
+The figure below illustrates the conversion from raw raster map to the level of aggregation of the compuational model on the example of population.
+
+Raw raster dataset         |  Vector data after pre-processing
+:-------------------------:|:-------------------------:
+<img src="figs/population_raster_data.png" width="420"/>  |  <img src="figs/population_aggregated_low_Res_hig_res.png" width="420"/> 
+
+Where applicable we used monthly resolved data (vector presence and air travel). The following animations show the vector presence of Aedes Aegypti and Aedes Albopictus respectively. The raw raster dataset were produced by Moritz Kraemer and Oliver Brady (2016).
 
 Aedes Aegypti         |  Aedes Albopictus
 :-------------------------:|:-------------------------:
 <img src="figs/Animation_Aegypti_v2.gif" width="600"/>  |  <img src="figs/Animation_Albopictus_v2.gif" width="600"/> 
 
 
-To address subnational heterogneity whenever possible as raw data high-resolution raster data rather than census data (on country level) was used. In the data preprocessing the raster data was transformed to vector data on the aggregation level needed for a fast global model. Similiar provinces within nations were clustered to single shapes.
+## Computation
+Preprocessing and postprocessing sripts (Jupyter Notebooks) were run in the indicated order using my personal laptop. 
+* System: Virtual Environment Ubuntu 14.04, 64 bit, Python 2.7
+* Hardware: Intel Core i7-4500 CPU 1.80GHz - 2.40GHz, 2 Core(s), 4 Logical Processor(s), RAM 8GB)
 
-
-Raw raster dataset         |  Vector data after pre-processing
-:-------------------------:|:-------------------------:
-<img src="figs/population_raster_data.png" width="420"/>  |  <img src="figs/population_aggregated_low_Res_hig_res.png" width="420"/> 
+Computational experiments were produced making use of high performance cluster provided by [Dominodatalab] (https://www.dominodatalab.com/). 
 
 
 ## Preliminary Results
@@ -44,8 +50,4 @@ Link to [Master Thesis](http://repository.tudelft.nl/islandora/object/uuid:4957d
 Upcoming journal paper
 
 ## License
-The MIT License (MIT)
-
-Delft, The Netherlands
-
-Copyright (c) 2016 Philipp Schwarz
+Data and scripts within this repository are released under the [CRAPL v0.1 License](http://matt.might.net/articles/crapl/).
