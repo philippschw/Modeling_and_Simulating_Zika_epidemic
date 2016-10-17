@@ -49,9 +49,11 @@ Schwarz P. Modeling and simulating the Zika outbreak under deep uncertainty | TU
 [Link](http://repository.tudelft.nl/islandora/object/uuid:4957df8e-3de1-4b5e-8231-731287a4ede4?collection=education)
 
 ***Future steps***
+
 Upcoming journal paper
 
 ***License***
+
 Data and scripts within this repository are released under the [CRAPL v0.1 License](http://matt.might.net/articles/crapl/).
 
 [Contact me](philipp.schw@gmail.com)
