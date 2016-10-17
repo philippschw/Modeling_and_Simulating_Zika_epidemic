@@ -30,6 +30,7 @@ Aedes Aegypti         |  Aedes Albopictus
 
 
 ***Computation***
+
 Preprocessing and postprocessing sripts (Jupyter Notebooks) were run in the indicated order using my personal laptop. 
 * System: Virtual Environment Ubuntu 14.04, 64 bit, Python 2.7
 * Hardware: Intel Core i7-4500 CPU 1.80GHz - 2.40GHz, 2 Core(s), 4 Logical Processor(s), RAM 8GB)
